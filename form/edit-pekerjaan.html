@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="id">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Edit Pekerjaan - Sistem Manajemen Karyawan</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      />
+      <script>
+         tailwind.config = {
+            theme: {
+               extend: {
+                  colors: {
+                     "primary-green": "#2d5a3d",
+                     "light-green": "#4a7c59",
+                  },
+               },
+            },
+         };
+      </script>
+   </head>
+   <body class="bg-gray-50 min-h-screen">
+      <!-- Header with Employee Info -->
+      <div class="bg-primary-green text-white">
+         <div class="flex items-center p-6">
+            <!-- Employee Photo -->
+            <div class="bg-white rounded-lg p-2 mr-6">
+               <img
+                  src="/placeholder.svg?height=120&width=100"
+                  alt="Arif Wibisono"
+                  class="w-24 h-32 rounded object-cover"
+               />
+            </div>
+            <!-- Employee Name and Title -->
+            <div class="flex-1">
+               <h1 class="text-4xl font-bold mb-2">Arif Wibisono</h1>
+               <p class="text-xl text-green-200">Adm. Sr. Manager</p>
+            </div>
+         </div>
+
+         <!-- Navigation Tabs -->
+         <div class="border-t border-light-green">
+            <nav class="flex overflow-x-auto px-6">
+               <a
+                  href="dashboard.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-user mr-2"></i>
+                  Profil
+               </a>
+               <a
+                  href="pekerjaan.html"
+                  class="nav-tab active px-6 py-4 whitespace-nowrap border-b-2 border-white text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-briefcase mr-2"></i>
+                  Pekerjaan
+               </a>
+               <a
+                  href="kehadiran.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-calendar-check mr-2"></i>
+                  Kehadiran
+               </a>
+               <a
+                  href="dokumen.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-file-alt mr-2"></i>
+                  Dokumen
+               </a>
+               <a
+                  href="kesehatan.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-heartbeat mr-2"></i>
+                  Riwat Kesehatan
+               </a>
+               <a
+                  href="performa.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-chart-line mr-2"></i>
+                  Performa
+               </a>
+               <a
+                  href="pelatihan.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-graduation-cap mr-2"></i>
+                  Pelatihan
+               </a>
+               <a
+                  href="organisasi.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-sitemap mr-2"></i>
+                  Struktur Organisasi
+               </a>
+               <a
+                  href="catatan.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-sticky-note mr-2"></i>
+                  Catatan
+               </a>
+               <a
+                  href="lainnya.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-ellipsis-h mr-2"></i>
+                  Lainnya
+               </a>
+            </nav>
+         </div>
+      </div>
+
+      <!-- Main Content Area -->
+      <div class="flex">
+         <!-- Left Sidebar -->
+         <div class="w-80 bg-primary-green text-white">
+            <!-- Area Section -->
+            <div class="p-6 border-b border-light-green">
+               <h3 class="font-semibold text-white mb-4 flex items-center">
+                  <i class="fas fa-map-marker-alt mr-2"></i>
+                  Area
+               </h3>
+               <div class="space-y-3 text-sm">
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-green-400 rounded-sm mr-3"></span>
+                     <i class="fas fa-phone mr-2 text-xs"></i>
+                     <span>+62-21-2578-4672</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-gray-300 rounded-sm mr-3"></span>
+                     <i class="fas fa-mobile-alt mr-2 text-xs"></i>
+                     <span>+62-811-8000-504</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-blue-400 rounded-sm mr-3"></span>
+                     <i class="fas fa-envelope mr-2 text-xs"></i>
+                     <span>arifwibisono@gmail.co.id</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-red-400 rounded-sm mr-3"></span>
+                     <i class="fas fa-building mr-2 text-xs"></i>
+                     <span>HBCA</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-purple-400 rounded-sm mr-3"></span>
+                     <i class="fas fa-university mr-2 text-xs"></i>
+                     <span>UBC</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-yellow-400 rounded-sm mr-3"></span>
+                     <i class="fas fa-id-badge mr-2 text-xs"></i>
+                     <span>1734</span>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Tanggal Bergabung Section -->
+            <div class="p-6 border-b border-light-green">
+               <h3 class="font-semibold text-white mb-4 flex items-center">
+                  <i class="fas fa-calendar-plus mr-2"></i>
+                  Tanggal Bergabung
+               </h3>
+               <div class="text-sm">
+                  <div class="flex items-center mb-2">
+                     <span class="w-4 h-4 bg-blue-400 rounded-sm mr-3"></span>
+                     <span>05 Juli 2017</span>
+                  </div>
+                  <div class="text-green-200 ml-7">7 Tahun, 6 Bulan</div>
+               </div>
+            </div>
+
+            <!-- Laporan Langsung Section -->
+            <div class="p-6">
+               <h3 class="font-semibold text-white mb-4 flex items-center">
+                  <i class="fas fa-users mr-2"></i>
+                  Laporan Langsung
+               </h3>
+               <div class="space-y-2 text-sm">
+                  <div class="flex items-center">
+                     <span
+                        class="w-2 h-2 bg-green-300 rounded-full mr-3"
+                     ></span>
+                     <span>Keuangan Eksekutif</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span
+                        class="w-2 h-2 bg-green-300 rounded-full mr-3"
+                     ></span>
+                     <span>Sekretaris Eksekutif</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- Main Content -->
+         <div class="flex-1 p-6 bg-gray-50">
+            <!-- Page Header -->
+            <div class="flex items-center justify-between mb-6">
+               <div class="flex items-center">
+                  <div
+                     class="w-8 h-8 bg-gray-200 rounded mr-3 flex items-center justify-center"
+                  >
+                     <i class="fas fa-edit text-gray-600"></i>
+                  </div>
+                  <h2 class="text-2xl font-bold text-gray-800">
+                     Edit Informasi Pekerjaan
+                  </h2>
+               </div>
+               <div class="flex space-x-2">
+                  <a
+                     href="pekerjaan.html"
+                     class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded text-sm font-medium flex items-center"
+                  >
+                     <i class="fas fa-times mr-2"></i>
+                     Batal
+                  </a>
+                  <button
+                     class="bg-primary-green hover:bg-light-green text-white px-4 py-2 rounded text-sm font-medium flex items-center"
+                  >
+                     <i class="fas fa-save mr-2"></i>
+                     Simpan Perubahan
+                  </button>
+               </div>
+            </div>
+
+            <!-- Edit Form -->
+            <form class="space-y-8">
+               <!-- Current Position Information -->
+               <div
+                  class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+               >
+                  <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+                     <h3 class="text-lg font-semibold flex items-center">
+                        <i class="fas fa-briefcase text-gray-400 mr-3"></i>
+                        Informasi Posisi Saat Ini
+                     </h3>
+                  </div>
+                  <div class="p-6">
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >ID Karyawan</label
+                           >
+                           <input
+                              type="text"
+                              value="1734"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 bg-gray-100"
+                              readonly
+                           />
+                           <p class="text-xs text-gray-500 mt-1">
+                              ID karyawan tidak dapat diubah
+                           </p>
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Status Karyawan *</label
+                           >
+                           <select
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           >
+                              <option value="tetap" selected>
+                                 Karyawan Tetap
+                              </option>
+                              <option value="kontrak">Karyawan Kontrak</option>
+                              <option value="magang">Magang</option>
+                              <option value="freelance">Freelance</option>
+                           </select>
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Jabatan *</label
+                           >
+                           <input
+                              type="text"
+                              value="Adm. Sr. Manager"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           />
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Level/Grade *</label
+                           >
+                           <select
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           >
+                              <option value="8" selected>Level 8</option>
+                              <option value="7">Level 7</option>
+                              <option value="9">Level 9</option>
+                              <option value="10">Level 10</option>
+                           </select>
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Departemen *</label
+                           >
+                           <select
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           >
+                              <option value="administrasi" selected>
+                                 Administrasi
+                              </option>
+                              <option value="keuangan">Keuangan</option>
+                              <option value="hr">Human Resources</option>
+                              <option value="it">Information Technology</option>
+                              <option value="operasional">Operasional</option>
+                           </select>
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Divisi</label
+                           >
+                           <input
+                              type="text"
+                              value="Administrasi Umum"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           />
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Lokasi Kerja *</label
+                           >
+                           <select
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           >
+                              <option value="jakarta_pusat" selected>
+                                 Jakarta Pusat
+                              </option>
+                              <option value="jakarta_selatan">
+                                 Jakarta Selatan
+                              </option>
+                              <option value="jakarta_utara">
+                                 Jakarta Utara
+                              </option>
+                              <option value="bandung">Bandung</option>
+                              <option value="surabaya">Surabaya</option>
+                           </select>
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Tipe Pekerjaan</label
+                           >
+                           <select
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           >
+                              <option value="onsite" selected>On-site</option>
+                              <option value="remote">Remote</option>
+                              <option value="hybrid">Hybrid</option>
+                           </select>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Employment Details -->
+               <div
+                  class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+               >
+                  <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+                     <h3 class="text-lg font-semibold flex items-center">
+                        <i class="fas fa-calendar-alt text-gray-400 mr-3"></i>
+                        Detail Kepegawaian
+                     </h3>
+                  </div>
+                  <div class="p-6">
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Tanggal Bergabung</label
+                           >
+                           <input
+                              type="date"
+                              value="2017-07-05"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 bg-gray-100"
+                              readonly
+                           />
+                           <p class="text-xs text-gray-500 mt-1">
+                              Tanggal bergabung tidak dapat diubah
+                           </p>
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Tanggal Efektif Posisi Saat Ini</label
+                           >
+                           <input
+                              type="date"
+                              value="2020-07-01"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           />
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Masa Kerja</label
+                           >
+                           <input
+                              type="text"
+                              value="7 Tahun, 6 Bulan"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 bg-gray-100"
+                              readonly
+                           />
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Masa Kontrak (jika kontrak)</label
+                           >
+                           <input
+                              type="date"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                              disabled
+                           />
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Jam Kerja per Minggu</label
+                           >
+                           <input
+                              type="number"
+                              value="40"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           />
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Shift Kerja</label
+                           >
+                           <select
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           >
+                              <option value="regular" selected>
+                                 Regular (08:00-17:00)
+                              </option>
+                              <option value="pagi">Pagi (06:00-15:00)</option>
+                              <option value="siang">Siang (14:00-23:00)</option>
+                              <option value="malam">Malam (22:00-07:00)</option>
+                              <option value="flexible">Flexible</option>
+                           </select>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Reporting Structure -->
+               <div
+                  class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+               >
+                  <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+                     <h3 class="text-lg font-semibold flex items-center">
+                        <i class="fas fa-sitemap text-gray-400 mr-3"></i>
+                        Struktur Pelaporan
+                     </h3>
+                  </div>
+                  <div class="p-6">
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Atasan Langsung *</label
+                           >
+                           <select
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           >
+                              <option value="budi_santoso" selected>
+                                 Budi Santoso - General Manager
+                              </option>
+                              <option value="sari_dewi">
+                                 Sari Dewi - Deputy GM
+                              </option>
+                              <option value="ahmad_fauzi">
+                                 Ahmad Fauzi - Senior Manager
+                              </option>
+                           </select>
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Atasan Tidak Langsung</label
+                           >
+                           <select
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           >
+                              <option value="bambang_sutrisno" selected>
+                                 Bambang Sutrisno - CEO
+                              </option>
+                              <option value="linda_sari">
+                                 Linda Sari - Director
+                              </option>
+                           </select>
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Jumlah Bawahan Langsung</label
+                           >
+                           <input
+                              type="number"
+                              value="4"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           />
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Total Span of Control</label
+                           >
+                           <input
+                              type="number"
+                              value="15"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Compensation & Benefits -->
+               <div
+                  class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+               >
+                  <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+                     <h3 class="text-lg font-semibold flex items-center">
+                        <i
+                           class="fas fa-money-bill-wave text-gray-400 mr-3"
+                        ></i>
+                        Kompensasi & Tunjangan
+                     </h3>
+                  </div>
+                  <div class="p-6">
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Gaji Pokok *</label
+                           >
+                           <div class="relative">
+                              <span class="absolute left-3 top-2 text-gray-500"
+                                 >Rp</span
+                              >
+                              <input
+                                 type="text"
+                                 value="15,000,000"
+                                 class="w-full border border-gray-300 rounded-lg pl-10 pr-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                              />
+                           </div>
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Tunjangan Jabatan</label
+                           >
+                           <div class="relative">
+                              <span class="absolute left-3 top-2 text-gray-500"
+                                 >Rp</span
+                              >
+                              <input
+                                 type="text"
+                                 value="3,000,000"
+                                 class="w-full border border-gray-300 rounded-lg pl-10 pr-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                              />
+                           </div>
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Tunjangan Transport</label
+                           >
+                           <div class="relative">
+                              <span class="absolute left-3 top-2 text-gray-500"
+                                 >Rp</span
+                              >
+                              <input
+                                 type="text"
+                                 value="1,500,000"
+                                 class="w-full border border-gray-300 rounded-lg pl-10 pr-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                              />
+                           </div>
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Tunjangan Makan</label
+                           >
+                           <div class="relative">
+                              <span class="absolute left-3 top-2 text-gray-500"
+                                 >Rp</span
+                              >
+                              <input
+                                 type="text"
+                                 value="1,000,000"
+                                 class="w-full border border-gray-300 rounded-lg pl-10 pr-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                              />
+                           </div>
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Asuransi Kesehatan</label
+                           >
+                           <select
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           >
+                              <option value="bpjs_plus" selected>
+                                 BPJS + Asuransi Swasta
+                              </option>
+                              <option value="bpjs_only">BPJS Saja</option>
+                              <option value="private_only">
+                                 Asuransi Swasta Saja
+                              </option>
+                           </select>
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Cuti Tahunan (Hari)</label
+                           >
+                           <input
+                              type="number"
+                              value="12"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           />
+                        </div>
+                     </div>
+
+                     <!-- Benefits Checkboxes -->
+                     <div class="mt-6">
+                        <label
+                           class="block text-sm font-medium text-gray-700 mb-3"
+                           >Fasilitas Tambahan</label
+                        >
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                           <label class="flex items-center">
+                              <input
+                                 type="checkbox"
+                                 checked
+                                 class="rounded border-gray-300 text-primary-green focus:ring-primary-green"
+                              />
+                              <span class="ml-2 text-sm">Laptop/PC</span>
+                           </label>
+                           <label class="flex items-center">
+                              <input
+                                 type="checkbox"
+                                 checked
+                                 class="rounded border-gray-300 text-primary-green focus:ring-primary-green"
+                              />
+                              <span class="ml-2 text-sm">Handphone</span>
+                           </label>
+                           <label class="flex items-center">
+                              <input
+                                 type="checkbox"
+                                 class="rounded border-gray-300 text-primary-green focus:ring-primary-green"
+                              />
+                              <span class="ml-2 text-sm">Kendaraan Dinas</span>
+                           </label>
+                           <label class="flex items-center">
+                              <input
+                                 type="checkbox"
+                                 checked
+                                 class="rounded border-gray-300 text-primary-green focus:ring-primary-green"
+                              />
+                              <span class="ml-2 text-sm">Parkir</span>
+                           </label>
+                           <label class="flex items-center">
+                              <input
+                                 type="checkbox"
+                                 checked
+                                 class="rounded border-gray-300 text-primary-green focus:ring-primary-green"
+                              />
+                              <span class="ml-2 text-sm">Gym Membership</span>
+                           </label>
+                           <label class="flex items-center">
+                              <input
+                                 type="checkbox"
+                                 class="rounded border-gray-300 text-primary-green focus:ring-primary-green"
+                              />
+                              <span class="ml-2 text-sm"
+                                 >Housing Allowance</span
+                              >
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Job Description -->
+               <div
+                  class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+               >
+                  <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+                     <h3 class="text-lg font-semibold flex items-center">
+                        <i class="fas fa-tasks text-gray-400 mr-3"></i>
+                        Deskripsi Pekerjaan
+                     </h3>
+                  </div>
+                  <div class="p-6">
+                     <div class="space-y-6">
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Ringkasan Pekerjaan</label
+                           >
+                           <textarea
+                              rows="3"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           >
+Bertanggung jawab atas pengelolaan administrasi umum perusahaan, koordinasi dengan berbagai departemen, dan memastikan kelancaran operasional harian. Memimpin tim administrasi dan memberikan dukungan kepada manajemen senior.</textarea
+                           >
+                        </div>
+
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Tanggung Jawab Utama</label
+                           >
+                           <textarea
+                              rows="5"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           >
+1. Mengelola dan mengawasi kegiatan administrasi umum perusahaan
+2. Koordinasi dengan departemen lain untuk memastikan kelancaran operasional
+3. Memimpin dan mengembangkan tim administrasi (4 orang)
+4. Menyiapkan laporan manajemen dan presentasi untuk direksi
+5. Mengelola anggaran departemen administrasi
+6. Mengawasi implementasi kebijakan dan prosedur perusahaan
+7. Menangani hubungan dengan vendor dan supplier eksternal</textarea
+                           >
+                        </div>
+
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Kualifikasi yang Diperlukan</label
+                           >
+                           <textarea
+                              rows="4"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           >
+1. Minimal S1 Manajemen, Administrasi Bisnis, atau bidang terkait
+2. Pengalaman minimal 5 tahun di posisi manajerial
+3. Kemampuan kepemimpinan dan manajemen tim yang baik
+4. Kemampuan komunikasi dan presentasi yang excellent
+5. Menguasai MS Office dan sistem ERP
+6. Kemampuan analisis dan problem solving yang kuat</textarea
+                           >
+                        </div>
+
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >KPI (Key Performance Indicators)</label
+                           >
+                           <textarea
+                              rows="3"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           >
+1. Efisiensi proses administrasi (target: 95%)
+2. Kepuasan internal customer (target: 4.5/5)
+3. Budget compliance (target: ±5%)
+4. Team development score (target: 4.0/5)
+5. On-time report submission (target: 100%)</textarea
+                           >
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Work History -->
+               <div
+                  class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+               >
+                  <div
+                     class="bg-gray-50 px-6 py-4 border-b border-gray-200 flex items-center justify-between"
+                  >
+                     <h3 class="text-lg font-semibold flex items-center">
+                        <i class="fas fa-history text-gray-400 mr-3"></i>
+                        Riwayat Posisi di Perusahaan
+                     </h3>
+                     <button
+                        type="button"
+                        class="bg-primary-green hover:bg-light-green text-white px-3 py-1 rounded text-sm flex items-center"
+                     >
+                        <i class="fas fa-plus mr-1"></i>
+                        Tambah Riwayat
+                     </button>
+                  </div>
+                  <div class="p-6">
+                     <div class="space-y-6">
+                        <!-- Current Position -->
+                        <div
+                           class="border-l-4 border-green-400 pl-4 pb-4 border-b border-gray-100"
+                        >
+                           <div class="flex items-center justify-between mb-2">
+                              <div class="flex items-center">
+                                 <span
+                                    class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mr-2"
+                                    >Saat Ini</span
+                                 >
+                                 <span class="text-sm text-gray-500"
+                                    >Juli 2020 - Sekarang</span
+                                 >
+                              </div>
+                              <button
+                                 type="button"
+                                 class="text-gray-400 hover:text-blue-600"
+                              >
+                                 <i class="fas fa-edit text-sm"></i>
+                              </button>
+                           </div>
+                           <h4 class="font-semibold mb-1">Adm. Sr. Manager</h4>
+                           <p class="text-sm text-gray-600 mb-2">
+                              Departemen Administrasi • Level 8
+                           </p>
+                           <p class="text-sm text-gray-700">
+                              Promosi dari Manager ke Senior Manager dengan
+                              tanggung jawab yang diperluas meliputi koordinasi
+                              lintas departemen dan strategic planning.
+                           </p>
+                        </div>
+
+                        <!-- Previous Position -->
+                        <div
+                           class="border-l-4 border-blue-400 pl-4 pb-4 border-b border-gray-100"
+                        >
+                           <div class="flex items-center justify-between mb-2">
+                              <div class="flex items-center">
+                                 <span
+                                    class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2"
+                                    >Sebelumnya</span
+                                 >
+                                 <span class="text-sm text-gray-500"
+                                    >Juli 2017 - Juni 2020</span
+                                 >
+                              </div>
+                              <button
+                                 type="button"
+                                 class="text-gray-400 hover:text-blue-600"
+                              >
+                                 <i class="fas fa-edit text-sm"></i>
+                              </button>
+                           </div>
+                           <h4 class="font-semibold mb-1">Manager</h4>
+                           <p class="text-sm text-gray-600 mb-2">
+                              Departemen Administrasi • Level 7
+                           </p>
+                           <p class="text-sm text-gray-700">
+                              Posisi awal saat bergabung dengan perusahaan.
+                              Bertanggung jawab mengelola tim administrasi dan
+                              mengembangkan sistem operasional.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Form Actions -->
+               <div class="bg-white rounded-lg border border-gray-200 p-6">
+                  <div class="flex items-center justify-between">
+                     <div class="text-sm text-gray-600">
+                        <i class="fas fa-info-circle mr-1"></i>
+                        Perubahan pada informasi gaji dan tunjangan memerlukan
+                        persetujuan HR dan Finance
+                     </div>
+                     <div class="flex space-x-3">
+                        <a
+                           href="pekerjaan.html"
+                           class="bg-gray-100 hover:bg-gray-200 px-6 py-2 rounded text-sm font-medium flex items-center"
+                        >
+                           <i class="fas fa-times mr-2"></i>
+                           Batal
+                        </a>
+                        <button
+                           type="button"
+                           class="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-2 rounded text-sm font-medium flex items-center"
+                        >
+                           <i class="fas fa-eye mr-2"></i>
+                           Preview
+                        </button>
+                        <button
+                           type="submit"
+                           class="bg-primary-green hover:bg-light-green text-white px-6 py-2 rounded text-sm font-medium flex items-center"
+                        >
+                           <i class="fas fa-save mr-2"></i>
+                           Simpan Perubahan
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+
+      <style>
+         .nav-tab.active {
+            border-bottom-color: white !important;
+            background-color: rgba(255, 255, 255, 0.1);
+         }
+         .nav-tab:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+         }
+
+         /* Currency formatting */
+         .currency-input {
+            text-align: right;
+         }
+
+         /* Form validation styles */
+         .form-error {
+            border-color: #ef4444;
+         }
+         .form-success {
+            border-color: #10b981;
+         }
+
+         /* Loading state */
+         .loading {
+            opacity: 0.6;
+            pointer-events: none;
+         }
+      </style>
+
+      <script>
+         document.addEventListener("DOMContentLoaded", function () {
+            // Currency formatting for salary inputs
+            const currencyInputs =
+               document.querySelectorAll('input[type="text"]');
+            currencyInputs.forEach((input) => {
+               if (
+                  input.previousElementSibling &&
+                  input.previousElementSibling.textContent === "Rp"
+               ) {
+                  input.addEventListener("input", function (e) {
+                     let value = e.target.value.replace(/[^\d]/g, "");
+                     if (value) {
+                        value = parseInt(value).toLocaleString("id-ID");
+                        e.target.value = value;
+                     }
+                  });
+               }
+            });
+
+            // Status karyawan change handler
+            const statusSelect = document.querySelector(
+               'select[value="tetap"]'
+            );
+            const kontrakDateInput = document.querySelector(
+               'input[type="date"][disabled]'
+            );
+
+            if (statusSelect) {
+               statusSelect.addEventListener("change", function (e) {
+                  if (e.target.value === "kontrak") {
+                     kontrakDateInput.disabled = false;
+                     kontrakDateInput.required = true;
+                  } else {
+                     kontrakDateInput.disabled = true;
+                     kontrakDateInput.required = false;
+                     kontrakDateInput.value = "";
+                  }
+               });
+            }
+
+            // Add work history entry
+            document
+               .querySelector(".bg-primary-green")
+               .addEventListener("click", function (e) {
+                  if (
+                     e.target.closest("button") &&
+                     e.target
+                        .closest("button")
+                        .textContent.includes("Tambah Riwayat")
+                  ) {
+                     // Add new work history entry logic here
+                     console.log("Add new work history entry");
+                  }
+               });
+
+            // Form submission
+            document
+               .querySelector("form")
+               .addEventListener("submit", function (e) {
+                  e.preventDefault();
+
+                  // Show loading state
+                  const submitBtn = document.querySelector(
+                     'button[type="submit"]'
+                  );
+                  const originalText = submitBtn.innerHTML;
+                  submitBtn.innerHTML =
+                     '<i class="fas fa-spinner fa-spin mr-2"></i>Menyimpan...';
+                  submitBtn.disabled = true;
+
+                  // Validate required fields
+                  const requiredFields = document.querySelectorAll(
+                     "input[required], select[required]"
+                  );
+                  let isValid = true;
+
+                  requiredFields.forEach((field) => {
+                     if (!field.value.trim()) {
+                        field.classList.add("form-error");
+                        isValid = false;
+                     } else {
+                        field.classList.remove("form-error");
+                        field.classList.add("form-success");
+                     }
+                  });
+
+                  // Simulate API call
+                  setTimeout(() => {
+                     if (isValid) {
+                        alert("Informasi pekerjaan berhasil diperbarui!");
+                        window.location.href = "pekerjaan.html";
+                     } else {
+                        alert("Mohon lengkapi semua field yang wajib diisi");
+                     }
+                     submitBtn.innerHTML = originalText;
+                     submitBtn.disabled = false;
+                  }, 2000);
+               });
+
+            // Preview functionality
+            document
+               .querySelector('button[type="button"]')
+               .addEventListener("click", function (e) {
+                  if (e.target.textContent.includes("Preview")) {
+                     // Show preview modal or redirect to preview page
+                     alert("Fitur preview akan segera tersedia");
+                  }
+               });
+
+            // Auto-calculate total compensation
+            const salaryInputs =
+               document.querySelectorAll('input[type="text"]');
+            salaryInputs.forEach((input) => {
+               if (
+                  input.previousElementSibling &&
+                  input.previousElementSibling.textContent === "Rp"
+               ) {
+                  input.addEventListener("blur", calculateTotalCompensation);
+               }
+            });
+
+            function calculateTotalCompensation() {
+               // Calculate total compensation logic here
+               console.log("Calculate total compensation");
+            }
+
+            // Unsaved changes warning
+            let hasUnsavedChanges = false;
+            const formInputs = document.querySelectorAll(
+               "input, select, textarea"
+            );
+
+            formInputs.forEach((input) => {
+               input.addEventListener("change", function () {
+                  hasUnsavedChanges = true;
+               });
+            });
+
+            window.addEventListener("beforeunload", function (e) {
+               if (hasUnsavedChanges) {
+                  e.preventDefault();
+                  e.returnValue = "";
+               }
+            });
+         });
+      </script>
+   </body>
+</html>

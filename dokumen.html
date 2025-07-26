@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="id">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Dokumen - Sistem Manajemen Karyawan</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      />
+      <script>
+         tailwind.config = {
+            theme: {
+               extend: {
+                  colors: {
+                     "primary-green": "#2d5a3d",
+                     "light-green": "#4a7c59",
+                  },
+               },
+            },
+         };
+      </script>
+   </head>
+   <body class="bg-gray-50 min-h-screen">
+      <!-- Header with Employee Info -->
+      <div class="bg-primary-green text-white">
+         <div class="flex items-center p-6">
+            <!-- Employee Photo -->
+            <div class="bg-white rounded-lg p-2 mr-6">
+               <img
+                  src="/placeholder.svg?height=120&width=100"
+                  alt="Arif Wibisono"
+                  class="w-24 h-32 rounded object-cover"
+               />
+            </div>
+            <!-- Employee Name and Title -->
+            <div class="flex-1">
+               <h1 class="text-4xl font-bold mb-2">Arif Wibisono</h1>
+               <p class="text-xl text-green-200">Adm. Sr. Manager</p>
+            </div>
+         </div>
+
+         <!-- Navigation Tabs -->
+         <div class="border-t border-light-green">
+            <nav class="flex overflow-x-auto px-6">
+               <a
+                  href="dashboard.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-user mr-2"></i>
+                  Profil
+               </a>
+               <a
+                  href="pekerjaan.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-briefcase mr-2"></i>
+                  Pekerjaan
+               </a>
+               <a
+                  href="kehadiran.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-calendar-check mr-2"></i>
+                  Kehadiran
+               </a>
+               <a
+                  href="dokumen.html"
+                  class="nav-tab active px-6 py-4 whitespace-nowrap border-b-2 border-white text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-file-alt mr-2"></i>
+                  Dokumen
+               </a>
+               <a
+                  href="kesehatan.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-heartbeat mr-2"></i>
+                  Riwat Kesehatan
+               </a>
+               <a
+                  href="performa.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-chart-line mr-2"></i>
+                  Performa
+               </a>
+               <a
+                  href="pelatihan.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-graduation-cap mr-2"></i>
+                  Pelatihan
+               </a>
+               <a
+                  href="organisasi.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-sitemap mr-2"></i>
+                  Struktur Organisasi
+               </a>
+               <a
+                  href="catatan.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-sticky-note mr-2"></i>
+                  Catatan
+               </a>
+               <a
+                  href="lainnya.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-ellipsis-h mr-2"></i>
+                  Lainnya
+               </a>
+            </nav>
+         </div>
+      </div>
+
+      <!-- Main Content Area -->
+      <div class="flex">
+         <!-- Left Sidebar -->
+         <div class="w-80 bg-primary-green text-white">
+            <!-- Area Section -->
+            <div class="p-6 border-b border-light-green">
+               <h3 class="font-semibold text-white mb-4 flex items-center">
+                  <i class="fas fa-map-marker-alt mr-2"></i>
+                  Area
+               </h3>
+               <div class="space-y-3 text-sm">
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-green-400 rounded-sm mr-3"></span>
+                     <i class="fas fa-phone mr-2 text-xs"></i>
+                     <span>+62-21-2578-4672</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-gray-300 rounded-sm mr-3"></span>
+                     <i class="fas fa-mobile-alt mr-2 text-xs"></i>
+                     <span>+62-811-8000-504</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-blue-400 rounded-sm mr-3"></span>
+                     <i class="fas fa-envelope mr-2 text-xs"></i>
+                     <span>arifwibisono@gmail.co.id</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-red-400 rounded-sm mr-3"></span>
+                     <i class="fas fa-building mr-2 text-xs"></i>
+                     <span>HBCA</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-purple-400 rounded-sm mr-3"></span>
+                     <i class="fas fa-university mr-2 text-xs"></i>
+                     <span>UBC</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-yellow-400 rounded-sm mr-3"></span>
+                     <i class="fas fa-id-badge mr-2 text-xs"></i>
+                     <span>1734</span>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Tanggal Bergabung Section -->
+            <div class="p-6 border-b border-light-green">
+               <h3 class="font-semibold text-white mb-4 flex items-center">
+                  <i class="fas fa-calendar-plus mr-2"></i>
+                  Tanggal Bergabung
+               </h3>
+               <div class="text-sm">
+                  <div class="flex items-center mb-2">
+                     <span class="w-4 h-4 bg-blue-400 rounded-sm mr-3"></span>
+                     <span>05 Juli 2017</span>
+                  </div>
+                  <div class="text-green-200 ml-7">7 Tahun, 6 Bulan</div>
+               </div>
+            </div>
+
+            <!-- Laporan Langsung Section -->
+            <div class="p-6">
+               <h3 class="font-semibold text-white mb-4 flex items-center">
+                  <i class="fas fa-users mr-2"></i>
+                  Laporan Langsung
+               </h3>
+               <div class="space-y-2 text-sm">
+                  <div class="flex items-center">
+                     <span
+                        class="w-2 h-2 bg-green-300 rounded-full mr-3"
+                     ></span>
+                     <span>Keuangan Eksekutif</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span
+                        class="w-2 h-2 bg-green-300 rounded-full mr-3"
+                     ></span>
+                     <span>Sekretaris Eksekutif</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- Main Content -->
+         <div class="flex-1 p-6 bg-gray-50">
+            <!-- Page Header -->
+            <div class="flex items-center justify-between mb-6">
+               <div class="flex items-center">
+                  <div
+                     class="w-8 h-8 bg-gray-200 rounded mr-3 flex items-center justify-center"
+                  >
+                     <i class="fas fa-file-alt text-gray-600"></i>
+                  </div>
+                  <h2 class="text-2xl font-bold text-gray-800">Dokumen</h2>
+               </div>
+               <div class="flex space-x-2">
+                  <a
+                     href="form/edit-dokumen.html"
+                     class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium flex items-center"
+                  >
+                     <i class="fas fa-edit mr-2"></i>
+                     Edit Dokumen
+                  </a>
+                  <button
+                     class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded text-sm font-medium flex items-center"
+                  >
+                     <i class="fas fa-download mr-2"></i>
+                     Download All
+                  </button>
+               </div>
+            </div>
+
+            <!-- Document Statistics -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+               <div class="bg-white rounded-lg border border-gray-200 p-6">
+                  <div class="flex items-center">
+                     <div
+                        class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4"
+                     >
+                        <i class="fas fa-file-alt text-blue-600 text-xl"></i>
+                     </div>
+                     <div>
+                        <div class="text-2xl font-bold text-gray-800">24</div>
+                        <div class="text-sm text-gray-600">Total Dokumen</div>
+                     </div>
+                  </div>
+               </div>
+               <div class="bg-white rounded-lg border border-gray-200 p-6">
+                  <div class="flex items-center">
+                     <div
+                        class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4"
+                     >
+                        <i
+                           class="fas fa-check-circle text-green-600 text-xl"
+                        ></i>
+                     </div>
+                     <div>
+                        <div class="text-2xl font-bold text-gray-800">18</div>
+                        <div class="text-sm text-gray-600">Terverifikasi</div>
+                     </div>
+                  </div>
+               </div>
+               <div class="bg-white rounded-lg border border-gray-200 p-6">
+                  <div class="flex items-center">
+                     <div
+                        class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4"
+                     >
+                        <i class="fas fa-clock text-yellow-600 text-xl"></i>
+                     </div>
+                     <div>
+                        <div class="text-2xl font-bold text-gray-800">4</div>
+                        <div class="text-sm text-gray-600">Pending Review</div>
+                     </div>
+                  </div>
+               </div>
+               <div class="bg-white rounded-lg border border-gray-200 p-6">
+                  <div class="flex items-center">
+                     <div
+                        class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4"
+                     >
+                        <i
+                           class="fas fa-exclamation-triangle text-red-600 text-xl"
+                        ></i>
+                     </div>
+                     <div>
+                        <div class="text-2xl font-bold text-gray-800">2</div>
+                        <div class="text-sm text-gray-600">Perlu Update</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Document Categories -->
+            <div
+               class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6"
+            >
+               <!-- Personal Documents -->
+               <div
+                  class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+               >
+                  <div class="bg-blue-50 px-6 py-4 border-b border-gray-200">
+                     <h3
+                        class="text-lg font-semibold flex items-center text-blue-800"
+                     >
+                        <i class="fas fa-id-card text-blue-600 mr-3"></i>
+                        Dokumen Pribadi
+                     </h3>
+                  </div>
+                  <div class="p-6">
+                     <div class="space-y-3">
+                        <div
+                           class="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+                        >
+                           <div class="flex items-center">
+                              <i class="fas fa-id-card text-blue-600 mr-3"></i>
+                              <div>
+                                 <div class="font-medium text-sm">KTP</div>
+                                 <div class="text-xs text-gray-500">
+                                    Berlaku s/d 2029
+                                 </div>
+                              </div>
+                           </div>
+                           <span
+                              class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full"
+                              >Verified</span
+                           >
+                        </div>
+                        <div
+                           class="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+                        >
+                           <div class="flex items-center">
+                              <i class="fas fa-passport text-blue-600 mr-3"></i>
+                              <div>
+                                 <div class="font-medium text-sm">Paspor</div>
+                                 <div class="text-xs text-gray-500">
+                                    Berlaku s/d 2027
+                                 </div>
+                              </div>
+                           </div>
+                           <span
+                              class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full"
+                              >Verified</span
+                           >
+                        </div>
+                        <div
+                           class="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+                        >
+                           <div class="flex items-center">
+                              <i
+                                 class="fas fa-graduation-cap text-blue-600 mr-3"
+                              ></i>
+                              <div>
+                                 <div class="font-medium text-sm">
+                                    Ijazah S1
+                                 </div>
+                                 <div class="text-xs text-gray-500">
+                                    Universitas Indonesia
+                                 </div>
+                              </div>
+                           </div>
+                           <span
+                              class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full"
+                              >Verified</span
+                           >
+                        </div>
+                        <div
+                           class="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+                        >
+                           <div class="flex items-center">
+                              <i
+                                 class="fas fa-certificate text-blue-600 mr-3"
+                              ></i>
+                              <div>
+                                 <div class="font-medium text-sm">
+                                    Sertifikat PMP
+                                 </div>
+                                 <div class="text-xs text-gray-500">
+                                    PMI Institute
+                                 </div>
+                              </div>
+                           </div>
+                           <span
+                              class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full"
+                              >Pending</span
+                           >
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Employment Documents -->
+               <div
+                  class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+               >
+                  <div class="bg-green-50 px-6 py-4 border-b border-gray-200">
+                     <h3
+                        class="text-lg font-semibold flex items-center text-green-800"
+                     >
+                        <i class="fas fa-briefcase text-green-600 mr-3"></i>
+                        Dokumen Kepegawaian
+                     </h3>
+                  </div>
+                  <div class="p-6">
+                     <div class="space-y-3">
+                        <div
+                           class="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+                        >
+                           <div class="flex items-center">
+                              <i
+                                 class="fas fa-file-contract text-green-600 mr-3"
+                              ></i>
+                              <div>
+                                 <div class="font-medium text-sm">
+                                    Kontrak Kerja
+                                 </div>
+                                 <div class="text-xs text-gray-500">
+                                    2024-2026
+                                 </div>
+                              </div>
+                           </div>
+                           <span
+                              class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full"
+                              >Active</span
+                           >
+                        </div>
+                        <div
+                           class="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+                        >
+                           <div class="flex items-center">
+                              <i
+                                 class="fas fa-user-tie text-green-600 mr-3"
+                              ></i>
+                              <div>
+                                 <div class="font-medium text-sm">
+                                    Job Description
+                                 </div>
+                                 <div class="text-xs text-gray-500">
+                                    Sr. Manager
+                                 </div>
+                              </div>
+                           </div>
+                           <span
+                              class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full"
+                              >Current</span
+                           >
+                        </div>
+                        <div
+                           class="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+                        >
+                           <div class="flex items-center">
+                              <i
+                                 class="fas fa-handshake text-green-600 mr-3"
+                              ></i>
+                              <div>
+                                 <div class="font-medium text-sm">
+                                    NDA Agreement
+                                 </div>
+                                 <div class="text-xs text-gray-500">
+                                    Confidentiality
+                                 </div>
+                              </div>
+                           </div>
+                           <span
+                              class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full"
+                              >Signed</span
+                           >
+                        </div>
+                        <div
+                           class="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+                        >
+                           <div class="flex items-center">
+                              <i
+                                 class="fas fa-shield-alt text-green-600 mr-3"
+                              ></i>
+                              <div>
+                                 <div class="font-medium text-sm">
+                                    Code of Conduct
+                                 </div>
+                                 <div class="text-xs text-gray-500">
+                                    Company Policy
+                                 </div>
+                              </div>
+                           </div>
+                           <span
+                              class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full"
+                              >Acknowledged</span
+                           >
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Financial Documents -->
+               <div
+                  class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+               >
+                  <div class="bg-purple-50 px-6 py-4 border-b border-gray-200">
+                     <h3
+                        class="text-lg font-semibold flex items-center text-purple-800"
+                     >
+                        <i
+                           class="fas fa-money-bill-wave text-purple-600 mr-3"
+                        ></i>
+                        Dokumen Keuangan
+                     </h3>
+                  </div>
+                  <div class="p-6">
+                     <div class="space-y-3">
+                        <div
+                           class="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+                        >
+                           <div class="flex items-center">
+                              <i
+                                 class="fas fa-university text-purple-600 mr-3"
+                              ></i>
+                              <div>
+                                 <div class="font-medium text-sm">
+                                    Rekening Bank
+                                 </div>
+                                 <div class="text-xs text-gray-500">
+                                    BCA ****1234
+                                 </div>
+                              </div>
+                           </div>
+                           <span
+                              class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full"
+                              >Verified</span
+                           >
+                        </div>
+                        <div
+                           class="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+                        >
+                           <div class="flex items-center">
+                              <i
+                                 class="fas fa-receipt text-purple-600 mr-3"
+                              ></i>
+                              <div>
+                                 <div class="font-medium text-sm">NPWP</div>
+                                 <div class="text-xs text-gray-500">
+                                    12.345.678.9-123.000
+                                 </div>
+                              </div>
+                           </div>
+                           <span
+                              class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full"
+                              >Verified</span
+                           >
+                        </div>
+                        <div
+                           class="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+                        >
+                           <div class="flex items-center">
+                              <i
+                                 class="fas fa-file-invoice text-purple-600 mr-3"
+                              ></i>
+                              <div>
+                                 <div class="font-medium text-sm">
+                                    Slip Gaji
+                                 </div>
+                                 <div class="text-xs text-gray-500">
+                                    Desember 2024
+                                 </div>
+                              </div>
+                           </div>
+                           <span
+                              class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full"
+                              >Latest</span
+                           >
+                        </div>
+                        <div
+                           class="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+                        >
+                           <div class="flex items-center">
+                              <i
+                                 class="fas fa-piggy-bank text-purple-600 mr-3"
+                              ></i>
+                              <div>
+                                 <div class="font-medium text-sm">
+                                    BPJS Ketenagakerjaan
+                                 </div>
+                                 <div class="text-xs text-gray-500">Aktif</div>
+                              </div>
+                           </div>
+                           <span
+                              class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full"
+                              >Active</span
+                           >
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Recent Document Activity -->
+            <div
+               class="bg-white rounded-lg border border-gray-200 overflow-hidden mb-6"
+            >
+               <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+                  <h3 class="text-lg font-semibold flex items-center">
+                     <i class="fas fa-history text-gray-400 mr-3"></i>
+                     Aktivitas Dokumen Terbaru
+                  </h3>
+               </div>
+               <div class="p-6">
+                  <div class="space-y-4">
+                     <div
+                        class="flex items-start space-x-4 p-4 bg-blue-50 rounded-lg"
+                     >
+                        <div
+                           class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center"
+                        >
+                           <i class="fas fa-upload text-blue-600"></i>
+                        </div>
+                        <div class="flex-1">
+                           <div class="flex items-center justify-between">
+                              <h4 class="font-semibold text-gray-800">
+                                 Sertifikat PMP Uploaded
+                              </h4>
+                              <span class="text-xs text-gray-500"
+                                 >2 jam yang lalu</span
+                              >
+                           </div>
+                           <p class="text-sm text-gray-600 mt-1">
+                              Sertifikat Project Management Professional
+                              berhasil diupload dan menunggu verifikasi HR.
+                           </p>
+                        </div>
+                     </div>
+
+                     <div
+                        class="flex items-start space-x-4 p-4 bg-green-50 rounded-lg"
+                     >
+                        <div
+                           class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center"
+                        >
+                           <i class="fas fa-check text-green-600"></i>
+                        </div>
+                        <div class="flex-1">
+                           <div class="flex items-center justify-between">
+                              <h4 class="font-semibold text-gray-800">
+                                 Kontrak Kerja Verified
+                              </h4>
+                              <span class="text-xs text-gray-500"
+                                 >1 hari yang lalu</span
+                              >
+                           </div>
+                           <p class="text-sm text-gray-600 mt-1">
+                              Kontrak kerja periode 2024-2026 telah diverifikasi
+                              dan disetujui oleh HR Department.
+                           </p>
+                        </div>
+                     </div>
+
+                     <div
+                        class="flex items-start space-x-4 p-4 bg-yellow-50 rounded-lg"
+                     >
+                        <div
+                           class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center"
+                        >
+                           <i
+                              class="fas fa-exclamation-triangle text-yellow-600"
+                           ></i>
+                        </div>
+                        <div class="flex-1">
+                           <div class="flex items-center justify-between">
+                              <h4 class="font-semibold text-gray-800">
+                                 Reminder: Update BPJS
+                              </h4>
+                              <span class="text-xs text-gray-500"
+                                 >3 hari yang lalu</span
+                              >
+                           </div>
+                           <p class="text-sm text-gray-600 mt-1">
+                              Dokumen BPJS Kesehatan perlu diperbarui sebelum
+                              tanggal 31 Desember 2024.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Document Expiry Alerts -->
+            <div
+               class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+            >
+               <div class="bg-red-50 px-6 py-4 border-b border-red-200">
+                  <h3
+                     class="text-lg font-semibold flex items-center text-red-800"
+                  >
+                     <i class="fas fa-bell text-red-600 mr-3"></i>
+                     Peringatan Dokumen
+                  </h3>
+               </div>
+               <div class="p-6">
+                  <div class="space-y-3">
+                     <div
+                        class="flex items-center justify-between p-4 bg-red-50 border border-red-200 rounded-lg"
+                     >
+                        <div class="flex items-center">
+                           <i class="fas fa-passport text-red-600 mr-3"></i>
+                           <div>
+                              <div class="font-medium text-red-800">
+                                 Paspor akan berakhir
+                              </div>
+                              <div class="text-sm text-red-600">
+                                 Berlaku hingga 15 Maret 2025 (3 bulan lagi)
+                              </div>
+                           </div>
+                        </div>
+                        <button
+                           class="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded text-sm"
+                        >
+                           Update
+                        </button>
+                     </div>
+
+                     <div
+                        class="flex items-center justify-between p-4 bg-yellow-50 border border-yellow-200 rounded-lg"
+                     >
+                        <div class="flex items-center">
+                           <i
+                              class="fas fa-shield-alt text-yellow-600 mr-3"
+                           ></i>
+                           <div>
+                              <div class="font-medium text-yellow-800">
+                                 Asuransi Kesehatan
+                              </div>
+                              <div class="text-sm text-yellow-600">
+                                 Perlu perpanjangan dalam 6 bulan
+                              </div>
+                           </div>
+                        </div>
+                        <button
+                           class="bg-yellow-600 hover:bg-yellow-700 text-white px-3 py-1 rounded text-sm"
+                        >
+                           Renew
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <style>
+         .nav-tab.active {
+            border-bottom-color: white !important;
+            background-color: rgba(255, 255, 255, 0.1);
+         }
+         .nav-tab:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+         }
+      </style>
+   </body>
+</html>

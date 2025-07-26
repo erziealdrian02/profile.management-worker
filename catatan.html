@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="id">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Catatan - Sistem Manajemen Karyawan</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      />
+      <script>
+         tailwind.config = {
+            theme: {
+               extend: {
+                  colors: {
+                     "primary-green": "#2d5a3d",
+                     "light-green": "#4a7c59",
+                  },
+               },
+            },
+         };
+      </script>
+   </head>
+   <body class="bg-gray-50 min-h-screen">
+      <!-- Header with Employee Info -->
+      <div class="bg-primary-green text-white">
+         <div class="flex items-center p-6">
+            <!-- Employee Photo -->
+            <div class="bg-white rounded-lg p-2 mr-6">
+               <img
+                  src="/placeholder.svg?height=120&width=100"
+                  alt="Arif Wibisono"
+                  class="w-24 h-32 rounded object-cover"
+               />
+            </div>
+            <!-- Employee Name and Title -->
+            <div class="flex-1">
+               <h1 class="text-4xl font-bold mb-2">Arif Wibisono</h1>
+               <p class="text-xl text-green-200">Adm. Sr. Manager</p>
+            </div>
+         </div>
+
+         <!-- Navigation Tabs -->
+         <div class="border-t border-light-green">
+            <nav class="flex overflow-x-auto px-6">
+               <a
+                  href="dashboard.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-user mr-2"></i>
+                  Profil
+               </a>
+               <a
+                  href="pekerjaan.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-briefcase mr-2"></i>
+                  Pekerjaan
+               </a>
+               <a
+                  href="kehadiran.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-calendar-check mr-2"></i>
+                  Kehadiran
+               </a>
+               <a
+                  href="dokumen.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-file-alt mr-2"></i>
+                  Dokumen
+               </a>
+               <a
+                  href="kesehatan.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-heartbeat mr-2"></i>
+                  Riwat Kesehatan
+               </a>
+               <a
+                  href="performa.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-chart-line mr-2"></i>
+                  Performa
+               </a>
+               <a
+                  href="pelatihan.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-graduation-cap mr-2"></i>
+                  Pelatihan
+               </a>
+               <a
+                  href="organisasi.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-sitemap mr-2"></i>
+                  Struktur Organisasi
+               </a>
+               <a
+                  href="catatan.html"
+                  class="nav-tab active px-6 py-4 whitespace-nowrap border-b-2 border-white text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-sticky-note mr-2"></i>
+                  Catatan
+               </a>
+               <a
+                  href="lainnya.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-ellipsis-h mr-2"></i>
+                  Lainnya
+               </a>
+            </nav>
+         </div>
+      </div>
+
+      <!-- Main Content Area -->
+      <div class="flex">
+         <!-- Left Sidebar -->
+         <div class="w-80 bg-primary-green text-white">
+            <!-- Area Section -->
+            <div class="p-6 border-b border-light-green">
+               <h3 class="font-semibold text-white mb-4 flex items-center">
+                  <i class="fas fa-map-marker-alt mr-2"></i>
+                  Area
+               </h3>
+               <div class="space-y-3 text-sm">
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-green-400 rounded-sm mr-3"></span>
+                     <i class="fas fa-phone mr-2 text-xs"></i>
+                     <span>+62-21-2578-4672</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-gray-300 rounded-sm mr-3"></span>
+                     <i class="fas fa-mobile-alt mr-2 text-xs"></i>
+                     <span>+62-811-8000-504</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-blue-400 rounded-sm mr-3"></span>
+                     <i class="fas fa-envelope mr-2 text-xs"></i>
+                     <span>arifwibisono@gmail.co.id</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-red-400 rounded-sm mr-3"></span>
+                     <i class="fas fa-building mr-2 text-xs"></i>
+                     <span>HBCA</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-purple-400 rounded-sm mr-3"></span>
+                     <i class="fas fa-university mr-2 text-xs"></i>
+                     <span>UBC</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-yellow-400 rounded-sm mr-3"></span>
+                     <i class="fas fa-id-badge mr-2 text-xs"></i>
+                     <span>1734</span>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Tanggal Bergabung Section -->
+            <div class="p-6 border-b border-light-green">
+               <h3 class="font-semibold text-white mb-4 flex items-center">
+                  <i class="fas fa-calendar-plus mr-2"></i>
+                  Tanggal Bergabung
+               </h3>
+               <div class="text-sm">
+                  <div class="flex items-center mb-2">
+                     <span class="w-4 h-4 bg-blue-400 rounded-sm mr-3"></span>
+                     <span>05 Juli 2017</span>
+                  </div>
+                  <div class="text-green-200 ml-7">7 Tahun, 6 Bulan</div>
+               </div>
+            </div>
+
+            <!-- Laporan Langsung Section -->
+            <div class="p-6">
+               <h3 class="font-semibold text-white mb-4 flex items-center">
+                  <i class="fas fa-users mr-2"></i>
+                  Laporan Langsung
+               </h3>
+               <div class="space-y-2 text-sm">
+                  <div class="flex items-center">
+                     <span
+                        class="w-2 h-2 bg-green-300 rounded-full mr-3"
+                     ></span>
+                     <span>Keuangan Eksekutif</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span
+                        class="w-2 h-2 bg-green-300 rounded-full mr-3"
+                     ></span>
+                     <span>Sekretaris Eksekutif</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- Main Content -->
+         <div class="flex-1 p-6 bg-gray-50">
+            <!-- Page Header -->
+            <div class="flex items-center justify-between mb-6">
+               <div class="flex items-center">
+                  <div
+                     class="w-8 h-8 bg-gray-200 rounded mr-3 flex items-center justify-center"
+                  >
+                     <i class="fas fa-sticky-note text-gray-600"></i>
+                  </div>
+                  <h2 class="text-2xl font-bold text-gray-800">Catatan</h2>
+               </div>
+               <div class="flex space-x-2">
+                  <select
+                     class="border border-gray-300 rounded-lg px-3 py-2 text-sm"
+                  >
+                     <option>Semua Kategori</option>
+                     <option>Catatan Pribadi</option>
+                     <option>Catatan Kerja</option>
+                     <option>Reminder</option>
+                     <option>Meeting Notes</option>
+                  </select>
+                  <button
+                     class="bg-primary-green hover:bg-light-green text-white px-4 py-2 rounded text-sm font-medium flex items-center"
+                  >
+                     <i class="fas fa-plus mr-2"></i>
+                     Tambah Catatan
+                  </button>
+               </div>
+            </div>
+
+            <!-- Notes Summary Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+               <div class="bg-white rounded-lg border border-gray-200 p-6">
+                  <div class="flex items-center">
+                     <div
+                        class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4"
+                     >
+                        <i class="fas fa-sticky-note text-blue-600 text-xl"></i>
+                     </div>
+                     <div>
+                        <h3 class="text-lg font-semibold text-blue-600">
+                           Total Catatan
+                        </h3>
+                        <p class="text-3xl font-bold">24</p>
+                        <p class="text-sm text-gray-600">catatan</p>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="bg-white rounded-lg border border-gray-200 p-6">
+                  <div class="flex items-center">
+                     <div
+                        class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4"
+                     >
+                        <i class="fas fa-briefcase text-green-600 text-xl"></i>
+                     </div>
+                     <div>
+                        <h3 class="text-lg font-semibold text-green-600">
+                           Catatan Kerja
+                        </h3>
+                        <p class="text-3xl font-bold">15</p>
+                        <p class="text-sm text-gray-600">catatan</p>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="bg-white rounded-lg border border-gray-200 p-6">
+                  <div class="flex items-center">
+                     <div
+                        class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4"
+                     >
+                        <i class="fas fa-bell text-yellow-600 text-xl"></i>
+                     </div>
+                     <div>
+                        <h3 class="text-lg font-semibold text-yellow-600">
+                           Reminder
+                        </h3>
+                        <p class="text-3xl font-bold">5</p>
+                        <p class="text-sm text-gray-600">aktif</p>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="bg-white rounded-lg border border-gray-200 p-6">
+                  <div class="flex items-center">
+                     <div
+                        class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4"
+                     >
+                        <i class="fas fa-users text-purple-600 text-xl"></i>
+                     </div>
+                     <div>
+                        <h3 class="text-lg font-semibold text-purple-600">
+                           Meeting Notes
+                        </h3>
+                        <p class="text-3xl font-bold">8</p>
+                        <p class="text-sm text-gray-600">catatan</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+               <!-- Left Column - Recent Notes -->
+               <div class="lg:col-span-2 space-y-8">
+                  <!-- Recent Notes -->
+                  <div
+                     class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+                  >
+                     <div
+                        class="bg-gray-50 px-6 py-4 border-b border-gray-200 flex items-center justify-between"
+                     >
+                        <h3 class="text-lg font-semibold flex items-center">
+                           <i class="fas fa-clock text-gray-400 mr-3"></i>
+                           Catatan Terbaru
+                        </h3>
+                        <div class="flex items-center space-x-2">
+                           <input
+                              type="text"
+                              placeholder="Cari catatan..."
+                              class="border border-gray-300 rounded px-3 py-1 text-sm"
+                           />
+                           <button
+                              class="bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded text-sm"
+                           >
+                              <i class="fas fa-search"></i>
+                           </button>
+                        </div>
+                     </div>
+                     <div class="p-6">
+                        <div class="space-y-6">
+                           <!-- Note 1 -->
+                           <div
+                              class="border-l-4 border-blue-400 pl-4 pb-4 border-b border-gray-100"
+                           >
+                              <div
+                                 class="flex items-center justify-between mb-2"
+                              >
+                                 <div class="flex items-center">
+                                    <span
+                                       class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2"
+                                       >Catatan Kerja</span
+                                    >
+                                    <span class="text-xs text-gray-500"
+                                       >20 Jan 2024, 14:30</span
+                                    >
+                                 </div>
+                                 <div class="flex items-center space-x-2">
+                                    <button
+                                       class="text-gray-400 hover:text-blue-600"
+                                    >
+                                       <i class="fas fa-edit text-sm"></i>
+                                    </button>
+                                    <button
+                                       class="text-gray-400 hover:text-red-600"
+                                    >
+                                       <i class="fas fa-trash text-sm"></i>
+                                    </button>
+                                 </div>
+                              </div>
+                              <h4 class="font-semibold mb-2">
+                                 Rencana Implementasi Sistem Baru
+                              </h4>
+                              <p class="text-sm text-gray-700 mb-3">
+                                 Diskusi dengan tim IT mengenai implementasi
+                                 sistem manajemen dokumen baru. Perlu koordinasi
+                                 dengan vendor untuk timeline dan training
+                                 karyawan.
+                              </p>
+                              <div
+                                 class="flex items-center text-xs text-gray-500"
+                              >
+                                 <i class="fas fa-tag mr-1"></i>
+                                 <span class="mr-3"
+                                    >sistem, implementasi, IT</span
+                                 >
+                                 <i class="fas fa-user mr-1"></i>
+                                 <span>Arif Wibisono</span>
+                              </div>
+                           </div>
+
+                           <!-- Note 2 -->
+                           <div
+                              class="border-l-4 border-green-400 pl-4 pb-4 border-b border-gray-100"
+                           >
+                              <div
+                                 class="flex items-center justify-between mb-2"
+                              >
+                                 <div class="flex items-center">
+                                    <span
+                                       class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mr-2"
+                                       >Meeting Notes</span
+                                    >
+                                    <span class="text-xs text-gray-500"
+                                       >18 Jan 2024, 10:00</span
+                                    >
+                                 </div>
+                                 <div class="flex items-center space-x-2">
+                                    <button
+                                       class="text-gray-400 hover:text-blue-600"
+                                    >
+                                       <i class="fas fa-edit text-sm"></i>
+                                    </button>
+                                    <button
+                                       class="text-gray-400 hover:text-red-600"
+                                    >
+                                       <i class="fas fa-trash text-sm"></i>
+                                    </button>
+                                 </div>
+                              </div>
+                              <h4 class="font-semibold mb-2">
+                                 Meeting Evaluasi Q4 2023
+                              </h4>
+                              <p class="text-sm text-gray-700 mb-3">
+                                 <strong>Agenda:</strong><br />
+                                 1. Review pencapaian target Q4<br />
+                                 2. Evaluasi performa tim<br />
+                                 3. Rencana kerja Q1 2024<br /><br />
+                                 <strong>Action Items:</strong><br />
+                                 - Finalisasi laporan keuangan (Sari)<br />
+                                 - Persiapan budget 2024 (Tim Finance)<br />
+                                 - Training plan untuk tim baru (Linda)
+                              </p>
+                              <div
+                                 class="flex items-center text-xs text-gray-500"
+                              >
+                                 <i class="fas fa-tag mr-1"></i>
+                                 <span class="mr-3">meeting, evaluasi, Q4</span>
+                                 <i class="fas fa-users mr-1"></i>
+                                 <span>Tim Management</span>
+                              </div>
+                           </div>
+
+                           <!-- Note 3 -->
+                           <div
+                              class="border-l-4 border-yellow-400 pl-4 pb-4 border-b border-gray-100"
+                           >
+                              <div
+                                 class="flex items-center justify-between mb-2"
+                              >
+                                 <div class="flex items-center">
+                                    <span
+                                       class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full mr-2"
+                                       >Reminder</span
+                                    >
+                                    <span class="text-xs text-gray-500"
+                                       >15 Jan 2024, 09:15</span
+                                    >
+                                 </div>
+                                 <div class="flex items-center space-x-2">
+                                    <button
+                                       class="text-gray-400 hover:text-blue-600"
+                                    >
+                                       <i class="fas fa-edit text-sm"></i>
+                                    </button>
+                                    <button
+                                       class="text-gray-400 hover:text-red-600"
+                                    >
+                                       <i class="fas fa-trash text-sm"></i>
+                                    </button>
+                                 </div>
+                              </div>
+                              <h4 class="font-semibold mb-2">
+                                 Deadline Laporan Bulanan
+                              </h4>
+                              <p class="text-sm text-gray-700 mb-3">
+                                 Jangan lupa submit laporan bulanan ke GM paling
+                                 lambat tanggal 25 Januari 2024. Pastikan semua
+                                 data sudah lengkap dan ter-review.
+                              </p>
+                              <div class="flex items-center justify-between">
+                                 <div
+                                    class="flex items-center text-xs text-gray-500"
+                                 >
+                                    <i class="fas fa-tag mr-1"></i>
+                                    <span class="mr-3">deadline, laporan</span>
+                                    <i class="fas fa-calendar mr-1"></i>
+                                    <span>25 Jan 2024</span>
+                                 </div>
+                                 <span
+                                    class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full"
+                                    >Urgent</span
+                                 >
+                              </div>
+                           </div>
+
+                           <!-- Note 4 -->
+                           <div
+                              class="border-l-4 border-purple-400 pl-4 pb-4 border-b border-gray-100"
+                           >
+                              <div
+                                 class="flex items-center justify-between mb-2"
+                              >
+                                 <div class="flex items-center">
+                                    <span
+                                       class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full mr-2"
+                                       >Catatan Pribadi</span
+                                    >
+                                    <span class="text-xs text-gray-500"
+                                       >12 Jan 2024, 16:45</span
+                                    >
+                                 </div>
+                                 <div class="flex items-center space-x-2">
+                                    <button
+                                       class="text-gray-400 hover:text-blue-600"
+                                    >
+                                       <i class="fas fa-edit text-sm"></i>
+                                    </button>
+                                    <button
+                                       class="text-gray-400 hover:text-red-600"
+                                    >
+                                       <i class="fas fa-trash text-sm"></i>
+                                    </button>
+                                 </div>
+                              </div>
+                              <h4 class="font-semibold mb-2">
+                                 Ide Pengembangan Karir
+                              </h4>
+                              <p class="text-sm text-gray-700 mb-3">
+                                 Pertimbangan untuk mengambil program MBA atau
+                                 sertifikasi manajemen strategis. Diskusikan
+                                 dengan atasan mengenai kemungkinan dukungan
+                                 perusahaan untuk pendidikan lanjutan.
+                              </p>
+                              <div
+                                 class="flex items-center text-xs text-gray-500"
+                              >
+                                 <i class="fas fa-tag mr-1"></i>
+                                 <span class="mr-3"
+                                    >karir, pendidikan, MBA</span
+                                 >
+                                 <i class="fas fa-lock mr-1"></i>
+                                 <span>Pribadi</span>
+                              </div>
+                           </div>
+
+                           <!-- Note 5 -->
+                           <div class="border-l-4 border-indigo-400 pl-4">
+                              <div
+                                 class="flex items-center justify-between mb-2"
+                              >
+                                 <div class="flex items-center">
+                                    <span
+                                       class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full mr-2"
+                                       >Catatan Kerja</span
+                                    >
+                                    <span class="text-xs text-gray-500"
+                                       >10 Jan 2024, 11:20</span
+                                    >
+                                 </div>
+                                 <div class="flex items-center space-x-2">
+                                    <button
+                                       class="text-gray-400 hover:text-blue-600"
+                                    >
+                                       <i class="fas fa-edit text-sm"></i>
+                                    </button>
+                                    <button
+                                       class="text-gray-400 hover:text-red-600"
+                                    >
+                                       <i class="fas fa-trash text-sm"></i>
+                                    </button>
+                                 </div>
+                              </div>
+                              <h4 class="font-semibold mb-2">
+                                 Feedback dari Audit Internal
+                              </h4>
+                              <p class="text-sm text-gray-700 mb-3">
+                                 Tim audit memberikan beberapa rekomendasi untuk
+                                 perbaikan proses dokumentasi. Perlu dibuat SOP
+                                 baru untuk approval workflow dan digital
+                                 signature.
+                              </p>
+                              <div
+                                 class="flex items-center text-xs text-gray-500"
+                              >
+                                 <i class="fas fa-tag mr-1"></i>
+                                 <span class="mr-3"
+                                    >audit, SOP, dokumentasi</span
+                                 >
+                                 <i
+                                    class="fas fa-exclamation-triangle mr-1"
+                                 ></i>
+                                 <span>Follow-up Required</span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Pagination -->
+                  <div
+                     class="bg-white rounded-lg border border-gray-200 px-6 py-4"
+                  >
+                     <div class="flex items-center justify-between">
+                        <div class="text-sm text-gray-600">
+                           Menampilkan 1-5 dari 24 catatan
+                        </div>
+                        <div class="flex space-x-2">
+                           <button
+                              class="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50"
+                           >
+                              <i class="fas fa-chevron-left mr-1"></i>
+                              Sebelumnya
+                           </button>
+                           <button
+                              class="px-3 py-1 bg-primary-green text-white rounded text-sm"
+                           >
+                              1
+                           </button>
+                           <button
+                              class="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50"
+                           >
+                              2
+                           </button>
+                           <button
+                              class="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50"
+                           >
+                              3
+                           </button>
+                           <button
+                              class="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50"
+                           >
+                              Selanjutnya
+                              <i class="fas fa-chevron-right ml-1"></i>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Right Column -->
+               <div class="space-y-8">
+                  <!-- Quick Add Note -->
+                  <div
+                     class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+                  >
+                     <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+                        <h3 class="text-lg font-semibold flex items-center">
+                           <i class="fas fa-plus text-gray-400 mr-3"></i>
+                           Tambah Catatan Cepat
+                        </h3>
+                     </div>
+                     <div class="p-6">
+                        <form class="space-y-4">
+                           <div>
+                              <label
+                                 class="block text-sm font-medium text-gray-700 mb-2"
+                                 >Judul</label
+                              >
+                              <input
+                                 type="text"
+                                 class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm"
+                                 placeholder="Masukkan judul catatan"
+                              />
+                           </div>
+                           <div>
+                              <label
+                                 class="block text-sm font-medium text-gray-700 mb-2"
+                                 >Kategori</label
+                              >
+                              <select
+                                 class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm"
+                              >
+                                 <option>Catatan Pribadi</option>
+                                 <option>Catatan Kerja</option>
+                                 <option>Reminder</option>
+                                 <option>Meeting Notes</option>
+                              </select>
+                           </div>
+                           <div>
+                              <label
+                                 class="block text-sm font-medium text-gray-700 mb-2"
+                                 >Isi Catatan</label
+                              >
+                              <textarea
+                                 rows="4"
+                                 class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm"
+                                 placeholder="Tulis catatan Anda di sini..."
+                              ></textarea>
+                           </div>
+                           <div>
+                              <label
+                                 class="block text-sm font-medium text-gray-700 mb-2"
+                                 >Tags</label
+                              >
+                              <input
+                                 type="text"
+                                 class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm"
+                                 placeholder="tag1, tag2, tag3"
+                              />
+                           </div>
+                           <button
+                              type="submit"
+                              class="w-full bg-primary-green hover:bg-light-green text-white px-4 py-2 rounded text-sm font-medium"
+                           >
+                              <i class="fas fa-save mr-2"></i>
+                              Simpan Catatan
+                           </button>
+                        </form>
+                     </div>
+                  </div>
+
+                  <!-- Categories -->
+                  <div
+                     class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+                  >
+                     <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+                        <h3 class="text-lg font-semibold flex items-center">
+                           <i class="fas fa-tags text-gray-400 mr-3"></i>
+                           Kategori Catatan
+                        </h3>
+                     </div>
+                     <div class="p-6">
+                        <div class="space-y-3">
+                           <div
+                              class="flex items-center justify-between p-3 bg-blue-50 rounded-lg"
+                           >
+                              <div class="flex items-center">
+                                 <i
+                                    class="fas fa-briefcase text-blue-600 mr-3"
+                                 ></i>
+                                 <span class="font-medium text-sm"
+                                    >Catatan Kerja</span
+                                 >
+                              </div>
+                              <span
+                                 class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full"
+                                 >15</span
+                              >
+                           </div>
+
+                           <div
+                              class="flex items-center justify-between p-3 bg-green-50 rounded-lg"
+                           >
+                              <div class="flex items-center">
+                                 <i
+                                    class="fas fa-users text-green-600 mr-3"
+                                 ></i>
+                                 <span class="font-medium text-sm"
+                                    >Meeting Notes</span
+                                 >
+                              </div>
+                              <span
+                                 class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full"
+                                 >8</span
+                              >
+                           </div>
+
+                           <div
+                              class="flex items-center justify-between p-3 bg-yellow-50 rounded-lg"
+                           >
+                              <div class="flex items-center">
+                                 <i
+                                    class="fas fa-bell text-yellow-600 mr-3"
+                                 ></i>
+                                 <span class="font-medium text-sm"
+                                    >Reminder</span
+                                 >
+                              </div>
+                              <span
+                                 class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full"
+                                 >5</span
+                              >
+                           </div>
+
+                           <div
+                              class="flex items-center justify-between p-3 bg-purple-50 rounded-lg"
+                           >
+                              <div class="flex items-center">
+                                 <i
+                                    class="fas fa-user text-purple-600 mr-3"
+                                 ></i>
+                                 <span class="font-medium text-sm"
+                                    >Catatan Pribadi</span
+                                 >
+                              </div>
+                              <span
+                                 class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full"
+                                 >4</span
+                              >
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Recent Tags -->
+                  <div
+                     class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+                  >
+                     <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+                        <h3 class="text-lg font-semibold flex items-center">
+                           <i class="fas fa-hashtag text-gray-400 mr-3"></i>
+                           Tag Populer
+                        </h3>
+                     </div>
+                     <div class="p-6">
+                        <div class="flex flex-wrap gap-2">
+                           <span
+                              class="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full"
+                              >#meeting</span
+                           >
+                           <span
+                              class="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full"
+                              >#sistem</span
+                           >
+                           <span
+                              class="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full"
+                              >#evaluasi</span
+                           >
+                           <span
+                              class="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full"
+                              >#deadline</span
+                           >
+                           <span
+                              class="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full"
+                              >#laporan</span
+                           >
+                           <span
+                              class="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full"
+                              >#IT</span
+                           >
+                           <span
+                              class="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full"
+                              >#audit</span
+                           >
+                           <span
+                              class="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full"
+                              >#karir</span
+                           >
+                           <span
+                              class="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full"
+                              >#implementasi</span
+                           >
+                           <span
+                              class="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full"
+                              >#SOP</span
+                           >
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Notes Statistics -->
+                  <div
+                     class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+                  >
+                     <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+                        <h3 class="text-lg font-semibold flex items-center">
+                           <i class="fas fa-chart-bar text-gray-400 mr-3"></i>
+                           Statistik Catatan
+                        </h3>
+                     </div>
+                     <div class="p-6">
+                        <div class="space-y-4">
+                           <div class="flex justify-between items-center">
+                              <span class="text-sm text-gray-600"
+                                 >Catatan Bulan Ini</span
+                              >
+                              <span class="font-semibold">12 catatan</span>
+                           </div>
+                           <div class="flex justify-between items-center">
+                              <span class="text-sm text-gray-600"
+                                 >Rata-rata per Minggu</span
+                              >
+                              <span class="font-semibold">3 catatan</span>
+                           </div>
+                           <div class="flex justify-between items-center">
+                              <span class="text-sm text-gray-600"
+                                 >Reminder Aktif</span
+                              >
+                              <span class="font-semibold text-yellow-600"
+                                 >5 item</span
+                              >
+                           </div>
+                           <div class="flex justify-between items-center">
+                              <span class="text-sm text-gray-600"
+                                 >Catatan Terlama</span
+                              >
+                              <span class="font-semibold">Jul 2017</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <style>
+         .nav-tab.active {
+            border-bottom-color: white !important;
+            background-color: rgba(255, 255, 255, 0.1);
+         }
+         .nav-tab:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+         }
+      </style>
+   </body>
+</html>

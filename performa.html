@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="id">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Performa - Sistem Manajemen Karyawan</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      />
+      <script>
+         tailwind.config = {
+            theme: {
+               extend: {
+                  colors: {
+                     "primary-green": "#2d5a3d",
+                     "light-green": "#4a7c59",
+                  },
+               },
+            },
+         };
+      </script>
+   </head>
+   <body class="bg-gray-50 min-h-screen">
+      <!-- Header with Employee Info -->
+      <div class="bg-primary-green text-white">
+         <div class="flex items-center p-6">
+            <!-- Employee Photo -->
+            <div class="bg-white rounded-lg p-2 mr-6">
+               <img
+                  src="/placeholder.svg?height=120&width=100"
+                  alt="Arif Wibisono"
+                  class="w-24 h-32 rounded object-cover"
+               />
+            </div>
+            <!-- Employee Name and Title -->
+            <div class="flex-1">
+               <h1 class="text-4xl font-bold mb-2">Arif Wibisono</h1>
+               <p class="text-xl text-green-200">Adm. Sr. Manager</p>
+            </div>
+         </div>
+
+         <!-- Navigation Tabs -->
+         <div class="border-t border-light-green">
+            <nav class="flex overflow-x-auto px-6">
+               <a
+                  href="dashboard.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-user mr-2"></i>
+                  Profil
+               </a>
+               <a
+                  href="pekerjaan.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-briefcase mr-2"></i>
+                  Pekerjaan
+               </a>
+               <a
+                  href="kehadiran.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-calendar-check mr-2"></i>
+                  Kehadiran
+               </a>
+               <a
+                  href="dokumen.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-file-alt mr-2"></i>
+                  Dokumen
+               </a>
+               <a
+                  href="kesehatan.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-heartbeat mr-2"></i>
+                  Riwat Kesehatan
+               </a>
+               <a
+                  href="performa.html"
+                  class="nav-tab active px-6 py-4 whitespace-nowrap border-b-2 border-white text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-chart-line mr-2"></i>
+                  Performa
+               </a>
+               <a
+                  href="pelatihan.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-graduation-cap mr-2"></i>
+                  Pelatihan
+               </a>
+               <a
+                  href="organisasi.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-sitemap mr-2"></i>
+                  Struktur Organisasi
+               </a>
+               <a
+                  href="catatan.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-sticky-note mr-2"></i>
+                  Catatan
+               </a>
+               <a
+                  href="lainnya.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-ellipsis-h mr-2"></i>
+                  Lainnya
+               </a>
+            </nav>
+         </div>
+      </div>
+
+      <!-- Main Content Area -->
+      <div class="flex">
+         <!-- Left Sidebar -->
+         <div class="w-80 bg-primary-green text-white">
+            <!-- Area Section -->
+            <div class="p-6 border-b border-light-green">
+               <h3 class="font-semibold text-white mb-4 flex items-center">
+                  <i class="fas fa-map-marker-alt mr-2"></i>
+                  Area
+               </h3>
+               <div class="space-y-3 text-sm">
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-green-400 rounded-sm mr-3"></span>
+                     <i class="fas fa-phone mr-2 text-xs"></i>
+                     <span>+62-21-2578-4672</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-gray-300 rounded-sm mr-3"></span>
+                     <i class="fas fa-mobile-alt mr-2 text-xs"></i>
+                     <span>+62-811-8000-504</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-blue-400 rounded-sm mr-3"></span>
+                     <i class="fas fa-envelope mr-2 text-xs"></i>
+                     <span>arifwibisono@gmail.co.id</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-red-400 rounded-sm mr-3"></span>
+                     <i class="fas fa-building mr-2 text-xs"></i>
+                     <span>HBCA</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-purple-400 rounded-sm mr-3"></span>
+                     <i class="fas fa-university mr-2 text-xs"></i>
+                     <span>UBC</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-yellow-400 rounded-sm mr-3"></span>
+                     <i class="fas fa-id-badge mr-2 text-xs"></i>
+                     <span>1734</span>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Tanggal Bergabung Section -->
+            <div class="p-6 border-b border-light-green">
+               <h3 class="font-semibold text-white mb-4 flex items-center">
+                  <i class="fas fa-calendar-plus mr-2"></i>
+                  Tanggal Bergabung
+               </h3>
+               <div class="text-sm">
+                  <div class="flex items-center mb-2">
+                     <span class="w-4 h-4 bg-blue-400 rounded-sm mr-3"></span>
+                     <span>05 Juli 2017</span>
+                  </div>
+                  <div class="text-green-200 ml-7">7 Tahun, 6 Bulan</div>
+               </div>
+            </div>
+
+            <!-- Laporan Langsung Section -->
+            <div class="p-6">
+               <h3 class="font-semibold text-white mb-4 flex items-center">
+                  <i class="fas fa-users mr-2"></i>
+                  Laporan Langsung
+               </h3>
+               <div class="space-y-2 text-sm">
+                  <div class="flex items-center">
+                     <span
+                        class="w-2 h-2 bg-green-300 rounded-full mr-3"
+                     ></span>
+                     <span>Keuangan Eksekutif</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span
+                        class="w-2 h-2 bg-green-300 rounded-full mr-3"
+                     ></span>
+                     <span>Sekretaris Eksekutif</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- Main Content -->
+         <div class="flex-1 p-6 bg-gray-50">
+            <!-- Page Header -->
+            <div class="flex items-center justify-between mb-6">
+               <div class="flex items-center">
+                  <div
+                     class="w-8 h-8 bg-gray-200 rounded mr-3 flex items-center justify-center"
+                  >
+                     <i class="fas fa-chart-line text-gray-600"></i>
+                  </div>
+                  <h2 class="text-2xl font-bold text-gray-800">Performa</h2>
+               </div>
+               <div class="flex space-x-2">
+                  <select
+                     class="border border-gray-300 rounded-lg px-3 py-2 text-sm"
+                  >
+                     <option>2023</option>
+                     <option>2022</option>
+                     <option>2021</option>
+                  </select>
+                  <button
+                     class="bg-primary-green hover:bg-light-green text-white px-4 py-2 rounded text-sm font-medium flex items-center"
+                  >
+                     <i class="fas fa-plus mr-2"></i>
+                     Evaluasi Baru
+                  </button>
+               </div>
+            </div>
+
+            <!-- Performance Overview -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+               <div class="bg-white rounded-lg border border-gray-200 p-6">
+                  <div class="flex items-center">
+                     <div
+                        class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4"
+                     >
+                        <i class="fas fa-star text-green-600 text-xl"></i>
+                     </div>
+                     <div>
+                        <h3 class="text-lg font-semibold text-green-600">
+                           Rating Keseluruhan
+                        </h3>
+                        <p class="text-3xl font-bold">4.2</p>
+                        <p class="text-sm text-gray-600">dari 5.0</p>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="bg-white rounded-lg border border-gray-200 p-6">
+                  <div class="flex items-center">
+                     <div
+                        class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4"
+                     >
+                        <i class="fas fa-target text-blue-600 text-xl"></i>
+                     </div>
+                     <div>
+                        <h3 class="text-lg font-semibold text-blue-600">
+                           Target Tercapai
+                        </h3>
+                        <p class="text-3xl font-bold">85%</p>
+                        <p class="text-sm text-gray-600">dari target</p>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="bg-white rounded-lg border border-gray-200 p-6">
+                  <div class="flex items-center">
+                     <div
+                        class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4"
+                     >
+                        <i class="fas fa-trophy text-purple-600 text-xl"></i>
+                     </div>
+                     <div>
+                        <h3 class="text-lg font-semibold text-purple-600">
+                           Pencapaian
+                        </h3>
+                        <p class="text-3xl font-bold">12</p>
+                        <p class="text-sm text-gray-600">penghargaan</p>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="bg-white rounded-lg border border-gray-200 p-6">
+                  <div class="flex items-center">
+                     <div
+                        class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4"
+                     >
+                        <i class="fas fa-chart-bar text-yellow-600 text-xl"></i>
+                     </div>
+                     <div>
+                        <h3 class="text-lg font-semibold text-yellow-600">
+                           Peningkatan
+                        </h3>
+                        <p class="text-3xl font-bold">+15%</p>
+                        <p class="text-sm text-gray-600">dari tahun lalu</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+               <!-- Left Column -->
+               <div class="space-y-8">
+                  <!-- Performance Reviews -->
+                  <div
+                     class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+                  >
+                     <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+                        <h3 class="text-lg font-semibold flex items-center">
+                           <i
+                              class="fas fa-clipboard-list text-gray-400 mr-3"
+                           ></i>
+                           Evaluasi Performa
+                        </h3>
+                     </div>
+                     <div class="p-6">
+                        <div class="space-y-6">
+                           <div class="border-l-4 border-green-400 pl-4">
+                              <div
+                                 class="flex items-center justify-between mb-2"
+                              >
+                                 <h4 class="font-medium">
+                                    Evaluasi Tahunan 2023
+                                 </h4>
+                                 <span
+                                    class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full"
+                                    >Excellent</span
+                                 >
+                              </div>
+                              <p class="text-sm text-gray-600">
+                                 Periode: Jan - Des 2023
+                              </p>
+                              <p class="text-sm text-gray-600">
+                                 Evaluator: Budi Santoso (GM)
+                              </p>
+                              <div class="mt-3 space-y-2">
+                                 <div class="flex justify-between text-sm">
+                                    <span>Kualitas Kerja</span>
+                                    <span class="font-medium">4.5/5</span>
+                                 </div>
+                                 <div class="flex justify-between text-sm">
+                                    <span>Kepemimpinan</span>
+                                    <span class="font-medium">4.2/5</span>
+                                 </div>
+                                 <div class="flex justify-between text-sm">
+                                    <span>Komunikasi</span>
+                                    <span class="font-medium">4.0/5</span>
+                                 </div>
+                                 <div class="flex justify-between text-sm">
+                                    <span>Inisiatif</span>
+                                    <span class="font-medium">4.3/5</span>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="border-l-4 border-blue-400 pl-4">
+                              <div
+                                 class="flex items-center justify-between mb-2"
+                              >
+                                 <h4 class="font-medium">
+                                    Evaluasi Mid-Year 2023
+                                 </h4>
+                                 <span
+                                    class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full"
+                                    >Good</span
+                                 >
+                              </div>
+                              <p class="text-sm text-gray-600">
+                                 Periode: Jan - Jun 2023
+                              </p>
+                              <p class="text-sm text-gray-600">
+                                 Evaluator: Budi Santoso (GM)
+                              </p>
+                              <div class="mt-3 space-y-2">
+                                 <div class="flex justify-between text-sm">
+                                    <span>Overall Rating</span>
+                                    <span class="font-medium">3.8/5</span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Goals & Objectives -->
+                  <div
+                     class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+                  >
+                     <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+                        <h3 class="text-lg font-semibold flex items-center">
+                           <i class="fas fa-bullseye text-gray-400 mr-3"></i>
+                           Target & Objektif 2024
+                        </h3>
+                     </div>
+                     <div class="p-6">
+                        <div class="space-y-4">
+                           <div class="p-4 border border-gray-200 rounded-lg">
+                              <div
+                                 class="flex items-center justify-between mb-2"
+                              >
+                                 <h4 class="font-medium">
+                                    Efisiensi Operasional
+                                 </h4>
+                                 <span
+                                    class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full"
+                                    >90%</span
+                                 >
+                              </div>
+                              <p class="text-sm text-gray-600 mb-2">
+                                 Meningkatkan efisiensi proses administrasi
+                                 sebesar 20%
+                              </p>
+                              <div class="w-full bg-gray-200 rounded-full h-2">
+                                 <div
+                                    class="bg-green-600 h-2 rounded-full"
+                                    style="width: 90%"
+                                 ></div>
+                              </div>
+                              <p class="text-xs text-gray-500 mt-1">
+                                 Target: Desember 2024
+                              </p>
+                           </div>
+
+                           <div class="p-4 border border-gray-200 rounded-lg">
+                              <div
+                                 class="flex items-center justify-between mb-2"
+                              >
+                                 <h4 class="font-medium">Pengembangan Tim</h4>
+                                 <span
+                                    class="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full"
+                                    >65%</span
+                                 >
+                              </div>
+                              <p class="text-sm text-gray-600 mb-2">
+                                 Melatih dan mengembangkan 5 anggota tim
+                              </p>
+                              <div class="w-full bg-gray-200 rounded-full h-2">
+                                 <div
+                                    class="bg-yellow-600 h-2 rounded-full"
+                                    style="width: 65%"
+                                 ></div>
+                              </div>
+                              <p class="text-xs text-gray-500 mt-1">
+                                 Target: Desember 2024
+                              </p>
+                           </div>
+
+                           <div class="p-4 border border-gray-200 rounded-lg">
+                              <div
+                                 class="flex items-center justify-between mb-2"
+                              >
+                                 <h4 class="font-medium">
+                                    Digitalisasi Proses
+                                 </h4>
+                                 <span
+                                    class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full"
+                                    >45%</span
+                                 >
+                              </div>
+                              <p class="text-sm text-gray-600 mb-2">
+                                 Implementasi sistem digital untuk 3 proses
+                                 utama
+                              </p>
+                              <div class="w-full bg-gray-200 rounded-full h-2">
+                                 <div
+                                    class="bg-blue-600 h-2 rounded-full"
+                                    style="width: 45%"
+                                 ></div>
+                              </div>
+                              <p class="text-xs text-gray-500 mt-1">
+                                 Target: Desember 2024
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Right Column -->
+               <div class="space-y-8">
+                  <!-- Skills Assessment -->
+                  <div
+                     class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+                  >
+                     <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+                        <h3 class="text-lg font-semibold flex items-center">
+                           <i class="fas fa-cogs text-gray-400 mr-3"></i>
+                           Penilaian Kompetensi
+                        </h3>
+                     </div>
+                     <div class="p-6">
+                        <div class="space-y-4">
+                           <div>
+                              <div class="flex justify-between mb-2">
+                                 <span class="text-sm font-medium"
+                                    >Kepemimpinan</span
+                                 >
+                                 <span class="text-sm text-gray-600"
+                                    >4.2/5</span
+                                 >
+                              </div>
+                              <div class="w-full bg-gray-200 rounded-full h-2">
+                                 <div
+                                    class="bg-green-600 h-2 rounded-full"
+                                    style="width: 84%"
+                                 ></div>
+                              </div>
+                           </div>
+
+                           <div>
+                              <div class="flex justify-between mb-2">
+                                 <span class="text-sm font-medium"
+                                    >Komunikasi</span
+                                 >
+                                 <span class="text-sm text-gray-600"
+                                    >4.0/5</span
+                                 >
+                              </div>
+                              <div class="w-full bg-gray-200 rounded-full h-2">
+                                 <div
+                                    class="bg-green-600 h-2 rounded-full"
+                                    style="width: 80%"
+                                 ></div>
+                              </div>
+                           </div>
+
+                           <div>
+                              <div class="flex justify-between mb-2">
+                                 <span class="text-sm font-medium"
+                                    >Problem Solving</span
+                                 >
+                                 <span class="text-sm text-gray-600"
+                                    >4.3/5</span
+                                 >
+                              </div>
+                              <div class="w-full bg-gray-200 rounded-full h-2">
+                                 <div
+                                    class="bg-green-600 h-2 rounded-full"
+                                    style="width: 86%"
+                                 ></div>
+                              </div>
+                           </div>
+
+                           <div>
+                              <div class="flex justify-between mb-2">
+                                 <span class="text-sm font-medium"
+                                    >Manajemen Waktu</span
+                                 >
+                                 <span class="text-sm text-gray-600"
+                                    >3.8/5</span
+                                 >
+                              </div>
+                              <div class="w-full bg-gray-200 rounded-full h-2">
+                                 <div
+                                    class="bg-yellow-600 h-2 rounded-full"
+                                    style="width: 76%"
+                                 ></div>
+                              </div>
+                           </div>
+
+                           <div>
+                              <div class="flex justify-between mb-2">
+                                 <span class="text-sm font-medium"
+                                    >Teknologi</span
+                                 >
+                                 <span class="text-sm text-gray-600"
+                                    >3.5/5</span
+                                 >
+                              </div>
+                              <div class="w-full bg-gray-200 rounded-full h-2">
+                                 <div
+                                    class="bg-yellow-600 h-2 rounded-full"
+                                    style="width: 70%"
+                                 ></div>
+                              </div>
+                           </div>
+
+                           <div>
+                              <div class="flex justify-between mb-2">
+                                 <span class="text-sm font-medium"
+                                    >Adaptabilitas</span
+                                 >
+                                 <span class="text-sm text-gray-600"
+                                    >4.1/5</span
+                                 >
+                              </div>
+                              <div class="w-full bg-gray-200 rounded-full h-2">
+                                 <div
+                                    class="bg-green-600 h-2 rounded-full"
+                                    style="width: 82%"
+                                 ></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Achievements -->
+                  <div
+                     class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+                  >
+                     <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+                        <h3 class="text-lg font-semibold flex items-center">
+                           <i class="fas fa-award text-gray-400 mr-3"></i>
+                           Pencapaian & Penghargaan
+                        </h3>
+                     </div>
+                     <div class="p-6">
+                        <div class="space-y-4">
+                           <div
+                              class="flex items-center p-3 bg-yellow-50 rounded-lg"
+                           >
+                              <i
+                                 class="fas fa-trophy text-yellow-600 text-xl mr-4"
+                              ></i>
+                              <div>
+                                 <h4 class="font-medium">
+                                    Employee of the Year 2023
+                                 </h4>
+                                 <p class="text-sm text-gray-600">
+                                    Penghargaan karyawan terbaik
+                                 </p>
+                                 <p class="text-xs text-gray-500">
+                                    Desember 2023
+                                 </p>
+                              </div>
+                           </div>
+
+                           <div
+                              class="flex items-center p-3 bg-blue-50 rounded-lg"
+                           >
+                              <i
+                                 class="fas fa-medal text-blue-600 text-xl mr-4"
+                              ></i>
+                              <div>
+                                 <h4 class="font-medium">
+                                    Best Team Leader Q3 2023
+                                 </h4>
+                                 <p class="text-sm text-gray-600">
+                                    Pemimpin tim terbaik kuartal 3
+                                 </p>
+                                 <p class="text-xs text-gray-500">
+                                    September 2023
+                                 </p>
+                              </div>
+                           </div>
+
+                           <div
+                              class="flex items-center p-3 bg-green-50 rounded-lg"
+                           >
+                              <i
+                                 class="fas fa-star text-green-600 text-xl mr-4"
+                              ></i>
+                              <div>
+                                 <h4 class="font-medium">
+                                    Innovation Award 2022
+                                 </h4>
+                                 <p class="text-sm text-gray-600">
+                                    Inovasi proses administrasi
+                                 </p>
+                                 <p class="text-xs text-gray-500">
+                                    November 2022
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Development Plan -->
+                  <div
+                     class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+                  >
+                     <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+                        <h3 class="text-lg font-semibold flex items-center">
+                           <i class="fas fa-route text-gray-400 mr-3"></i>
+                           Rencana Pengembangan
+                        </h3>
+                     </div>
+                     <div class="p-6">
+                        <div class="space-y-4">
+                           <div
+                              class="p-4 border-l-4 border-blue-400 bg-blue-50"
+                           >
+                              <h4 class="font-medium mb-2">
+                                 Area Pengembangan
+                              </h4>
+                              <ul class="text-sm text-gray-700 space-y-1">
+                                 <li>
+                                    • Peningkatan kemampuan teknologi digital
+                                 </li>
+                                 <li>• Manajemen waktu yang lebih efektif</li>
+                                 <li>• Pengembangan strategic thinking</li>
+                              </ul>
+                           </div>
+
+                           <div
+                              class="p-4 border-l-4 border-green-400 bg-green-50"
+                           >
+                              <h4 class="font-medium mb-2">
+                                 Rekomendasi Pelatihan
+                              </h4>
+                              <ul class="text-sm text-gray-700 space-y-1">
+                                 <li>• Digital Leadership Program</li>
+                                 <li>• Time Management Workshop</li>
+                                 <li>• Strategic Planning Course</li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <style>
+         .nav-tab.active {
+            border-bottom-color: white !important;
+            background-color: rgba(255, 255, 255, 0.1);
+         }
+         .nav-tab:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+         }
+      </style>
+   </body>
+</html>

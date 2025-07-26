@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="id">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Kehadiran - Sistem Manajemen Karyawan</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      />
+      <script>
+         tailwind.config = {
+            theme: {
+               extend: {
+                  colors: {
+                     "primary-green": "#2d5a3d",
+                     "light-green": "#4a7c59",
+                  },
+               },
+            },
+         };
+      </script>
+   </head>
+   <body class="bg-gray-50 min-h-screen">
+      <!-- Header with Employee Info -->
+      <div class="bg-primary-green text-white">
+         <div class="flex items-center p-6">
+            <!-- Employee Photo -->
+            <div class="bg-white rounded-lg p-2 mr-6">
+               <img
+                  src="/placeholder.svg?height=120&width=100"
+                  alt="Arif Wibisono"
+                  class="w-24 h-32 rounded object-cover"
+               />
+            </div>
+            <!-- Employee Name and Title -->
+            <div class="flex-1">
+               <h1 class="text-4xl font-bold mb-2">Arif Wibisono</h1>
+               <p class="text-xl text-green-200">Adm. Sr. Manager</p>
+            </div>
+         </div>
+
+         <!-- Navigation Tabs -->
+         <div class="border-t border-light-green">
+            <nav class="flex overflow-x-auto px-6">
+               <a
+                  href="dashboard.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-user mr-2"></i>
+                  Profil
+               </a>
+               <a
+                  href="pekerjaan.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-briefcase mr-2"></i>
+                  Pekerjaan
+               </a>
+               <a
+                  href="kehadiran.html"
+                  class="nav-tab active px-6 py-4 whitespace-nowrap border-b-2 border-white text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-calendar-check mr-2"></i>
+                  Kehadiran
+               </a>
+               <a
+                  href="dokumen.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-file-alt mr-2"></i>
+                  Dokumen
+               </a>
+               <a
+                  href="kesehatan.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-heartbeat mr-2"></i>
+                  Riwat Kesehatan
+               </a>
+               <a
+                  href="performa.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-chart-line mr-2"></i>
+                  Performa
+               </a>
+               <a
+                  href="pelatihan.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-graduation-cap mr-2"></i>
+                  Pelatihan
+               </a>
+               <a
+                  href="organisasi.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-sitemap mr-2"></i>
+                  Struktur Organisasi
+               </a>
+               <a
+                  href="catatan.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-sticky-note mr-2"></i>
+                  Catatan
+               </a>
+               <a
+                  href="lainnya.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-ellipsis-h mr-2"></i>
+                  Lainnya
+               </a>
+            </nav>
+         </div>
+      </div>
+
+      <!-- Main Content Area -->
+      <div class="flex">
+         <!-- Left Sidebar -->
+         <div class="w-80 bg-primary-green text-white">
+            <!-- Area Section -->
+            <div class="p-6 border-b border-light-green">
+               <h3 class="font-semibold text-white mb-4 flex items-center">
+                  <i class="fas fa-map-marker-alt mr-2"></i>
+                  Area
+               </h3>
+               <div class="space-y-3 text-sm">
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-green-400 rounded-sm mr-3"></span>
+                     <i class="fas fa-phone mr-2 text-xs"></i>
+                     <span>+62-21-2578-4672</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-gray-300 rounded-sm mr-3"></span>
+                     <i class="fas fa-mobile-alt mr-2 text-xs"></i>
+                     <span>+62-811-8000-504</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-blue-400 rounded-sm mr-3"></span>
+                     <i class="fas fa-envelope mr-2 text-xs"></i>
+                     <span>arifwibisono@gmail.co.id</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-red-400 rounded-sm mr-3"></span>
+                     <i class="fas fa-building mr-2 text-xs"></i>
+                     <span>HBCA</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-purple-400 rounded-sm mr-3"></span>
+                     <i class="fas fa-university mr-2 text-xs"></i>
+                     <span>UBC</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-yellow-400 rounded-sm mr-3"></span>
+                     <i class="fas fa-id-badge mr-2 text-xs"></i>
+                     <span>1734</span>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Tanggal Bergabung Section -->
+            <div class="p-6 border-b border-light-green">
+               <h3 class="font-semibold text-white mb-4 flex items-center">
+                  <i class="fas fa-calendar-plus mr-2"></i>
+                  Tanggal Bergabung
+               </h3>
+               <div class="text-sm">
+                  <div class="flex items-center mb-2">
+                     <span class="w-4 h-4 bg-blue-400 rounded-sm mr-3"></span>
+                     <span>05 Juli 2017</span>
+                  </div>
+                  <div class="text-green-200 ml-7">7 Tahun, 6 Bulan</div>
+               </div>
+            </div>
+
+            <!-- Laporan Langsung Section -->
+            <div class="p-6">
+               <h3 class="font-semibold text-white mb-4 flex items-center">
+                  <i class="fas fa-users mr-2"></i>
+                  Laporan Langsung
+               </h3>
+               <div class="space-y-2 text-sm">
+                  <div class="flex items-center">
+                     <span
+                        class="w-2 h-2 bg-green-300 rounded-full mr-3"
+                     ></span>
+                     <span>Keuangan Eksekutif</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span
+                        class="w-2 h-2 bg-green-300 rounded-full mr-3"
+                     ></span>
+                     <span>Sekretaris Eksekutif</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- Main Content -->
+         <div class="flex-1 p-6 bg-gray-50">
+            <!-- Page Header -->
+            <div class="flex items-center justify-between mb-6">
+               <div class="flex items-center">
+                  <div
+                     class="w-8 h-8 bg-gray-200 rounded mr-3 flex items-center justify-center"
+                  >
+                     <i class="fas fa-calendar-check text-gray-600"></i>
+                  </div>
+                  <h2 class="text-2xl font-bold text-gray-800">Kehadiran</h2>
+               </div>
+               <div class="flex space-x-2">
+                  <select
+                     class="border border-gray-300 rounded-lg px-3 py-2 text-sm"
+                  >
+                     <option>Januari 2024</option>
+                     <option>Februari 2024</option>
+                     <option>Maret 2024</option>
+                  </select>
+                  <button
+                     class="bg-primary-green hover:bg-light-green text-white px-4 py-2 rounded text-sm font-medium flex items-center"
+                  >
+                     <i class="fas fa-download mr-2"></i>
+                     Export
+                  </button>
+               </div>
+            </div>
+
+            <!-- Summary Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+               <div class="bg-white rounded-lg border border-gray-200 p-6">
+                  <div class="flex items-center">
+                     <div
+                        class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4"
+                     >
+                        <i
+                           class="fas fa-check-circle text-green-600 text-xl"
+                        ></i>
+                     </div>
+                     <div>
+                        <h3 class="text-lg font-semibold text-green-600">
+                           Hadir
+                        </h3>
+                        <p class="text-3xl font-bold">22</p>
+                        <p class="text-sm text-gray-600">hari</p>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="bg-white rounded-lg border border-gray-200 p-6">
+                  <div class="flex items-center">
+                     <div
+                        class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4"
+                     >
+                        <i class="fas fa-clock text-yellow-600 text-xl"></i>
+                     </div>
+                     <div>
+                        <h3 class="text-lg font-semibold text-yellow-600">
+                           Terlambat
+                        </h3>
+                        <p class="text-3xl font-bold">3</p>
+                        <p class="text-sm text-gray-600">hari</p>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="bg-white rounded-lg border border-gray-200 p-6">
+                  <div class="flex items-center">
+                     <div
+                        class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4"
+                     >
+                        <i class="fas fa-times-circle text-red-600 text-xl"></i>
+                     </div>
+                     <div>
+                        <h3 class="text-lg font-semibold text-red-600">
+                           Tidak Hadir
+                        </h3>
+                        <p class="text-3xl font-bold">1</p>
+                        <p class="text-sm text-gray-600">hari</p>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="bg-white rounded-lg border border-gray-200 p-6">
+                  <div class="flex items-center">
+                     <div
+                        class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4"
+                     >
+                        <i class="fas fa-plane text-blue-600 text-xl"></i>
+                     </div>
+                     <div>
+                        <h3 class="text-lg font-semibold text-blue-600">
+                           Cuti
+                        </h3>
+                        <p class="text-3xl font-bold">2</p>
+                        <p class="text-sm text-gray-600">hari</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Attendance Table -->
+            <div
+               class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+            >
+               <div
+                  class="px-6 py-4 border-b border-gray-200 flex items-center justify-between"
+               >
+                  <h3 class="text-lg font-semibold flex items-center">
+                     <i class="fas fa-table text-gray-400 mr-3"></i>
+                     Detail Kehadiran
+                  </h3>
+                  <div class="flex items-center space-x-2">
+                     <input
+                        type="text"
+                        placeholder="Cari tanggal..."
+                        class="border border-gray-300 rounded px-3 py-1 text-sm"
+                     />
+                     <button
+                        class="bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded text-sm"
+                     >
+                        <i class="fas fa-search"></i>
+                     </button>
+                  </div>
+               </div>
+               <div class="overflow-x-auto">
+                  <table class="w-full">
+                     <thead class="bg-gray-50">
+                        <tr>
+                           <th
+                              class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase"
+                           >
+                              <i class="fas fa-calendar mr-2"></i>Tanggal
+                           </th>
+                           <th
+                              class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase"
+                           >
+                              <i class="fas fa-sign-in-alt mr-2"></i>Masuk
+                           </th>
+                           <th
+                              class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase"
+                           >
+                              <i class="fas fa-sign-out-alt mr-2"></i>Keluar
+                           </th>
+                           <th
+                              class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase"
+                           >
+                              <i class="fas fa-hourglass-half mr-2"></i>Total
+                              Jam
+                           </th>
+                           <th
+                              class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase"
+                           >
+                              <i class="fas fa-info-circle mr-2"></i>Status
+                           </th>
+                           <th
+                              class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase"
+                           >
+                              <i class="fas fa-sticky-note mr-2"></i>Keterangan
+                           </th>
+                        </tr>
+                     </thead>
+                     <tbody class="divide-y divide-gray-200">
+                        <tr>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm">
+                              01 Jan 2024
+                           </td>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm">
+                              08:00
+                           </td>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm">
+                              17:00
+                           </td>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm">
+                              9 jam
+                           </td>
+                           <td class="px-6 py-4 whitespace-nowrap">
+                              <span
+                                 class="px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full flex items-center w-fit"
+                              >
+                                 <i class="fas fa-check-circle mr-1"></i>
+                                 Hadir
+                              </span>
+                           </td>
+                           <td
+                              class="px-6 py-4 whitespace-nowrap text-sm text-gray-600"
+                           >
+                              -
+                           </td>
+                        </tr>
+                        <tr>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm">
+                              02 Jan 2024
+                           </td>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm">
+                              08:15
+                           </td>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm">
+                              17:00
+                           </td>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm">
+                              8.75 jam
+                           </td>
+                           <td class="px-6 py-4 whitespace-nowrap">
+                              <span
+                                 class="px-2 py-1 text-xs font-medium bg-yellow-100 text-yellow-800 rounded-full flex items-center w-fit"
+                              >
+                                 <i class="fas fa-clock mr-1"></i>
+                                 Terlambat
+                              </span>
+                           </td>
+                           <td
+                              class="px-6 py-4 whitespace-nowrap text-sm text-gray-600"
+                           >
+                              Macet
+                           </td>
+                        </tr>
+                        <tr>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm">
+                              03 Jan 2024
+                           </td>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm">
+                              -
+                           </td>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm">
+                              -
+                           </td>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm">
+                              0 jam
+                           </td>
+                           <td class="px-6 py-4 whitespace-nowrap">
+                              <span
+                                 class="px-2 py-1 text-xs font-medium bg-red-100 text-red-800 rounded-full flex items-center w-fit"
+                              >
+                                 <i class="fas fa-times-circle mr-1"></i>
+                                 Tidak Hadir
+                              </span>
+                           </td>
+                           <td
+                              class="px-6 py-4 whitespace-nowrap text-sm text-gray-600"
+                           >
+                              Sakit
+                           </td>
+                        </tr>
+                        <tr>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm">
+                              04 Jan 2024
+                           </td>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm">
+                              -
+                           </td>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm">
+                              -
+                           </td>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm">
+                              0 jam
+                           </td>
+                           <td class="px-6 py-4 whitespace-nowrap">
+                              <span
+                                 class="px-2 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded-full flex items-center w-fit"
+                              >
+                                 <i class="fas fa-plane mr-1"></i>
+                                 Cuti
+                              </span>
+                           </td>
+                           <td
+                              class="px-6 py-4 whitespace-nowrap text-sm text-gray-600"
+                           >
+                              Cuti Tahunan
+                           </td>
+                        </tr>
+                        <tr>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm">
+                              05 Jan 2024
+                           </td>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm">
+                              07:55
+                           </td>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm">
+                              17:05
+                           </td>
+                           <td class="px-6 py-4 whitespace-nowrap text-sm">
+                              9.17 jam
+                           </td>
+                           <td class="px-6 py-4 whitespace-nowrap">
+                              <span
+                                 class="px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full flex items-center w-fit"
+                              >
+                                 <i class="fas fa-check-circle mr-1"></i>
+                                 Hadir
+                              </span>
+                           </td>
+                           <td
+                              class="px-6 py-4 whitespace-nowrap text-sm text-gray-600"
+                           >
+                              Lembur
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+
+               <!-- Pagination -->
+               <div
+                  class="px-6 py-4 border-t border-gray-200 flex items-center justify-between"
+               >
+                  <div class="text-sm text-gray-600">
+                     Menampilkan 1-5 dari 28 data
+                  </div>
+                  <div class="flex space-x-2">
+                     <button
+                        class="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50"
+                     >
+                        <i class="fas fa-chevron-left mr-1"></i>
+                        Sebelumnya
+                     </button>
+                     <button
+                        class="px-3 py-1 bg-primary-green text-white rounded text-sm"
+                     >
+                        1
+                     </button>
+                     <button
+                        class="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50"
+                     >
+                        2
+                     </button>
+                     <button
+                        class="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50"
+                     >
+                        3
+                     </button>
+                     <button
+                        class="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50"
+                     >
+                        Selanjutnya
+                        <i class="fas fa-chevron-right ml-1"></i>
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <style>
+         .nav-tab.active {
+            border-bottom-color: white !important;
+            background-color: rgba(255, 255, 255, 0.1);
+         }
+         .nav-tab:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+         }
+      </style>
+   </body>
+</html>

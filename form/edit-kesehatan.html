@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="id">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Edit Riwayat Kesehatan - Sistem Manajemen Karyawan</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      />
+      <script>
+         tailwind.config = {
+            theme: {
+               extend: {
+                  colors: {
+                     "primary-green": "#2d5a3d",
+                     "light-green": "#4a7c59",
+                  },
+               },
+            },
+         };
+      </script>
+   </head>
+   <body class="bg-gray-50 min-h-screen">
+      <!-- Header with Employee Info -->
+      <div class="bg-primary-green text-white">
+         <div class="flex items-center p-6">
+            <!-- Employee Photo -->
+            <div class="bg-white rounded-lg p-2 mr-6">
+               <img
+                  src="/placeholder.svg?height=120&width=100"
+                  alt="Arif Wibisono"
+                  class="w-24 h-32 rounded object-cover"
+               />
+            </div>
+            <!-- Employee Name and Title -->
+            <div class="flex-1">
+               <h1 class="text-4xl font-bold mb-2">Arif Wibisono</h1>
+               <p class="text-xl text-green-200">Adm. Sr. Manager</p>
+            </div>
+         </div>
+
+         <!-- Navigation Tabs -->
+         <div class="border-t border-light-green">
+            <nav class="flex overflow-x-auto px-6">
+               <a
+                  href="dashboard.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-user mr-2"></i>
+                  Profil
+               </a>
+               <a
+                  href="pekerjaan.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-briefcase mr-2"></i>
+                  Pekerjaan
+               </a>
+               <a
+                  href="kehadiran.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-calendar-check mr-2"></i>
+                  Kehadiran
+               </a>
+               <a
+                  href="dokumen.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-file-alt mr-2"></i>
+                  Dokumen
+               </a>
+               <a
+                  href="kesehatan.html"
+                  class="nav-tab active px-6 py-4 whitespace-nowrap border-b-2 border-white text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-heartbeat mr-2"></i>
+                  Riwat Kesehatan
+               </a>
+               <a
+                  href="performa.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-chart-line mr-2"></i>
+                  Performa
+               </a>
+               <a
+                  href="pelatihan.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-graduation-cap mr-2"></i>
+                  Pelatihan
+               </a>
+               <a
+                  href="organisasi.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-sitemap mr-2"></i>
+                  Struktur Organisasi
+               </a>
+               <a
+                  href="catatan.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-sticky-note mr-2"></i>
+                  Catatan
+               </a>
+               <a
+                  href="lainnya.html"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+               >
+                  <i class="fas fa-ellipsis-h mr-2"></i>
+                  Lainnya
+               </a>
+            </nav>
+         </div>
+      </div>
+
+      <!-- Main Content Area -->
+      <div class="flex">
+         <!-- Left Sidebar -->
+         <div class="w-80 bg-primary-green text-white">
+            <!-- Area Section -->
+            <div class="p-6 border-b border-light-green">
+               <h3 class="font-semibold text-white mb-4 flex items-center">
+                  <i class="fas fa-map-marker-alt mr-2"></i>
+                  Area
+               </h3>
+               <div class="space-y-3 text-sm">
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-green-400 rounded-sm mr-3"></span>
+                     <i class="fas fa-phone mr-2 text-xs"></i>
+                     <span>+62-21-2578-4672</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-gray-300 rounded-sm mr-3"></span>
+                     <i class="fas fa-mobile-alt mr-2 text-xs"></i>
+                     <span>+62-811-8000-504</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-blue-400 rounded-sm mr-3"></span>
+                     <i class="fas fa-envelope mr-2 text-xs"></i>
+                     <span>arifwibisono@gmail.co.id</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-red-400 rounded-sm mr-3"></span>
+                     <i class="fas fa-building mr-2 text-xs"></i>
+                     <span>HBCA</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-purple-400 rounded-sm mr-3"></span>
+                     <i class="fas fa-university mr-2 text-xs"></i>
+                     <span>UBC</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span class="w-4 h-4 bg-yellow-400 rounded-sm mr-3"></span>
+                     <i class="fas fa-id-badge mr-2 text-xs"></i>
+                     <span>1734</span>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Tanggal Bergabung Section -->
+            <div class="p-6 border-b border-light-green">
+               <h3 class="font-semibold text-white mb-4 flex items-center">
+                  <i class="fas fa-calendar-plus mr-2"></i>
+                  Tanggal Bergabung
+               </h3>
+               <div class="text-sm">
+                  <div class="flex items-center mb-2">
+                     <span class="w-4 h-4 bg-blue-400 rounded-sm mr-3"></span>
+                     <span>05 Juli 2017</span>
+                  </div>
+                  <div class="text-green-200 ml-7">7 Tahun, 6 Bulan</div>
+               </div>
+            </div>
+
+            <!-- Laporan Langsung Section -->
+            <div class="p-6">
+               <h3 class="font-semibold text-white mb-4 flex items-center">
+                  <i class="fas fa-users mr-2"></i>
+                  Laporan Langsung
+               </h3>
+               <div class="space-y-2 text-sm">
+                  <div class="flex items-center">
+                     <span
+                        class="w-2 h-2 bg-green-300 rounded-full mr-3"
+                     ></span>
+                     <span>Keuangan Eksekutif</span>
+                  </div>
+                  <div class="flex items-center">
+                     <span
+                        class="w-2 h-2 bg-green-300 rounded-full mr-3"
+                     ></span>
+                     <span>Sekretaris Eksekutif</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- Main Content -->
+         <div class="flex-1 p-6 bg-gray-50">
+            <!-- Page Header -->
+            <div class="flex items-center justify-between mb-6">
+               <div class="flex items-center">
+                  <div
+                     class="w-8 h-8 bg-gray-200 rounded mr-3 flex items-center justify-center"
+                  >
+                     <i class="fas fa-edit text-gray-600"></i>
+                  </div>
+                  <h2 class="text-2xl font-bold text-gray-800">
+                     Edit Riwayat Kesehatan
+                  </h2>
+               </div>
+               <div class="flex space-x-2">
+                  <a
+                     href="kesehatan.html"
+                     class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded text-sm font-medium flex items-center"
+                  >
+                     <i class="fas fa-times mr-2"></i>
+                     Batal
+                  </a>
+                  <button
+                     class="bg-primary-green hover:bg-light-green text-white px-4 py-2 rounded text-sm font-medium flex items-center"
+                  >
+                     <i class="fas fa-save mr-2"></i>
+                     Simpan Perubahan
+                  </button>
+               </div>
+            </div>
+
+            <!-- Health Information Form -->
+            <div
+               class="bg-white rounded-lg border border-gray-200 overflow-hidden mb-6"
+            >
+               <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+                  <h3 class="text-lg font-semibold flex items-center">
+                     <i class="fas fa-user-md text-gray-400 mr-3"></i>
+                     Informasi Kesehatan Umum
+                  </h3>
+               </div>
+               <div class="p-6">
+                  <form class="space-y-6">
+                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Golongan Darah</label
+                           >
+                           <select
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           >
+                              <option value="">Pilih Golongan Darah</option>
+                              <option value="A" selected>A</option>
+                              <option value="B">B</option>
+                              <option value="AB">AB</option>
+                              <option value="O">O</option>
+                           </select>
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Tinggi Badan (cm)</label
+                           >
+                           <input
+                              type="number"
+                              value="175"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           />
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Berat Badan (kg)</label
+                           >
+                           <input
+                              type="number"
+                              value="72"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           />
+                        </div>
+                     </div>
+
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Kontak Darurat</label
+                           >
+                           <input
+                              type="text"
+                              value="Dr. Sarah Wijaya"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                              placeholder="Nama kontak darurat"
+                           />
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Nomor Kontak Darurat</label
+                           >
+                           <input
+                              type="tel"
+                              value="+62-811-9876-543"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                              placeholder="Nomor telepon"
+                           />
+                        </div>
+                     </div>
+
+                     <div>
+                        <label
+                           class="block text-sm font-medium text-gray-700 mb-2"
+                           >Alergi</label
+                        >
+                        <textarea
+                           rows="3"
+                           class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           placeholder="Tuliskan alergi yang dimiliki..."
+                        >
+Tidak ada alergi khusus</textarea
+                        >
+                     </div>
+
+                     <div>
+                        <label
+                           class="block text-sm font-medium text-gray-700 mb-2"
+                           >Riwayat Penyakit</label
+                        >
+                        <textarea
+                           rows="3"
+                           class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           placeholder="Tuliskan riwayat penyakit..."
+                        >
+Tidak ada riwayat penyakit serius</textarea
+                        >
+                     </div>
+                  </form>
+               </div>
+            </div>
+
+            <!-- Medical Checkup Records -->
+            <div
+               class="bg-white rounded-lg border border-gray-200 overflow-hidden mb-6"
+            >
+               <div
+                  class="bg-gray-50 px-6 py-4 border-b border-gray-200 flex items-center justify-between"
+               >
+                  <h3 class="text-lg font-semibold flex items-center">
+                     <i class="fas fa-clipboard-list text-gray-400 mr-3"></i>
+                     Riwayat Medical Check Up
+                  </h3>
+                  <button
+                     class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium flex items-center"
+                     onclick="openAddCheckupModal()"
+                  >
+                     <i class="fas fa-plus mr-2"></i>
+                     Tambah Check Up
+                  </button>
+               </div>
+               <div class="p-6">
+                  <div class="space-y-4">
+                     <!-- Checkup Record 1 -->
+                     <div
+                        class="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 transition-colors"
+                     >
+                        <div class="flex items-center justify-between mb-3">
+                           <div class="flex items-center space-x-3">
+                              <div
+                                 class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center"
+                              >
+                                 <i class="fas fa-heartbeat text-green-600"></i>
+                              </div>
+                              <div>
+                                 <h4 class="font-semibold text-gray-800">
+                                    Medical Check Up Tahunan 2024
+                                 </h4>
+                                 <p class="text-sm text-gray-600">
+                                    03 Januari 2024 • RS. Jakarta Medical Center
+                                 </p>
+                              </div>
+                           </div>
+                           <span
+                              class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full"
+                              >Sehat</span
+                           >
+                        </div>
+                        <div
+                           class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm"
+                        >
+                           <div>
+                              <span class="text-gray-500">Tekanan Darah:</span>
+                              <span class="block font-medium">120/80 mmHg</span>
+                           </div>
+                           <div>
+                              <span class="text-gray-500">Kolesterol:</span>
+                              <span class="block font-medium">180 mg/dL</span>
+                           </div>
+                           <div>
+                              <span class="text-gray-500">Gula Darah:</span>
+                              <span class="block font-medium">95 mg/dL</span>
+                           </div>
+                           <div>
+                              <span class="text-gray-500">BMI:</span>
+                              <span class="block font-medium">23.5</span>
+                           </div>
+                        </div>
+                        <div class="mt-3 flex justify-end space-x-2">
+                           <button
+                              class="text-blue-600 hover:text-blue-800 text-sm"
+                              onclick="editCheckup(1)"
+                           >
+                              <i class="fas fa-edit mr-1"></i>
+                              Edit
+                           </button>
+                           <button
+                              class="text-red-600 hover:text-red-800 text-sm"
+                              onclick="deleteCheckup(1)"
+                           >
+                              <i class="fas fa-trash mr-1"></i>
+                              Hapus
+                           </button>
+                        </div>
+                     </div>
+
+                     <!-- Checkup Record 2 -->
+                     <div
+                        class="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 transition-colors"
+                     >
+                        <div class="flex items-center justify-between mb-3">
+                           <div class="flex items-center space-x-3">
+                              <div
+                                 class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center"
+                              >
+                                 <i class="fas fa-heartbeat text-green-600"></i>
+                              </div>
+                              <div>
+                                 <h4 class="font-semibold text-gray-800">
+                                    Medical Check Up Tahunan 2023
+                                 </h4>
+                                 <p class="text-sm text-gray-600">
+                                    15 Januari 2023 • RS. Jakarta Medical Center
+                                 </p>
+                              </div>
+                           </div>
+                           <span
+                              class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full"
+                              >Sehat</span
+                           >
+                        </div>
+                        <div
+                           class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm"
+                        >
+                           <div>
+                              <span class="text-gray-500">Tekanan Darah:</span>
+                              <span class="block font-medium">118/78 mmHg</span>
+                           </div>
+                           <div>
+                              <span class="text-gray-500">Kolesterol:</span>
+                              <span class="block font-medium">175 mg/dL</span>
+                           </div>
+                           <div>
+                              <span class="text-gray-500">Gula Darah:</span>
+                              <span class="block font-medium">92 mg/dL</span>
+                           </div>
+                           <div>
+                              <span class="text-gray-500">BMI:</span>
+                              <span class="block font-medium">23.2</span>
+                           </div>
+                        </div>
+                        <div class="mt-3 flex justify-end space-x-2">
+                           <button
+                              class="text-blue-600 hover:text-blue-800 text-sm"
+                              onclick="editCheckup(2)"
+                           >
+                              <i class="fas fa-edit mr-1"></i>
+                              Edit
+                           </button>
+                           <button
+                              class="text-red-600 hover:text-red-800 text-sm"
+                              onclick="deleteCheckup(2)"
+                           >
+                              <i class="fas fa-trash mr-1"></i>
+                              Hapus
+                           </button>
+                        </div>
+                     </div>
+
+                     <!-- Checkup Record 3 - with warning -->
+                     <div
+                        class="border border-yellow-200 rounded-lg p-4 hover:bg-yellow-50 transition-colors"
+                     >
+                        <div class="flex items-center justify-between mb-3">
+                           <div class="flex items-center space-x-3">
+                              <div
+                                 class="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center"
+                              >
+                                 <i
+                                    class="fas fa-exclamation-triangle text-yellow-600"
+                                 ></i>
+                              </div>
+                              <div>
+                                 <h4 class="font-semibold text-gray-800">
+                                    Medical Check Up Tahunan 2022
+                                 </h4>
+                                 <p class="text-sm text-gray-600">
+                                    20 Januari 2022 • RS. Jakarta Medical Center
+                                 </p>
+                              </div>
+                           </div>
+                           <span
+                              class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full"
+                              >Perlu Perhatian</span
+                           >
+                        </div>
+                        <div
+                           class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm"
+                        >
+                           <div>
+                              <span class="text-gray-500">Tekanan Darah:</span>
+                              <span class="block font-medium text-yellow-600"
+                                 >135/85 mmHg</span
+                              >
+                           </div>
+                           <div>
+                              <span class="text-gray-500">Kolesterol:</span>
+                              <span class="block font-medium text-yellow-600"
+                                 >220 mg/dL</span
+                              >
+                           </div>
+                           <div>
+                              <span class="text-gray-500">Gula Darah:</span>
+                              <span class="block font-medium">88 mg/dL</span>
+                           </div>
+                           <div>
+                              <span class="text-gray-500">BMI:</span>
+                              <span class="block font-medium">23.8</span>
+                           </div>
+                        </div>
+                        <div
+                           class="mt-3 text-sm text-yellow-700 bg-yellow-50 p-2 rounded"
+                        >
+                           <i class="fas fa-info-circle mr-1"></i>
+                           Rekomendasi: Kontrol tekanan darah dan kolesterol,
+                           diet rendah garam dan lemak
+                        </div>
+                        <div class="mt-3 flex justify-end space-x-2">
+                           <button
+                              class="text-blue-600 hover:text-blue-800 text-sm"
+                              onclick="editCheckup(3)"
+                           >
+                              <i class="fas fa-edit mr-1"></i>
+                              Edit
+                           </button>
+                           <button
+                              class="text-red-600 hover:text-red-800 text-sm"
+                              onclick="deleteCheckup(3)"
+                           >
+                              <i class="fas fa-trash mr-1"></i>
+                              Hapus
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Health Insurance -->
+            <div
+               class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+            >
+               <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+                  <h3 class="text-lg font-semibold flex items-center">
+                     <i class="fas fa-shield-alt text-gray-400 mr-3"></i>
+                     Asuransi Kesehatan
+                  </h3>
+               </div>
+               <div class="p-6">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                     <div>
+                        <label
+                           class="block text-sm font-medium text-gray-700 mb-2"
+                           >Nama Asuransi</label
+                        >
+                        <input
+                           type="text"
+                           value="BPJS Kesehatan"
+                           class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                        />
+                     </div>
+                     <div>
+                        <label
+                           class="block text-sm font-medium text-gray-700 mb-2"
+                           >Nomor Asuransi</label
+                        >
+                        <input
+                           type="text"
+                           value="0001234567890"
+                           class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                        />
+                     </div>
+                     <div>
+                        <label
+                           class="block text-sm font-medium text-gray-700 mb-2"
+                           >Tanggal Mulai</label
+                        >
+                        <input
+                           type="date"
+                           value="2017-07-05"
+                           class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                        />
+                     </div>
+                     <div>
+                        <label
+                           class="block text-sm font-medium text-gray-700 mb-2"
+                           >Tanggal Berakhir</label
+                        >
+                        <input
+                           type="date"
+                           value="2025-07-05"
+                           class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                        />
+                     </div>
+                  </div>
+
+                  <div class="mt-6">
+                     <h4 class="font-semibold text-gray-800 mb-3">
+                        Asuransi Tambahan
+                     </h4>
+                     <div class="space-y-3">
+                        <div
+                           class="flex items-center justify-between p-3 border border-gray-200 rounded-lg"
+                        >
+                           <div>
+                              <span class="font-medium"
+                                 >Asuransi Kesehatan Swasta</span
+                              >
+                              <p class="text-sm text-gray-600">
+                                 Allianz Care - No: AC-2024-001234
+                              </p>
+                           </div>
+                           <button class="text-red-600 hover:text-red-800">
+                              <i class="fas fa-trash"></i>
+                           </button>
+                        </div>
+                        <button
+                           class="w-full border-2 border-dashed border-gray-300 rounded-lg p-3 text-gray-600 hover:border-primary-green hover:text-primary-green transition-colors"
+                        >
+                           <i class="fas fa-plus mr-2"></i>
+                           Tambah Asuransi
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Add Checkup Modal -->
+      <div
+         id="checkup-modal"
+         class="fixed inset-0 bg-black bg-opacity-50 hidden z-50"
+      >
+         <div class="flex items-center justify-center min-h-screen p-4">
+            <div
+               class="bg-white rounded-lg max-w-2xl w-full max-h-screen overflow-y-auto"
+            >
+               <div
+                  class="bg-gray-50 px-6 py-4 border-b border-gray-200 flex items-center justify-between"
+               >
+                  <h3 class="text-lg font-semibold">Tambah Medical Check Up</h3>
+                  <button
+                     id="close-checkup-modal"
+                     class="text-gray-400 hover:text-gray-600"
+                  >
+                     <i class="fas fa-times text-xl"></i>
+                  </button>
+               </div>
+               <div class="p-6">
+                  <form class="space-y-4">
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Tanggal Check Up *</label
+                           >
+                           <input
+                              type="date"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                              required
+                           />
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Rumah Sakit/Klinik *</label
+                           >
+                           <input
+                              type="text"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                              placeholder="Nama rumah sakit"
+                              required
+                           />
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Tekanan Darah</label
+                           >
+                           <input
+                              type="text"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                              placeholder="contoh: 120/80 mmHg"
+                           />
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Kolesterol (mg/dL)</label
+                           >
+                           <input
+                              type="number"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                              placeholder="contoh: 180"
+                           />
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Gula Darah (mg/dL)</label
+                           >
+                           <input
+                              type="number"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                              placeholder="contoh: 95"
+                           />
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >BMI</label
+                           >
+                           <input
+                              type="number"
+                              step="0.1"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                              placeholder="contoh: 23.5"
+                           />
+                        </div>
+                     </div>
+                     <div>
+                        <label
+                           class="block text-sm font-medium text-gray-700 mb-2"
+                           >Status Kesehatan</label
+                        >
+                        <select
+                           class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                        >
+                           <option value="sehat">Sehat</option>
+                           <option value="perlu_perhatian">
+                              Perlu Perhatian
+                           </option>
+                           <option value="tidak_sehat">Tidak Sehat</option>
+                        </select>
+                     </div>
+                     <div>
+                        <label
+                           class="block text-sm font-medium text-gray-700 mb-2"
+                           >Catatan/Rekomendasi</label
+                        >
+                        <textarea
+                           rows="3"
+                           class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           placeholder="Tambahkan catatan atau rekomendasi dokter..."
+                        ></textarea>
+                     </div>
+                     <div class="flex justify-end space-x-3 pt-4">
+                        <button
+                           type="button"
+                           id="cancel-checkup"
+                           class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded text-sm font-medium"
+                        >
+                           Batal
+                        </button>
+                        <button
+                           type="submit"
+                           class="bg-primary-green hover:bg-light-green text-white px-4 py-2 rounded text-sm font-medium"
+                        >
+                           Simpan
+                        </button>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <style>
+         .nav-tab.active {
+            border-bottom-color: white !important;
+            background-color: rgba(255, 255, 255, 0.1);
+         }
+         .nav-tab:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+         }
+      </style>
+
+      <script>
+         document.addEventListener("DOMContentLoaded", function () {
+            const checkupModal = document.getElementById("checkup-modal");
+            const closeCheckupModalBtn = document.getElementById(
+               "close-checkup-modal"
+            );
+            const cancelCheckupBtn = document.getElementById("cancel-checkup");
+
+            // Modal functions
+            window.openAddCheckupModal = function () {
+               checkupModal.classList.remove("hidden");
+            };
+
+            window.editCheckup = function (id) {
+               // Populate modal with existing data for editing
+               checkupModal.classList.remove("hidden");
+               // Add logic to populate form with existing data
+            };
+
+            window.deleteCheckup = function (id) {
+               if (
+                  confirm(
+                     "Apakah Anda yakin ingin menghapus data medical check up ini?"
+                  )
+               ) {
+                  alert("Data medical check up berhasil dihapus");
+                  // Add delete logic here
+               }
+            };
+
+            // Close modal events
+            closeCheckupModalBtn.addEventListener("click", () => {
+               checkupModal.classList.add("hidden");
+            });
+
+            cancelCheckupBtn.addEventListener("click", () => {
+               checkupModal.classList.add("hidden");
+            });
+
+            // Close modal when clicking outside
+            checkupModal.addEventListener("click", (e) => {
+               if (e.target === checkupModal) {
+                  checkupModal.classList.add("hidden");
+               }
+            });
+
+            // Form submission
+            document
+               .querySelector("#checkup-modal form")
+               .addEventListener("submit", function (e) {
+                  e.preventDefault();
+
+                  const submitBtn = this.querySelector('button[type="submit"]');
+                  const originalText = submitBtn.textContent;
+                  submitBtn.innerHTML =
+                     '<i class="fas fa-spinner fa-spin mr-2"></i>Menyimpan...';
+                  submitBtn.disabled = true;
+
+                  setTimeout(() => {
+                     alert("Data medical check up berhasil disimpan!");
+                     submitBtn.textContent = originalText;
+                     submitBtn.disabled = false;
+                     checkupModal.classList.add("hidden");
+                     // Reset form
+                     this.reset();
+                  }, 1500);
+               });
+
+            // Calculate BMI automatically
+            const heightInput = document.querySelector(
+               'input[type="number"][value="175"]'
+            );
+            const weightInput = document.querySelector(
+               'input[type="number"][value="72"]'
+            );
+
+            function calculateBMI() {
+               const height = parseFloat(heightInput.value) / 100; // convert to meters
+               const weight = parseFloat(weightInput.value);
+
+               if (height && weight) {
+                  const bmi = (weight / (height * height)).toFixed(1);
+                  // Update BMI display somewhere if needed
+                  console.log("BMI:", bmi);
+               }
+            }
+
+            heightInput.addEventListener("input", calculateBMI);
+            weightInput.addEventListener("input", calculateBMI);
+         });
+      </script>
+   </body>
+</html>

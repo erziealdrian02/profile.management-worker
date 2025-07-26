@@ -3,7 +3,7 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Edit Pelatihan - Sistem Manajemen Karyawan</title>
+      <title>Edit Struktur Organisasi - Sistem Manajemen Karyawan</title>
       <script src="https://cdn.tailwindcss.com"></script>
       <link
          rel="stylesheet"
@@ -88,14 +88,14 @@
                </a>
                <a
                   href="../pelatihan.html"
-                  class="nav-tab active px-6 py-4 whitespace-nowrap border-b-2 border-white text-sm font-medium flex items-center"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
                >
                   <i class="fas fa-graduation-cap mr-2"></i>
                   Pelatihan
                </a>
                <a
                   href="../organisasi.html"
-                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+                  class="nav-tab active px-6 py-4 whitespace-nowrap border-b-2 border-white text-sm font-medium flex items-center"
                >
                   <i class="fas fa-sitemap mr-2"></i>
                   Struktur Organisasi
@@ -108,7 +108,7 @@
                   Catatan
                </a>
                <a
-                  href="../lainnya.html"
+                  href="../index.html"
                   class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
                >
                   <i class="fas fa-ellipsis-h mr-2"></i>
@@ -211,12 +211,12 @@
                      <i class="fas fa-edit text-gray-600"></i>
                   </div>
                   <h2 class="text-2xl font-bold text-gray-800">
-                     Edit Pelatihan
+                     Edit Struktur Organisasi
                   </h2>
                </div>
                <div class="flex space-x-2">
                   <a
-                     href="pelatihan.html"
+                     href="organisasi.html"
                      class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded text-sm font-medium flex items-center"
                   >
                      <i class="fas fa-times mr-2"></i>
@@ -231,49 +231,112 @@
                </div>
             </div>
 
-            <!-- Training Overview -->
+            <!-- Current Position Info -->
             <div
                class="bg-white rounded-lg border border-gray-200 overflow-hidden mb-6"
             >
                <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
                   <h3 class="text-lg font-semibold flex items-center">
-                     <i class="fas fa-chart-bar text-gray-400 mr-3"></i>
-                     Ringkasan Pelatihan 2024
+                     <i class="fas fa-id-card text-gray-400 mr-3"></i>
+                     Posisi Saat Ini
                   </h3>
                </div>
                <div class="p-6">
-                  <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                     <div class="text-center">
-                        <div class="text-3xl font-bold text-blue-600 mb-2">
-                           12
+                  <form class="space-y-6">
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Jabatan *</label
+                           >
+                           <input
+                              type="text"
+                              value="Adm. Sr. Manager"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           />
                         </div>
-                        <div class="text-sm text-gray-600">Total Pelatihan</div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Departemen *</label
+                           >
+                           <select
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           >
+                              <option value="administration" selected>
+                                 Administration
+                              </option>
+                              <option value="finance">Finance</option>
+                              <option value="hr">Human Resources</option>
+                              <option value="it">Information Technology</option>
+                              <option value="operations">Operations</option>
+                              <option value="marketing">Marketing</option>
+                           </select>
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Divisi</label
+                           >
+                           <input
+                              type="text"
+                              value="Corporate Administration"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           />
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Level Jabatan</label
+                           >
+                           <select
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           >
+                              <option value="staff">Staff</option>
+                              <option value="supervisor">Supervisor</option>
+                              <option value="manager" selected>Manager</option>
+                              <option value="senior_manager">
+                                 Senior Manager
+                              </option>
+                              <option value="director">Director</option>
+                              <option value="vp">Vice President</option>
+                           </select>
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Lokasi Kerja</label
+                           >
+                           <select
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           >
+                              <option value="jakarta" selected>Jakarta</option>
+                              <option value="bandung">Bandung</option>
+                              <option value="surabaya">Surabaya</option>
+                              <option value="medan">Medan</option>
+                              <option value="remote">Remote</option>
+                           </select>
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Status Karyawan</label
+                           >
+                           <select
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           >
+                              <option value="permanent" selected>Tetap</option>
+                              <option value="contract">Kontrak</option>
+                              <option value="probation">Masa Percobaan</option>
+                              <option value="intern">Magang</option>
+                           </select>
+                        </div>
                      </div>
-                     <div class="text-center">
-                        <div class="text-3xl font-bold text-green-600 mb-2">
-                           96
-                        </div>
-                        <div class="text-sm text-gray-600">Jam Pelatihan</div>
-                     </div>
-                     <div class="text-center">
-                        <div class="text-3xl font-bold text-purple-600 mb-2">
-                           8
-                        </div>
-                        <div class="text-sm text-gray-600">Sertifikat</div>
-                     </div>
-                     <div class="text-center">
-                        <div class="text-3xl font-bold text-orange-600 mb-2">
-                           4.7
-                        </div>
-                        <div class="text-sm text-gray-600">
-                           Rata-rata Rating
-                        </div>
-                     </div>
-                  </div>
+                  </form>
                </div>
             </div>
 
-            <!-- Training Records -->
+            <!-- Organizational Chart -->
             <div
                class="bg-white rounded-lg border border-gray-200 overflow-hidden mb-6"
             >
@@ -281,448 +344,258 @@
                   class="bg-gray-50 px-6 py-4 border-b border-gray-200 flex items-center justify-between"
                >
                   <h3 class="text-lg font-semibold flex items-center">
-                     <i class="fas fa-book-open text-gray-400 mr-3"></i>
-                     Riwayat Pelatihan
+                     <i class="fas fa-sitemap text-gray-400 mr-3"></i>
+                     Bagan Organisasi
                   </h3>
                   <div class="flex items-center space-x-2">
-                     <select
-                        class="border border-gray-300 rounded px-3 py-1 text-sm"
-                     >
-                        <option>Semua Kategori</option>
-                        <option>Teknis</option>
-                        <option>Kepemimpinan</option>
-                        <option>Soft Skills</option>
-                        <option>Sertifikasi</option>
-                     </select>
                      <button
-                        class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium flex items-center"
-                        onclick="openAddTrainingModal()"
+                        class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-sm flex items-center"
                      >
-                        <i class="fas fa-plus mr-2"></i>
-                        Tambah Pelatihan
+                        <i class="fas fa-expand-arrows-alt mr-2"></i>
+                        Fullscreen
+                     </button>
+                     <button
+                        class="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded text-sm flex items-center"
+                     >
+                        <i class="fas fa-download mr-2"></i>
+                        Export
                      </button>
                   </div>
                </div>
                <div class="p-6">
-                  <div class="space-y-4">
-                     <!-- Training Record 1 -->
-                     <div
-                        class="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 transition-colors"
-                     >
-                        <div class="flex items-start justify-between">
-                           <div class="flex items-start space-x-4">
-                              <div
-                                 class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center"
-                              >
-                                 <i
-                                    class="fas fa-certificate text-blue-600"
-                                 ></i>
-                              </div>
-                              <div class="flex-1">
-                                 <h4 class="font-semibold text-gray-800 mb-1">
-                                    Project Management Professional (PMP)
-                                 </h4>
-                                 <p class="text-sm text-gray-600 mb-2">
-                                    PMI Institute • Sertifikasi • 40 Jam
-                                 </p>
-                                 <div
-                                    class="flex items-center space-x-4 text-xs text-gray-500"
-                                 >
-                                    <span
-                                       ><i class="fas fa-calendar mr-1"></i>15
-                                       Mar - 20 Mar 2024</span
-                                    >
-                                    <span
-                                       ><i
-                                          class="fas fa-map-marker-alt mr-1"
-                                       ></i
-                                       >Online</span
-                                    >
-                                    <span
-                                       ><i class="fas fa-dollar-sign mr-1"></i
-                                       >Rp 15.000.000</span
-                                    >
-                                 </div>
-                                 <div class="mt-2 flex items-center space-x-2">
-                                    <span
-                                       class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full"
-                                       >Selesai</span
-                                    >
-                                    <span
-                                       class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full"
-                                       >Bersertifikat</span
-                                    >
-                                    <div class="flex items-center">
-                                       <span class="text-xs text-gray-500 mr-1"
-                                          >Rating:</span
-                                       >
-                                       <div class="flex space-x-1">
-                                          <i
-                                             class="fas fa-star text-yellow-400 text-xs"
-                                          ></i>
-                                          <i
-                                             class="fas fa-star text-yellow-400 text-xs"
-                                          ></i>
-                                          <i
-                                             class="fas fa-star text-yellow-400 text-xs"
-                                          ></i>
-                                          <i
-                                             class="fas fa-star text-yellow-400 text-xs"
-                                          ></i>
-                                          <i
-                                             class="fas fa-star text-yellow-400 text-xs"
-                                          ></i>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
+                  <!-- Organizational Chart Visualization -->
+                  <div class="org-chart">
+                     <!-- CEO Level -->
+                     <div class="flex justify-center mb-8">
+                        <div class="org-node ceo-node">
+                           <div
+                              class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-2"
+                           >
+                              <i class="fas fa-crown text-red-600 text-xl"></i>
                            </div>
-                           <div class="flex items-center space-x-2">
-                              <button
-                                 class="text-blue-600 hover:text-blue-800 p-2"
-                                 onclick="editTraining(1)"
-                                 title="Edit"
-                              >
-                                 <i class="fas fa-edit"></i>
-                              </button>
-                              <button
-                                 class="text-green-600 hover:text-green-800 p-2"
-                                 title="Lihat Sertifikat"
-                              >
-                                 <i class="fas fa-certificate"></i>
-                              </button>
-                              <button
-                                 class="text-red-600 hover:text-red-800 p-2"
-                                 onclick="deleteTraining(1)"
-                                 title="Hapus"
-                              >
-                                 <i class="fas fa-trash"></i>
-                              </button>
+                           <div class="text-center">
+                              <div class="font-semibold text-sm">
+                                 John Smith
+                              </div>
+                              <div class="text-xs text-gray-600">
+                                 Chief Executive Officer
+                              </div>
                            </div>
                         </div>
                      </div>
 
-                     <!-- Training Record 2 -->
-                     <div
-                        class="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 transition-colors"
-                     >
-                        <div class="flex items-start justify-between">
-                           <div class="flex items-start space-x-4">
-                              <div
-                                 class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center"
-                              >
-                                 <i class="fas fa-users text-green-600"></i>
+                     <!-- VP Level -->
+                     <div class="flex justify-center space-x-12 mb-8">
+                        <div class="org-node vp-node">
+                           <div
+                              class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-2"
+                           >
+                              <i class="fas fa-user-tie text-purple-600"></i>
+                           </div>
+                           <div class="text-center">
+                              <div class="font-semibold text-sm">
+                                 Sarah Johnson
                               </div>
-                              <div class="flex-1">
-                                 <h4 class="font-semibold text-gray-800 mb-1">
-                                    Advanced Leadership Skills
-                                 </h4>
-                                 <p class="text-sm text-gray-600 mb-2">
-                                    Internal Training • Kepemimpinan • 16 Jam
-                                 </p>
-                                 <div
-                                    class="flex items-center space-x-4 text-xs text-gray-500"
-                                 >
-                                    <span
-                                       ><i class="fas fa-calendar mr-1"></i>10
-                                       Feb - 11 Feb 2024</span
-                                    >
-                                    <span
-                                       ><i
-                                          class="fas fa-map-marker-alt mr-1"
-                                       ></i
-                                       >Jakarta Office</span
-                                    >
-                                    <span
-                                       ><i class="fas fa-dollar-sign mr-1"></i
-                                       >Rp 3.500.000</span
-                                    >
-                                 </div>
-                                 <div class="mt-2 flex items-center space-x-2">
-                                    <span
-                                       class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full"
-                                       >Selesai</span
-                                    >
-                                    <span
-                                       class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full"
-                                       >Internal</span
-                                    >
-                                    <div class="flex items-center">
-                                       <span class="text-xs text-gray-500 mr-1"
-                                          >Rating:</span
-                                       >
-                                       <div class="flex space-x-1">
-                                          <i
-                                             class="fas fa-star text-yellow-400 text-xs"
-                                          ></i>
-                                          <i
-                                             class="fas fa-star text-yellow-400 text-xs"
-                                          ></i>
-                                          <i
-                                             class="fas fa-star text-yellow-400 text-xs"
-                                          ></i>
-                                          <i
-                                             class="fas fa-star text-yellow-400 text-xs"
-                                          ></i>
-                                          <i
-                                             class="far fa-star text-yellow-400 text-xs"
-                                          ></i>
-                                       </div>
-                                    </div>
-                                 </div>
+                              <div class="text-xs text-gray-600">
+                                 VP Operations
                               </div>
                            </div>
-                           <div class="flex items-center space-x-2">
-                              <button
-                                 class="text-blue-600 hover:text-blue-800 p-2"
-                                 onclick="editTraining(2)"
-                                 title="Edit"
-                              >
-                                 <i class="fas fa-edit"></i>
-                              </button>
-                              <button
-                                 class="text-green-600 hover:text-green-800 p-2"
-                                 title="Lihat Materi"
-                              >
-                                 <i class="fas fa-file-pdf"></i>
-                              </button>
-                              <button
-                                 class="text-red-600 hover:text-red-800 p-2"
-                                 onclick="deleteTraining(2)"
-                                 title="Hapus"
-                              >
-                                 <i class="fas fa-trash"></i>
-                              </button>
+                        </div>
+                        <div class="org-node vp-node">
+                           <div
+                              class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-2"
+                           >
+                              <i class="fas fa-user-tie text-purple-600"></i>
+                           </div>
+                           <div class="text-center">
+                              <div class="font-semibold text-sm">
+                                 Michael Chen
+                              </div>
+                              <div class="text-xs text-gray-600">
+                                 VP Finance
+                              </div>
+                           </div>
+                        </div>
+                        <div class="org-node vp-node">
+                           <div
+                              class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-2"
+                           >
+                              <i class="fas fa-user-tie text-purple-600"></i>
+                           </div>
+                           <div class="text-center">
+                              <div class="font-semibold text-sm">Lisa Wong</div>
+                              <div class="text-xs text-gray-600">
+                                 VP Technology
+                              </div>
                            </div>
                         </div>
                      </div>
 
-                     <!-- Training Record 3 - In Progress -->
-                     <div
-                        class="border border-yellow-200 rounded-lg p-4 hover:bg-yellow-50 transition-colors"
-                     >
-                        <div class="flex items-start justify-between">
-                           <div class="flex items-start space-x-4">
-                              <div
-                                 class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center"
-                              >
-                                 <i
-                                    class="fas fa-laptop-code text-yellow-600"
-                                 ></i>
-                              </div>
-                              <div class="flex-1">
-                                 <h4 class="font-semibold text-gray-800 mb-1">
-                                    Digital Transformation Strategy
-                                 </h4>
-                                 <p class="text-sm text-gray-600 mb-2">
-                                    External Training • Teknis • 24 Jam
-                                 </p>
-                                 <div
-                                    class="flex items-center space-x-4 text-xs text-gray-500"
-                                 >
-                                    <span
-                                       ><i class="fas fa-calendar mr-1"></i>20
-                                       Jan - 25 Jan 2025</span
-                                    >
-                                    <span
-                                       ><i
-                                          class="fas fa-map-marker-alt mr-1"
-                                       ></i
-                                       >Hybrid</span
-                                    >
-                                    <span
-                                       ><i class="fas fa-dollar-sign mr-1"></i
-                                       >Rp 8.500.000</span
-                                    >
-                                 </div>
-                                 <div class="mt-2 flex items-center space-x-2">
-                                    <span
-                                       class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full"
-                                       >Berlangsung</span
-                                    >
-                                    <span
-                                       class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full"
-                                       >External</span
-                                    >
-                                    <div class="flex items-center">
-                                       <span class="text-xs text-gray-500 mr-1"
-                                          >Progress:</span
-                                       >
-                                       <div
-                                          class="w-16 bg-gray-200 rounded-full h-2 mr-2"
-                                       >
-                                          <div
-                                             class="bg-yellow-500 h-2 rounded-full"
-                                             style="width: 60%"
-                                          ></div>
-                                       </div>
-                                       <span class="text-xs text-gray-500"
-                                          >60%</span
-                                       >
-                                    </div>
-                                 </div>
+                     <!-- Director Level -->
+                     <div class="flex justify-center space-x-8 mb-8">
+                        <div class="org-node director-node">
+                           <div
+                              class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2"
+                           >
+                              <i class="fas fa-user-cog text-blue-600"></i>
+                           </div>
+                           <div class="text-center">
+                              <div class="font-semibold text-sm">David Lee</div>
+                              <div class="text-xs text-gray-600">
+                                 Director Admin
                               </div>
                            </div>
-                           <div class="flex items-center space-x-2">
-                              <button
-                                 class="text-blue-600 hover:text-blue-800 p-2"
-                                 onclick="editTraining(3)"
-                                 title="Edit"
-                              >
-                                 <i class="fas fa-edit"></i>
-                              </button>
-                              <button
-                                 class="text-orange-600 hover:text-orange-800 p-2"
-                                 title="Update Progress"
-                              >
-                                 <i class="fas fa-tasks"></i>
-                              </button>
-                              <button
-                                 class="text-red-600 hover:text-red-800 p-2"
-                                 onclick="deleteTraining(3)"
-                                 title="Hapus"
-                              >
-                                 <i class="fas fa-trash"></i>
-                              </button>
+                        </div>
+                        <div class="org-node director-node">
+                           <div
+                              class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2"
+                           >
+                              <i class="fas fa-user-cog text-blue-600"></i>
+                           </div>
+                           <div class="text-center">
+                              <div class="font-semibold text-sm">
+                                 Emma Davis
+                              </div>
+                              <div class="text-xs text-gray-600">
+                                 Director HR
+                              </div>
+                           </div>
+                        </div>
+                        <div class="org-node director-node">
+                           <div
+                              class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2"
+                           >
+                              <i class="fas fa-user-cog text-blue-600"></i>
+                           </div>
+                           <div class="text-center">
+                              <div class="font-semibold text-sm">
+                                 Robert Kim
+                              </div>
+                              <div class="text-xs text-gray-600">
+                                 Director Finance
+                              </div>
+                           </div>
+                        </div>
+                        <div class="org-node director-node">
+                           <div
+                              class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2"
+                           >
+                              <i class="fas fa-user-cog text-blue-600"></i>
+                           </div>
+                           <div class="text-center">
+                              <div class="font-semibold text-sm">
+                                 Anna Taylor
+                              </div>
+                              <div class="text-xs text-gray-600">
+                                 Director IT
+                              </div>
                            </div>
                         </div>
                      </div>
 
-                     <!-- Training Record 4 -->
-                     <div
-                        class="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 transition-colors"
-                     >
-                        <div class="flex items-start justify-between">
-                           <div class="flex items-start space-x-4">
-                              <div
-                                 class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center"
-                              >
-                                 <i class="fas fa-comments text-purple-600"></i>
+                     <!-- Manager Level (Current Position Highlighted) -->
+                     <div class="flex justify-center space-x-6 mb-6">
+                        <div class="org-node manager-node current-position">
+                           <div
+                              class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-2 ring-2 ring-green-500"
+                           >
+                              <i class="fas fa-user text-green-600"></i>
+                           </div>
+                           <div class="text-center">
+                              <div class="font-semibold text-sm text-green-700">
+                                 Arif Wibisono
                               </div>
-                              <div class="flex-1">
-                                 <h4 class="font-semibold text-gray-800 mb-1">
-                                    Effective Communication & Presentation
-                                 </h4>
-                                 <p class="text-sm text-gray-600 mb-2">
-                                    Workshop • Soft Skills • 8 Jam
-                                 </p>
-                                 <div
-                                    class="flex items-center space-x-4 text-xs text-gray-500"
-                                 >
-                                    <span
-                                       ><i class="fas fa-calendar mr-1"></i>05
-                                       Dec 2023</span
-                                    >
-                                    <span
-                                       ><i
-                                          class="fas fa-map-marker-alt mr-1"
-                                       ></i
-                                       >Bandung Office</span
-                                    >
-                                    <span
-                                       ><i class="fas fa-dollar-sign mr-1"></i
-                                       >Rp 2.000.000</span
-                                    >
-                                 </div>
-                                 <div class="mt-2 flex items-center space-x-2">
-                                    <span
-                                       class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full"
-                                       >Selesai</span
-                                    >
-                                    <span
-                                       class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full"
-                                       >Workshop</span
-                                    >
-                                    <div class="flex items-center">
-                                       <span class="text-xs text-gray-500 mr-1"
-                                          >Rating:</span
-                                       >
-                                       <div class="flex space-x-1">
-                                          <i
-                                             class="fas fa-star text-yellow-400 text-xs"
-                                          ></i>
-                                          <i
-                                             class="fas fa-star text-yellow-400 text-xs"
-                                          ></i>
-                                          <i
-                                             class="fas fa-star text-yellow-400 text-xs"
-                                          ></i>
-                                          <i
-                                             class="fas fa-star text-yellow-400 text-xs"
-                                          ></i>
-                                          <i
-                                             class="fas fa-star-half-alt text-yellow-400 text-xs"
-                                          ></i>
-                                       </div>
-                                    </div>
-                                 </div>
+                              <div class="text-xs text-green-600">
+                                 Adm. Sr. Manager
+                              </div>
+                              <div
+                                 class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded mt-1"
+                              >
+                                 Current
                               </div>
                            </div>
-                           <div class="flex items-center space-x-2">
-                              <button
-                                 class="text-blue-600 hover:text-blue-800 p-2"
-                                 onclick="editTraining(4)"
-                                 title="Edit"
-                              >
-                                 <i class="fas fa-edit"></i>
-                              </button>
-                              <button
-                                 class="text-green-600 hover:text-green-800 p-2"
-                                 title="Lihat Materi"
-                              >
-                                 <i class="fas fa-file-pdf"></i>
-                              </button>
-                              <button
-                                 class="text-red-600 hover:text-red-800 p-2"
-                                 onclick="deleteTraining(4)"
-                                 title="Hapus"
-                              >
-                                 <i class="fas fa-trash"></i>
-                              </button>
+                        </div>
+                        <div class="org-node manager-node">
+                           <div
+                              class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-2"
+                           >
+                              <i class="fas fa-user text-orange-600"></i>
+                           </div>
+                           <div class="text-center">
+                              <div class="font-semibold text-sm">
+                                 James Wilson
+                              </div>
+                              <div class="text-xs text-gray-600">
+                                 HR Manager
+                              </div>
+                           </div>
+                        </div>
+                        <div class="org-node manager-node">
+                           <div
+                              class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-2"
+                           >
+                              <i class="fas fa-user text-orange-600"></i>
+                           </div>
+                           <div class="text-center">
+                              <div class="font-semibold text-sm">
+                                 Maria Garcia
+                              </div>
+                              <div class="text-xs text-gray-600">
+                                 Finance Manager
+                              </div>
+                           </div>
+                        </div>
+                        <div class="org-node manager-node">
+                           <div
+                              class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-2"
+                           >
+                              <i class="fas fa-user text-orange-600"></i>
+                           </div>
+                           <div class="text-center">
+                              <div class="font-semibold text-sm">
+                                 Kevin Zhang
+                              </div>
+                              <div class="text-xs text-gray-600">
+                                 IT Manager
+                              </div>
                            </div>
                         </div>
                      </div>
-                  </div>
 
-                  <!-- Pagination -->
-                  <div class="mt-6 flex items-center justify-between">
-                     <div class="text-sm text-gray-600">
-                        Menampilkan 1-4 dari 12 pelatihan
-                     </div>
-                     <div class="flex space-x-2">
-                        <button
-                           class="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50"
-                        >
-                           <i class="fas fa-chevron-left mr-1"></i>
-                           Sebelumnya
-                        </button>
-                        <button
-                           class="px-3 py-1 bg-primary-green text-white rounded text-sm"
-                        >
-                           1
-                        </button>
-                        <button
-                           class="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50"
-                        >
-                           2
-                        </button>
-                        <button
-                           class="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50"
-                        >
-                           3
-                        </button>
-                        <button
-                           class="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50"
-                        >
-                           Selanjutnya
-                           <i class="fas fa-chevron-right ml-1"></i>
-                        </button>
+                     <!-- Staff Level (Direct Reports) -->
+                     <div class="flex justify-center space-x-4">
+                        <div class="org-node staff-node">
+                           <div
+                              class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-2"
+                           >
+                              <i class="fas fa-user text-gray-600 text-sm"></i>
+                           </div>
+                           <div class="text-center">
+                              <div class="font-semibold text-xs">
+                                 Finance Executive
+                              </div>
+                              <div class="text-xs text-gray-500">Staff</div>
+                           </div>
+                        </div>
+                        <div class="org-node staff-node">
+                           <div
+                              class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-2"
+                           >
+                              <i class="fas fa-user text-gray-600 text-sm"></i>
+                           </div>
+                           <div class="text-center">
+                              <div class="font-semibold text-xs">
+                                 Executive Secretary
+                              </div>
+                              <div class="text-xs text-gray-500">Staff</div>
+                           </div>
+                        </div>
                      </div>
                   </div>
                </div>
             </div>
 
-            <!-- Skills Development Plan -->
+            <!-- Reporting Structure -->
             <div
                class="bg-white rounded-lg border border-gray-200 overflow-hidden mb-6"
             >
@@ -730,213 +603,136 @@
                   class="bg-gray-50 px-6 py-4 border-b border-gray-200 flex items-center justify-between"
                >
                   <h3 class="text-lg font-semibold flex items-center">
-                     <i class="fas fa-road text-gray-400 mr-3"></i>
-                     Rencana Pengembangan Skill 2025
+                     <i class="fas fa-users text-gray-400 mr-3"></i>
+                     Struktur Pelaporan
                   </h3>
                   <button
                      class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium flex items-center"
-                     onclick="openAddPlanModal()"
+                     onclick="openEditReportingModal()"
                   >
-                     <i class="fas fa-plus mr-2"></i>
-                     Tambah Rencana
+                     <i class="fas fa-edit mr-2"></i>
+                     Edit Struktur
                   </button>
                </div>
                <div class="p-6">
                   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                     <!-- Development Plan 1 -->
-                     <div
-                        class="border border-blue-200 rounded-lg p-4 bg-blue-50"
-                     >
-                        <div class="flex items-center justify-between mb-3">
-                           <h4 class="font-semibold text-blue-800">
-                              Agile & Scrum Mastery
-                           </h4>
-                           <span
-                              class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full"
-                              >Q1 2025</span
+                     <!-- Reports To -->
+                     <div>
+                        <h4
+                           class="font-semibold text-gray-800 mb-4 flex items-center"
+                        >
+                           <i class="fas fa-arrow-up text-blue-500 mr-2"></i>
+                           Melapor Kepada
+                        </h4>
+                        <div class="space-y-3">
+                           <div
+                              class="flex items-center p-3 bg-blue-50 rounded-lg"
                            >
-                        </div>
-                        <p class="text-sm text-gray-700 mb-3">
-                           Menguasai metodologi Agile dan Scrum untuk
-                           meningkatkan efisiensi manajemen proyek.
-                        </p>
-                        <div class="space-y-2 text-sm">
-                           <div class="flex items-center justify-between">
-                              <span>Target Sertifikasi:</span>
-                              <span class="font-medium">Scrum Master</span>
-                           </div>
-                           <div class="flex items-center justify-between">
-                              <span>Estimasi Biaya:</span>
-                              <span class="font-medium">Rp 12.000.000</span>
-                           </div>
-                           <div class="flex items-center justify-between">
-                              <span>Durasi:</span>
-                              <span class="font-medium">32 Jam</span>
-                           </div>
-                        </div>
-                        <div class="mt-3 flex justify-end space-x-2">
-                           <button
-                              class="text-blue-600 hover:text-blue-800 text-sm"
-                              onclick="editPlan(1)"
-                           >
-                              <i class="fas fa-edit mr-1"></i>
-                              Edit
-                           </button>
-                           <button
-                              class="text-red-600 hover:text-red-800 text-sm"
-                              onclick="deletePlan(1)"
-                           >
-                              <i class="fas fa-trash mr-1"></i>
-                              Hapus
-                           </button>
-                        </div>
-                     </div>
-
-                     <!-- Development Plan 2 -->
-                     <div
-                        class="border border-green-200 rounded-lg p-4 bg-green-50"
-                     >
-                        <div class="flex items-center justify-between mb-3">
-                           <h4 class="font-semibold text-green-800">
-                              Data Analytics & Business Intelligence
-                           </h4>
-                           <span
-                              class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full"
-                              >Q2 2025</span
-                           >
-                        </div>
-                        <p class="text-sm text-gray-700 mb-3">
-                           Mengembangkan kemampuan analisis data untuk mendukung
-                           pengambilan keputusan strategis.
-                        </p>
-                        <div class="space-y-2 text-sm">
-                           <div class="flex items-center justify-between">
-                              <span>Target Sertifikasi:</span>
-                              <span class="font-medium">Power BI Expert</span>
-                           </div>
-                           <div class="flex items-center justify-between">
-                              <span>Estimasi Biaya:</span>
-                              <span class="font-medium">Rp 8.500.000</span>
-                           </div>
-                           <div class="flex items-center justify-between">
-                              <span>Durasi:</span>
-                              <span class="font-medium">24 Jam</span>
-                           </div>
-                        </div>
-                        <div class="mt-3 flex justify-end space-x-2">
-                           <button
-                              class="text-blue-600 hover:text-blue-800 text-sm"
-                              onclick="editPlan(2)"
-                           >
-                              <i class="fas fa-edit mr-1"></i>
-                              Edit
-                           </button>
-                           <button
-                              class="text-red-600 hover:text-red-800 text-sm"
-                              onclick="deletePlan(2)"
-                           >
-                              <i class="fas fa-trash mr-1"></i>
-                              Hapus
-                           </button>
-                        </div>
-                     </div>
-
-                     <!-- Development Plan 3 -->
-                     <div
-                        class="border border-purple-200 rounded-lg p-4 bg-purple-50"
-                     >
-                        <div class="flex items-center justify-between mb-3">
-                           <h4 class="font-semibold text-purple-800">
-                              Strategic Leadership Program
-                           </h4>
-                           <span
-                              class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full"
-                              >Q3 2025</span
-                           >
-                        </div>
-                        <p class="text-sm text-gray-700 mb-3">
-                           Program kepemimpinan strategis untuk persiapan posisi
-                           senior management.
-                        </p>
-                        <div class="space-y-2 text-sm">
-                           <div class="flex items-center justify-between">
-                              <span>Target Sertifikasi:</span>
-                              <span class="font-medium"
-                                 >Executive Leadership</span
+                              <div
+                                 class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3"
                               >
+                                 <i class="fas fa-user text-blue-600"></i>
+                              </div>
+                              <div>
+                                 <div class="font-semibold text-sm">
+                                    David Lee
+                                 </div>
+                                 <div class="text-xs text-gray-600">
+                                    Director Administration
+                                 </div>
+                                 <div class="text-xs text-blue-600">
+                                    Direct Supervisor
+                                 </div>
+                              </div>
                            </div>
-                           <div class="flex items-center justify-between">
-                              <span>Estimasi Biaya:</span>
-                              <span class="font-medium">Rp 25.000.000</span>
-                           </div>
-                           <div class="flex items-center justify-between">
-                              <span>Durasi:</span>
-                              <span class="font-medium">48 Jam</span>
-                           </div>
-                        </div>
-                        <div class="mt-3 flex justify-end space-x-2">
-                           <button
-                              class="text-blue-600 hover:text-blue-800 text-sm"
-                              onclick="editPlan(3)"
+                           <div
+                              class="flex items-center p-3 bg-gray-50 rounded-lg"
                            >
-                              <i class="fas fa-edit mr-1"></i>
-                              Edit
-                           </button>
-                           <button
-                              class="text-red-600 hover:text-red-800 text-sm"
-                              onclick="deletePlan(3)"
-                           >
-                              <i class="fas fa-trash mr-1"></i>
-                              Hapus
-                           </button>
+                              <div
+                                 class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3"
+                              >
+                                 <i class="fas fa-user-tie text-purple-600"></i>
+                              </div>
+                              <div>
+                                 <div class="font-semibold text-sm">
+                                    Sarah Johnson
+                                 </div>
+                                 <div class="text-xs text-gray-600">
+                                    VP Operations
+                                 </div>
+                                 <div class="text-xs text-purple-600">
+                                    Indirect Supervisor
+                                 </div>
+                              </div>
+                           </div>
                         </div>
                      </div>
 
-                     <!-- Development Plan 4 -->
-                     <div
-                        class="border border-orange-200 rounded-lg p-4 bg-orange-50"
-                     >
-                        <div class="flex items-center justify-between mb-3">
-                           <h4 class="font-semibold text-orange-800">
-                              Change Management Certification
-                           </h4>
-                           <span
-                              class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full"
-                              >Q4 2025</span
+                     <!-- Direct Reports -->
+                     <div>
+                        <h4
+                           class="font-semibold text-gray-800 mb-4 flex items-center"
+                        >
+                           <i class="fas fa-arrow-down text-green-500 mr-2"></i>
+                           Bawahan Langsung
+                        </h4>
+                        <div class="space-y-3">
+                           <div
+                              class="flex items-center justify-between p-3 bg-green-50 rounded-lg"
                            >
-                        </div>
-                        <p class="text-sm text-gray-700 mb-3">
-                           Sertifikasi manajemen perubahan untuk mendukung
-                           transformasi organisasi.
-                        </p>
-                        <div class="space-y-2 text-sm">
-                           <div class="flex items-center justify-between">
-                              <span>Target Sertifikasi:</span>
-                              <span class="font-medium">PROSCI Certified</span>
+                              <div class="flex items-center">
+                                 <div
+                                    class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3"
+                                 >
+                                    <i class="fas fa-user text-green-600"></i>
+                                 </div>
+                                 <div>
+                                    <div class="font-semibold text-sm">
+                                       Finance Executive
+                                    </div>
+                                    <div class="text-xs text-gray-600">
+                                       Staff Level
+                                    </div>
+                                 </div>
+                              </div>
+                              <button
+                                 class="text-blue-600 hover:text-blue-800 text-sm"
+                                 onclick="editDirectReport(1)"
+                              >
+                                 <i class="fas fa-edit"></i>
+                              </button>
                            </div>
-                           <div class="flex items-center justify-between">
-                              <span>Estimasi Biaya:</span>
-                              <span class="font-medium">Rp 18.000.000</span>
+                           <div
+                              class="flex items-center justify-between p-3 bg-green-50 rounded-lg"
+                           >
+                              <div class="flex items-center">
+                                 <div
+                                    class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3"
+                                 >
+                                    <i class="fas fa-user text-green-600"></i>
+                                 </div>
+                                 <div>
+                                    <div class="font-semibold text-sm">
+                                       Executive Secretary
+                                    </div>
+                                    <div class="text-xs text-gray-600">
+                                       Staff Level
+                                    </div>
+                                 </div>
+                              </div>
+                              <button
+                                 class="text-blue-600 hover:text-blue-800 text-sm"
+                                 onclick="editDirectReport(2)"
+                              >
+                                 <i class="fas fa-edit"></i>
+                              </button>
                            </div>
-                           <div class="flex items-center justify-between">
-                              <span>Durasi:</span>
-                              <span class="font-medium">40 Jam</span>
-                           </div>
-                        </div>
-                        <div class="mt-3 flex justify-end space-x-2">
                            <button
-                              class="text-blue-600 hover:text-blue-800 text-sm"
-                              onclick="editPlan(4)"
+                              class="w-full border-2 border-dashed border-gray-300 rounded-lg p-3 text-gray-600 hover:border-green-500 hover:text-green-600 transition-colors text-sm"
+                              onclick="addDirectReport()"
                            >
-                              <i class="fas fa-edit mr-1"></i>
-                              Edit
-                           </button>
-                           <button
-                              class="text-red-600 hover:text-red-800 text-sm"
-                              onclick="deletePlan(4)"
-                           >
-                              <i class="fas fa-trash mr-1"></i>
-                              Hapus
+                              <i class="fas fa-plus mr-2"></i>
+                              Tambah Bawahan
                            </button>
                         </div>
                      </div>
@@ -944,108 +740,236 @@
                </div>
             </div>
 
-            <!-- Training Budget -->
+            <!-- Position History -->
+            <div
+               class="bg-white rounded-lg border border-gray-200 overflow-hidden mb-6"
+            >
+               <div
+                  class="bg-gray-50 px-6 py-4 border-b border-gray-200 flex items-center justify-between"
+               >
+                  <h3 class="text-lg font-semibold flex items-center">
+                     <i class="fas fa-history text-gray-400 mr-3"></i>
+                     Riwayat Jabatan
+                  </h3>
+                  <button
+                     class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium flex items-center"
+                     onclick="openAddPositionModal()"
+                  >
+                     <i class="fas fa-plus mr-2"></i>
+                     Tambah Riwayat
+                  </button>
+               </div>
+               <div class="p-6">
+                  <div class="space-y-4">
+                     <!-- Current Position -->
+                     <div
+                        class="border-l-4 border-green-500 pl-4 py-3 bg-green-50"
+                     >
+                        <div class="flex items-center justify-between">
+                           <div>
+                              <h4 class="font-semibold text-green-800">
+                                 Adm. Sr. Manager
+                              </h4>
+                              <p class="text-sm text-gray-600">
+                                 Administration Department • Corporate
+                                 Administration Division
+                              </p>
+                              <p class="text-xs text-gray-500">
+                                 Juli 2020 - Sekarang • 4 Tahun 6 Bulan
+                              </p>
+                           </div>
+                           <span
+                              class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full"
+                              >Current</span
+                           >
+                        </div>
+                     </div>
+
+                     <!-- Previous Position 1 -->
+                     <div class="border-l-4 border-blue-500 pl-4 py-3">
+                        <div class="flex items-center justify-between">
+                           <div>
+                              <h4 class="font-semibold text-gray-800">
+                                 Administration Manager
+                              </h4>
+                              <p class="text-sm text-gray-600">
+                                 Administration Department • General
+                                 Administration
+                              </p>
+                              <p class="text-xs text-gray-500">
+                                 Juli 2017 - Juni 2020 • 3 Tahun
+                              </p>
+                           </div>
+                           <div class="flex items-center space-x-2">
+                              <button
+                                 class="text-blue-600 hover:text-blue-800 text-sm"
+                                 onclick="editPosition(1)"
+                              >
+                                 <i class="fas fa-edit"></i>
+                              </button>
+                              <button
+                                 class="text-red-600 hover:text-red-800 text-sm"
+                                 onclick="deletePosition(1)"
+                              >
+                                 <i class="fas fa-trash"></i>
+                              </button>
+                           </div>
+                        </div>
+                        <div class="mt-2 text-sm text-gray-700">
+                           <strong>Pencapaian:</strong> Meningkatkan efisiensi
+                           operasional sebesar 25%, implementasi sistem digital
+                           untuk administrasi
+                        </div>
+                     </div>
+
+                     <!-- Previous Position 2 -->
+                     <div class="border-l-4 border-gray-400 pl-4 py-3">
+                        <div class="flex items-center justify-between">
+                           <div>
+                              <h4 class="font-semibold text-gray-800">
+                                 Senior Administrative Officer
+                              </h4>
+                              <p class="text-sm text-gray-600">
+                                 Administration Department • Document Management
+                              </p>
+                              <p class="text-xs text-gray-500">
+                                 Januari 2015 - Juni 2017 • 2 Tahun 6 Bulan
+                              </p>
+                           </div>
+                           <div class="flex items-center space-x-2">
+                              <button
+                                 class="text-blue-600 hover:text-blue-800 text-sm"
+                                 onclick="editPosition(2)"
+                              >
+                                 <i class="fas fa-edit"></i>
+                              </button>
+                              <button
+                                 class="text-red-600 hover:text-red-800 text-sm"
+                                 onclick="deletePosition(2)"
+                              >
+                                 <i class="fas fa-trash"></i>
+                              </button>
+                           </div>
+                        </div>
+                        <div class="mt-2 text-sm text-gray-700">
+                           <strong>Pencapaian:</strong> Mengelola sistem
+                           dokumentasi perusahaan, pelatihan staff baru
+                        </div>
+                     </div>
+
+                     <!-- Previous Position 3 -->
+                     <div class="border-l-4 border-gray-400 pl-4 py-3">
+                        <div class="flex items-center justify-between">
+                           <div>
+                              <h4 class="font-semibold text-gray-800">
+                                 Administrative Officer
+                              </h4>
+                              <p class="text-sm text-gray-600">
+                                 Administration Department • General Support
+                              </p>
+                              <p class="text-xs text-gray-500">
+                                 Maret 2012 - Desember 2014 • 2 Tahun 10 Bulan
+                              </p>
+                           </div>
+                           <div class="flex items-center space-x-2">
+                              <button
+                                 class="text-blue-600 hover:text-blue-800 text-sm"
+                                 onclick="editPosition(3)"
+                              >
+                                 <i class="fas fa-edit"></i>
+                              </button>
+                              <button
+                                 class="text-red-600 hover:text-red-800 text-sm"
+                                 onclick="deletePosition(3)"
+                              >
+                                 <i class="fas fa-trash"></i>
+                              </button>
+                           </div>
+                        </div>
+                        <div class="mt-2 text-sm text-gray-700">
+                           <strong>Pencapaian:</strong> Mendukung operasional
+                           harian departemen, koordinasi dengan berbagai divisi
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Department Information -->
             <div
                class="bg-white rounded-lg border border-gray-200 overflow-hidden"
             >
                <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
                   <h3 class="text-lg font-semibold flex items-center">
-                     <i class="fas fa-wallet text-gray-400 mr-3"></i>
-                     Budget Pelatihan 2024-2025
+                     <i class="fas fa-building text-gray-400 mr-3"></i>
+                     Informasi Departemen
                   </h3>
                </div>
                <div class="p-6">
-                  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                     <div class="text-center p-4 bg-blue-50 rounded-lg">
-                        <div class="text-2xl font-bold text-blue-600 mb-2">
-                           Rp 45.5M
-                        </div>
-                        <div class="text-sm text-gray-600">Budget 2024</div>
-                        <div class="text-xs text-green-600 mt-1">
-                           Terpakai: Rp 29.0M (64%)
-                        </div>
-                     </div>
-                     <div class="text-center p-4 bg-green-50 rounded-lg">
-                        <div class="text-2xl font-bold text-green-600 mb-2">
-                           Rp 63.5M
-                        </div>
-                        <div class="text-sm text-gray-600">Budget 2025</div>
-                        <div class="text-xs text-blue-600 mt-1">
-                           Dialokasikan: Rp 63.5M (100%)
-                        </div>
-                     </div>
-                     <div class="text-center p-4 bg-purple-50 rounded-lg">
-                        <div class="text-2xl font-bold text-purple-600 mb-2">
-                           Rp 16.5M
-                        </div>
-                        <div class="text-sm text-gray-600">
-                           Sisa Budget 2024
-                        </div>
-                        <div class="text-xs text-orange-600 mt-1">
-                           Dapat dialihkan ke 2025
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                     <div>
+                        <h4 class="font-semibold text-gray-800 mb-3">
+                           Administration Department
+                        </h4>
+                        <div class="space-y-2 text-sm">
+                           <div class="flex items-center justify-between">
+                              <span class="text-gray-600">Total Karyawan:</span>
+                              <span class="font-medium">24 orang</span>
+                           </div>
+                           <div class="flex items-center justify-between">
+                              <span class="text-gray-600">Jumlah Divisi:</span>
+                              <span class="font-medium">4 divisi</span>
+                           </div>
+                           <div class="flex items-center justify-between">
+                              <span class="text-gray-600">Budget Tahunan:</span>
+                              <span class="font-medium">Rp 2.5M</span>
+                           </div>
+                           <div class="flex items-center justify-between">
+                              <span class="text-gray-600">Lokasi:</span>
+                              <span class="font-medium">Jakarta, Bandung</span>
+                           </div>
                         </div>
                      </div>
-                  </div>
 
-                  <div class="mt-6">
-                     <h4 class="font-semibold mb-3">
-                        Breakdown Budget per Kategori
-                     </h4>
-                     <div class="space-y-3">
-                        <div
-                           class="flex items-center justify-between p-3 bg-gray-50 rounded"
-                        >
-                           <div class="flex items-center">
-                              <div
-                                 class="w-4 h-4 bg-blue-500 rounded mr-3"
-                              ></div>
-                              <span class="font-medium"
-                                 >Sertifikasi Profesional</span
+                     <div>
+                        <h4 class="font-semibold text-gray-800 mb-3">
+                           Tanggung Jawab Utama
+                        </h4>
+                        <ul class="space-y-1 text-sm text-gray-700">
+                           <li class="flex items-start">
+                              <i
+                                 class="fas fa-check text-green-500 mr-2 mt-1 text-xs"
+                              ></i>
+                              <span
+                                 >Mengelola operasional administrasi
+                                 perusahaan</span
                               >
-                           </div>
-                           <div class="text-right">
-                              <div class="font-semibold">Rp 35.0M</div>
-                              <div class="text-sm text-gray-600">
-                                 55% dari total budget
-                              </div>
-                           </div>
-                        </div>
-                        <div
-                           class="flex items-center justify-between p-3 bg-gray-50 rounded"
-                        >
-                           <div class="flex items-center">
-                              <div
-                                 class="w-4 h-4 bg-green-500 rounded mr-3"
-                              ></div>
-                              <span class="font-medium"
-                                 >Pelatihan Kepemimpinan</span
-                              >
-                           </div>
-                           <div class="text-right">
-                              <div class="font-semibold">Rp 18.5M</div>
-                              <div class="text-sm text-gray-600">
-                                 29% dari total budget
-                              </div>
-                           </div>
-                        </div>
-                        <div
-                           class="flex items-center justify-between p-3 bg-gray-50 rounded"
-                        >
-                           <div class="flex items-center">
-                              <div
-                                 class="w-4 h-4 bg-purple-500 rounded mr-3"
-                              ></div>
-                              <span class="font-medium"
-                                 >Soft Skills & Workshop</span
-                              >
-                           </div>
-                           <div class="text-right">
-                              <div class="font-semibold">Rp 10.0M</div>
-                              <div class="text-sm text-gray-600">
-                                 16% dari total budget
-                              </div>
-                           </div>
-                        </div>
+                           </li>
+                           <li class="flex items-start">
+                              <i
+                                 class="fas fa-check text-green-500 mr-2 mt-1 text-xs"
+                              ></i>
+                              <span>Koordinasi dengan departemen lain</span>
+                           </li>
+                           <li class="flex items-start">
+                              <i
+                                 class="fas fa-check text-green-500 mr-2 mt-1 text-xs"
+                              ></i>
+                              <span>Pengembangan sistem dan proses</span>
+                           </li>
+                           <li class="flex items-start">
+                              <i
+                                 class="fas fa-check text-green-500 mr-2 mt-1 text-xs"
+                              ></i>
+                              <span>Manajemen tim dan pengembangan SDM</span>
+                           </li>
+                           <li class="flex items-start">
+                              <i
+                                 class="fas fa-check text-green-500 mr-2 mt-1 text-xs"
+                              ></i>
+                              <span>Pelaporan dan analisis kinerja</span>
+                           </li>
+                        </ul>
                      </div>
                   </div>
                </div>
@@ -1053,9 +977,114 @@
          </div>
       </div>
 
-      <!-- Add Training Modal -->
+      <!-- Edit Reporting Structure Modal -->
       <div
-         id="training-modal"
+         id="reporting-modal"
+         class="fixed inset-0 bg-black bg-opacity-50 hidden z-50"
+      >
+         <div class="flex items-center justify-center min-h-screen p-4">
+            <div
+               class="bg-white rounded-lg max-w-2xl w-full max-h-screen overflow-y-auto"
+            >
+               <div
+                  class="bg-gray-50 px-6 py-4 border-b border-gray-200 flex items-center justify-between"
+               >
+                  <h3 class="text-lg font-semibold">Edit Struktur Pelaporan</h3>
+                  <button
+                     id="close-reporting-modal"
+                     class="text-gray-400 hover:text-gray-600"
+                  >
+                     <i class="fas fa-times text-xl"></i>
+                  </button>
+               </div>
+               <div class="p-6">
+                  <form class="space-y-6">
+                     <div>
+                        <label
+                           class="block text-sm font-medium text-gray-700 mb-2"
+                           >Supervisor Langsung *</label
+                        >
+                        <select
+                           class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           required
+                        >
+                           <option value="">Pilih Supervisor</option>
+                           <option value="david_lee" selected>
+                              David Lee - Director Administration
+                           </option>
+                           <option value="emma_davis">
+                              Emma Davis - Director HR
+                           </option>
+                           <option value="robert_kim">
+                              Robert Kim - Director Finance
+                           </option>
+                           <option value="anna_taylor">
+                              Anna Taylor - Director IT
+                           </option>
+                        </select>
+                     </div>
+
+                     <div>
+                        <label
+                           class="block text-sm font-medium text-gray-700 mb-2"
+                           >Supervisor Tidak Langsung</label
+                        >
+                        <select
+                           class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                        >
+                           <option value="">
+                              Pilih Supervisor Tidak Langsung
+                           </option>
+                           <option value="sarah_johnson" selected>
+                              Sarah Johnson - VP Operations
+                           </option>
+                           <option value="michael_chen">
+                              Michael Chen - VP Finance
+                           </option>
+                           <option value="lisa_wong">
+                              Lisa Wong - VP Technology
+                           </option>
+                        </select>
+                     </div>
+
+                     <div>
+                        <label
+                           class="block text-sm font-medium text-gray-700 mb-2"
+                           >Catatan Pelaporan</label
+                        >
+                        <textarea
+                           rows="3"
+                           class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           placeholder="Tambahkan catatan khusus tentang struktur pelaporan..."
+                        >
+Laporan harian ke Director Administration, laporan mingguan ke VP Operations untuk review strategis.</textarea
+                        >
+                     </div>
+
+                     <div class="flex justify-end space-x-3 pt-4">
+                        <button
+                           type="button"
+                           id="cancel-reporting"
+                           class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded text-sm font-medium"
+                        >
+                           Batal
+                        </button>
+                        <button
+                           type="submit"
+                           class="bg-primary-green hover:bg-light-green text-white px-4 py-2 rounded text-sm font-medium"
+                        >
+                           Simpan Perubahan
+                        </button>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Add Position History Modal -->
+      <div
+         id="position-modal"
          class="fixed inset-0 bg-black bg-opacity-50 hidden z-50"
       >
          <div class="flex items-center justify-center min-h-screen p-4">
@@ -1065,9 +1094,9 @@
                <div
                   class="bg-gray-50 px-6 py-4 border-b border-gray-200 flex items-center justify-between"
                >
-                  <h3 class="text-lg font-semibold">Tambah Pelatihan Baru</h3>
+                  <h3 class="text-lg font-semibold">Tambah Riwayat Jabatan</h3>
                   <button
-                     id="close-training-modal"
+                     id="close-position-modal"
                      class="text-gray-400 hover:text-gray-600"
                   >
                      <i class="fas fa-times text-xl"></i>
@@ -1079,65 +1108,73 @@
                         <div>
                            <label
                               class="block text-sm font-medium text-gray-700 mb-2"
-                              >Nama Pelatihan *</label
+                              >Nama Jabatan *</label
                            >
                            <input
                               type="text"
                               class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
-                              placeholder="Masukkan nama pelatihan"
+                              placeholder="Masukkan nama jabatan"
                               required
                            />
                         </div>
                         <div>
                            <label
                               class="block text-sm font-medium text-gray-700 mb-2"
-                              >Kategori *</label
+                              >Departemen *</label
                            >
                            <select
                               class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
                               required
                            >
-                              <option value="">Pilih Kategori</option>
-                              <option value="teknis">Teknis</option>
-                              <option value="kepemimpinan">Kepemimpinan</option>
-                              <option value="soft_skills">Soft Skills</option>
-                              <option value="sertifikasi">Sertifikasi</option>
-                              <option value="workshop">Workshop</option>
+                              <option value="">Pilih Departemen</option>
+                              <option value="administration">
+                                 Administration
+                              </option>
+                              <option value="finance">Finance</option>
+                              <option value="hr">Human Resources</option>
+                              <option value="it">Information Technology</option>
+                              <option value="operations">Operations</option>
+                              <option value="marketing">Marketing</option>
                            </select>
                         </div>
                         <div>
                            <label
                               class="block text-sm font-medium text-gray-700 mb-2"
-                              >Penyelenggara</label
+                              >Divisi</label
                            >
                            <input
                               type="text"
                               class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
-                              placeholder="Nama penyelenggara"
+                              placeholder="Nama divisi"
                            />
                         </div>
                         <div>
                            <label
                               class="block text-sm font-medium text-gray-700 mb-2"
-                              >Tipe Pelatihan</label
+                              >Level Jabatan</label
                            >
                            <select
                               class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
                            >
-                              <option value="internal">Internal</option>
-                              <option value="external">External</option>
-                              <option value="online">Online</option>
-                              <option value="hybrid">Hybrid</option>
+                              <option value="staff">Staff</option>
+                              <option value="supervisor">Supervisor</option>
+                              <option value="manager">Manager</option>
+                              <option value="senior_manager">
+                                 Senior Manager
+                              </option>
+                              <option value="director">Director</option>
+                              <option value="vp">Vice President</option>
                            </select>
                         </div>
                         <div>
                            <label
                               class="block text-sm font-medium text-gray-700 mb-2"
-                              >Tanggal Mulai</label
+                              >Tanggal Mulai *</label
                            >
                            <input
                               type="date"
                               class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                              required
                            />
                         </div>
                         <div>
@@ -1150,26 +1187,30 @@
                               class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
                            />
                         </div>
+                     </div>
+
+                     <div>
+                        <label
+                           class="block text-sm font-medium text-gray-700 mb-2"
+                           >Pencapaian & Tanggung Jawab</label
+                        >
+                        <textarea
+                           rows="4"
+                           class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           placeholder="Jelaskan pencapaian dan tanggung jawab utama dalam posisi ini..."
+                        ></textarea>
+                     </div>
+
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                            <label
                               class="block text-sm font-medium text-gray-700 mb-2"
-                              >Durasi (Jam)</label
+                              >Supervisor</label
                            >
                            <input
-                              type="number"
+                              type="text"
                               class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
-                              placeholder="0"
-                           />
-                        </div>
-                        <div>
-                           <label
-                              class="block text-sm font-medium text-gray-700 mb-2"
-                              >Biaya (Rp)</label
-                           >
-                           <input
-                              type="number"
-                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
-                              placeholder="0"
+                              placeholder="Nama supervisor"
                            />
                         </div>
                         <div>
@@ -1180,189 +1221,15 @@
                            <input
                               type="text"
                               class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
-                              placeholder="Lokasi pelatihan"
+                              placeholder="Lokasi kerja"
                            />
-                        </div>
-                        <div>
-                           <label
-                              class="block text-sm font-medium text-gray-700 mb-2"
-                              >Status</label
-                           >
-                           <select
-                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
-                           >
-                              <option value="planned">Direncanakan</option>
-                              <option value="ongoing">Berlangsung</option>
-                              <option value="completed">Selesai</option>
-                              <option value="cancelled">Dibatalkan</option>
-                           </select>
-                        </div>
-                     </div>
-
-                     <div>
-                        <label
-                           class="block text-sm font-medium text-gray-700 mb-2"
-                           >Deskripsi</label
-                        >
-                        <textarea
-                           rows="3"
-                           class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
-                           placeholder="Deskripsi pelatihan..."
-                        ></textarea>
-                     </div>
-
-                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                           <label
-                              class="block text-sm font-medium text-gray-700 mb-2"
-                              >Rating (1-5)</label
-                           >
-                           <select
-                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
-                           >
-                              <option value="">Belum dinilai</option>
-                              <option value="1">1 - Sangat Buruk</option>
-                              <option value="2">2 - Buruk</option>
-                              <option value="3">3 - Cukup</option>
-                              <option value="4">4 - Baik</option>
-                              <option value="5">5 - Sangat Baik</option>
-                           </select>
-                        </div>
-                        <div>
-                           <label
-                              class="block text-sm font-medium text-gray-700 mb-2"
-                              >Sertifikat</label
-                           >
-                           <select
-                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
-                           >
-                              <option value="no">Tidak Ada</option>
-                              <option value="yes">Ada Sertifikat</option>
-                           </select>
                         </div>
                      </div>
 
                      <div class="flex justify-end space-x-3 pt-4">
                         <button
                            type="button"
-                           id="cancel-training"
-                           class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded text-sm font-medium"
-                        >
-                           Batal
-                        </button>
-                        <button
-                           type="submit"
-                           class="bg-primary-green hover:bg-light-green text-white px-4 py-2 rounded text-sm font-medium"
-                        >
-                           Simpan
-                        </button>
-                     </div>
-                  </form>
-               </div>
-            </div>
-         </div>
-      </div>
-
-      <!-- Add Development Plan Modal -->
-      <div
-         id="plan-modal"
-         class="fixed inset-0 bg-black bg-opacity-50 hidden z-50"
-      >
-         <div class="flex items-center justify-center min-h-screen p-4">
-            <div
-               class="bg-white rounded-lg max-w-2xl w-full max-h-screen overflow-y-auto"
-            >
-               <div
-                  class="bg-gray-50 px-6 py-4 border-b border-gray-200 flex items-center justify-between"
-               >
-                  <h3 class="text-lg font-semibold">
-                     Tambah Rencana Pengembangan
-                  </h3>
-                  <button
-                     id="close-plan-modal"
-                     class="text-gray-400 hover:text-gray-600"
-                  >
-                     <i class="fas fa-times text-xl"></i>
-                  </button>
-               </div>
-               <div class="p-6">
-                  <form class="space-y-4">
-                     <div>
-                        <label
-                           class="block text-sm font-medium text-gray-700 mb-2"
-                           >Nama Rencana *</label
-                        >
-                        <input
-                           type="text"
-                           class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
-                           placeholder="Masukkan nama rencana pengembangan"
-                           required
-                        />
-                     </div>
-                     <div>
-                        <label
-                           class="block text-sm font-medium text-gray-700 mb-2"
-                           >Deskripsi</label
-                        >
-                        <textarea
-                           rows="3"
-                           class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
-                           placeholder="Jelaskan detail rencana pengembangan..."
-                        ></textarea>
-                     </div>
-                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                           <label
-                              class="block text-sm font-medium text-gray-700 mb-2"
-                              >Target Periode</label
-                           >
-                           <select
-                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
-                           >
-                              <option value="Q1 2025">Q1 2025</option>
-                              <option value="Q2 2025">Q2 2025</option>
-                              <option value="Q3 2025">Q3 2025</option>
-                              <option value="Q4 2025">Q4 2025</option>
-                           </select>
-                        </div>
-                        <div>
-                           <label
-                              class="block text-sm font-medium text-gray-700 mb-2"
-                              >Target Sertifikasi</label
-                           >
-                           <input
-                              type="text"
-                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
-                              placeholder="Nama sertifikasi yang ditargetkan"
-                           />
-                        </div>
-                        <div>
-                           <label
-                              class="block text-sm font-medium text-gray-700 mb-2"
-                              >Estimasi Biaya (Rp)</label
-                           >
-                           <input
-                              type="number"
-                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
-                              placeholder="0"
-                           />
-                        </div>
-                        <div>
-                           <label
-                              class="block text-sm font-medium text-gray-700 mb-2"
-                              >Estimasi Durasi (Jam)</label
-                           >
-                           <input
-                              type="number"
-                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
-                              placeholder="0"
-                           />
-                        </div>
-                     </div>
-                     <div class="flex justify-end space-x-3 pt-4">
-                        <button
-                           type="button"
-                           id="cancel-plan"
+                           id="cancel-position"
                            class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded text-sm font-medium"
                         >
                            Batal
@@ -1388,81 +1255,123 @@
          .nav-tab:hover {
             background-color: rgba(255, 255, 255, 0.05);
          }
+
+         .org-chart {
+            position: relative;
+         }
+
+         .org-node {
+            padding: 1rem;
+            border-radius: 0.5rem;
+            background: white;
+            border: 1px solid #e5e7eb;
+            transition: all 0.2s ease;
+            cursor: pointer;
+         }
+
+         .org-node:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+         }
+
+         .current-position {
+            border: 2px solid #10b981;
+            background: #f0fdf4;
+         }
+
+         .ceo-node {
+            border-color: #ef4444;
+            background: #fef2f2;
+         }
+
+         .vp-node {
+            border-color: #8b5cf6;
+            background: #faf5ff;
+         }
+
+         .director-node {
+            border-color: #3b82f6;
+            background: #eff6ff;
+         }
+
+         .manager-node {
+            border-color: #f59e0b;
+            background: #fffbeb;
+         }
+
+         .staff-node {
+            border-color: #6b7280;
+            background: #f9fafb;
+         }
       </style>
 
       <script>
          document.addEventListener("DOMContentLoaded", function () {
-            const trainingModal = document.getElementById("training-modal");
-            const planModal = document.getElementById("plan-modal");
+            const reportingModal = document.getElementById("reporting-modal");
+            const positionModal = document.getElementById("position-modal");
 
             // Modal open functions
-            window.openAddTrainingModal = function () {
-               trainingModal.classList.remove("hidden");
+            window.openEditReportingModal = function () {
+               reportingModal.classList.remove("hidden");
             };
 
-            window.openAddPlanModal = function () {
-               planModal.classList.remove("hidden");
+            window.openAddPositionModal = function () {
+               positionModal.classList.remove("hidden");
             };
 
             // Edit functions
-            window.editTraining = function (id) {
-               trainingModal.classList.remove("hidden");
-               // Add logic to populate form with existing data
+            window.editDirectReport = function (id) {
+               alert(`Edit bawahan langsung ID: ${id}`);
             };
 
-            window.editPlan = function (id) {
-               planModal.classList.remove("hidden");
+            window.editPosition = function (id) {
+               positionModal.classList.remove("hidden");
                // Add logic to populate form with existing data
             };
 
             // Delete functions
-            window.deleteTraining = function (id) {
+            window.deletePosition = function (id) {
                if (
                   confirm(
-                     "Apakah Anda yakin ingin menghapus data pelatihan ini?"
+                     "Apakah Anda yakin ingin menghapus riwayat jabatan ini?"
                   )
                ) {
-                  alert("Data pelatihan berhasil dihapus");
+                  alert("Riwayat jabatan berhasil dihapus");
                }
             };
 
-            window.deletePlan = function (id) {
-               if (
-                  confirm(
-                     "Apakah Anda yakin ingin menghapus rencana pengembangan ini?"
-                  )
-               ) {
-                  alert("Rencana pengembangan berhasil dihapus");
-               }
+            // Add functions
+            window.addDirectReport = function () {
+               alert("Fitur tambah bawahan langsung");
             };
 
             // Close modal events
             document
-               .getElementById("close-training-modal")
+               .getElementById("close-reporting-modal")
                .addEventListener("click", () => {
-                  trainingModal.classList.add("hidden");
+                  reportingModal.classList.add("hidden");
                });
 
             document
-               .getElementById("close-plan-modal")
+               .getElementById("close-position-modal")
                .addEventListener("click", () => {
-                  planModal.classList.add("hidden");
+                  positionModal.classList.add("hidden");
                });
 
             document
-               .getElementById("cancel-training")
+               .getElementById("cancel-reporting")
                .addEventListener("click", () => {
-                  trainingModal.classList.add("hidden");
+                  reportingModal.classList.add("hidden");
                });
 
             document
-               .getElementById("cancel-plan")
+               .getElementById("cancel-position")
                .addEventListener("click", () => {
-                  planModal.classList.add("hidden");
+                  positionModal.classList.add("hidden");
                });
 
             // Close modal when clicking outside
-            [trainingModal, planModal].forEach((modal) => {
+            [reportingModal, positionModal].forEach((modal) => {
                modal.addEventListener("click", (e) => {
                   if (e.target === modal) {
                      modal.classList.add("hidden");
@@ -1472,7 +1381,7 @@
 
             // Form submissions
             document
-               .querySelector("#training-modal form")
+               .querySelector("#reporting-modal form")
                .addEventListener("submit", function (e) {
                   e.preventDefault();
 
@@ -1483,16 +1392,15 @@
                   submitBtn.disabled = true;
 
                   setTimeout(() => {
-                     alert("Data pelatihan berhasil disimpan!");
+                     alert("Struktur pelaporan berhasil diperbarui!");
                      submitBtn.textContent = originalText;
                      submitBtn.disabled = false;
-                     trainingModal.classList.add("hidden");
-                     this.reset();
+                     reportingModal.classList.add("hidden");
                   }, 1500);
                });
 
             document
-               .querySelector("#plan-modal form")
+               .querySelector("#position-modal form")
                .addEventListener("submit", function (e) {
                   e.preventDefault();
 
@@ -1503,13 +1411,22 @@
                   submitBtn.disabled = true;
 
                   setTimeout(() => {
-                     alert("Rencana pengembangan berhasil disimpan!");
+                     alert("Riwayat jabatan berhasil disimpan!");
                      submitBtn.textContent = originalText;
                      submitBtn.disabled = false;
-                     planModal.classList.add("hidden");
+                     positionModal.classList.add("hidden");
                      this.reset();
                   }, 1500);
                });
+
+            // Org chart interactions
+            document.querySelectorAll(".org-node").forEach((node) => {
+               node.addEventListener("click", function () {
+                  const name = this.querySelector(".font-semibold").textContent;
+                  const position = this.querySelector(".text-xs").textContent;
+                  alert(`Klik pada: ${name}\nJabatan: ${position}`);
+               });
+            });
          });
       </script>
    </body>

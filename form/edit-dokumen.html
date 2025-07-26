@@ -3,7 +3,7 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Edit Kehadiran - Sistem Manajemen Karyawan</title>
+      <title>Edit Dokumen - Sistem Manajemen Karyawan</title>
       <script src="https://cdn.tailwindcss.com"></script>
       <link
          rel="stylesheet"
@@ -60,14 +60,14 @@
                </a>
                <a
                   href="../kehadiran.html"
-                  class="nav-tab active px-6 py-4 whitespace-nowrap border-b-2 border-white text-sm font-medium flex items-center"
+                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
                >
                   <i class="fas fa-calendar-check mr-2"></i>
                   Kehadiran
                </a>
                <a
                   href="../dokumen.html"
-                  class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
+                  class="nav-tab active px-6 py-4 whitespace-nowrap border-b-2 border-white text-sm font-medium flex items-center"
                >
                   <i class="fas fa-file-alt mr-2"></i>
                   Dokumen
@@ -108,7 +108,7 @@
                   Catatan
                </a>
                <a
-                  href="../lainnya.html"
+                  href="../index.html"
                   class="nav-tab px-6 py-4 whitespace-nowrap border-b-2 border-transparent hover:border-white transition-colors text-sm font-medium flex items-center"
                >
                   <i class="fas fa-ellipsis-h mr-2"></i>
@@ -210,20 +210,11 @@
                   >
                      <i class="fas fa-edit text-gray-600"></i>
                   </div>
-                  <h2 class="text-2xl font-bold text-gray-800">
-                     Edit Kehadiran
-                  </h2>
+                  <h2 class="text-2xl font-bold text-gray-800">Edit Dokumen</h2>
                </div>
                <div class="flex space-x-2">
-                  <select
-                     class="border border-gray-300 rounded-lg px-3 py-2 text-sm"
-                  >
-                     <option>Januari 2024</option>
-                     <option>Februari 2024</option>
-                     <option>Maret 2024</option>
-                  </select>
                   <a
-                     href="../kehadiran.html"
+                     href="../dokumen.html"
                      class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded text-sm font-medium flex items-center"
                   >
                      <i class="fas fa-times mr-2"></i>
@@ -238,270 +229,14 @@
                </div>
             </div>
 
-            <!-- Quick Actions -->
-            <div class="bg-white rounded-lg border border-gray-200 p-4 mb-6">
-               <div class="flex items-center justify-between">
-                  <h3 class="font-semibold text-gray-800">Aksi Cepat</h3>
-                  <div class="flex space-x-2">
-                     <button
-                        class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-sm flex items-center"
-                     >
-                        <i class="fas fa-plus mr-1"></i>
-                        Tambah Kehadiran
-                     </button>
-                     <button
-                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded text-sm flex items-center"
-                     >
-                        <i class="fas fa-calendar-times mr-1"></i>
-                        Tambah Cuti
-                     </button>
-                     <button
-                        class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded text-sm flex items-center"
-                     >
-                        <i class="fas fa-user-times mr-1"></i>
-                        Tambah Izin
-                     </button>
-                  </div>
-               </div>
-            </div>
-
-            <!-- Attendance Calendar -->
+            <!-- Document Upload Section -->
             <div
                class="bg-white rounded-lg border border-gray-200 overflow-hidden mb-6"
             >
                <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
                   <h3 class="text-lg font-semibold flex items-center">
-                     <i class="fas fa-calendar-alt text-gray-400 mr-3"></i>
-                     Kalender Kehadiran - Januari 2024
-                  </h3>
-               </div>
-               <div class="p-6">
-                  <!-- Calendar Header -->
-                  <div class="grid grid-cols-7 gap-2 mb-4">
-                     <div class="text-center font-semibold text-gray-600 py-2">
-                        Min
-                     </div>
-                     <div class="text-center font-semibold text-gray-600 py-2">
-                        Sen
-                     </div>
-                     <div class="text-center font-semibold text-gray-600 py-2">
-                        Sel
-                     </div>
-                     <div class="text-center font-semibold text-gray-600 py-2">
-                        Rab
-                     </div>
-                     <div class="text-center font-semibold text-gray-600 py-2">
-                        Kam
-                     </div>
-                     <div class="text-center font-semibold text-gray-600 py-2">
-                        Jum
-                     </div>
-                     <div class="text-center font-semibold text-gray-600 py-2">
-                        Sab
-                     </div>
-                  </div>
-
-                  <!-- Calendar Days -->
-                  <div class="grid grid-cols-7 gap-2">
-                     <!-- Week 1 -->
-                     <div class="text-center py-3 text-gray-400">31</div>
-                     <div
-                        class="attendance-day bg-green-100 border border-green-300 rounded p-2 cursor-pointer hover:bg-green-200"
-                        data-date="2024-01-01"
-                     >
-                        <div class="text-center font-semibold">1</div>
-                        <div class="text-xs text-green-700">08:00-17:00</div>
-                     </div>
-                     <div
-                        class="attendance-day bg-green-100 border border-green-300 rounded p-2 cursor-pointer hover:bg-green-200"
-                        data-date="2024-01-02"
-                     >
-                        <div class="text-center font-semibold">2</div>
-                        <div class="text-xs text-green-700">08:15-17:00</div>
-                     </div>
-                     <div
-                        class="attendance-day bg-green-100 border border-green-300 rounded p-2 cursor-pointer hover:bg-green-200"
-                        data-date="2024-01-03"
-                     >
-                        <div class="text-center font-semibold">3</div>
-                        <div class="text-xs text-green-700">08:00-17:30</div>
-                     </div>
-                     <div
-                        class="attendance-day bg-green-100 border border-green-300 rounded p-2 cursor-pointer hover:bg-green-200"
-                        data-date="2024-01-04"
-                     >
-                        <div class="text-center font-semibold">4</div>
-                        <div class="text-xs text-green-700">08:00-17:00</div>
-                     </div>
-                     <div
-                        class="attendance-day bg-green-100 border border-green-300 rounded p-2 cursor-pointer hover:bg-green-200"
-                        data-date="2024-01-05"
-                     >
-                        <div class="text-center font-semibold">5</div>
-                        <div class="text-xs text-green-700">08:00-17:00</div>
-                     </div>
-                     <div
-                        class="bg-gray-100 border border-gray-300 rounded p-2"
-                     >
-                        <div class="text-center font-semibold text-gray-500">
-                           6
-                        </div>
-                        <div class="text-xs text-gray-500">Weekend</div>
-                     </div>
-
-                     <!-- Week 2 -->
-                     <div
-                        class="bg-gray-100 border border-gray-300 rounded p-2"
-                     >
-                        <div class="text-center font-semibold text-gray-500">
-                           7
-                        </div>
-                        <div class="text-xs text-gray-500">Weekend</div>
-                     </div>
-                     <div
-                        class="attendance-day bg-green-100 border border-green-300 rounded p-2 cursor-pointer hover:bg-green-200"
-                        data-date="2024-01-08"
-                     >
-                        <div class="text-center font-semibold">8</div>
-                        <div class="text-xs text-green-700">08:00-17:00</div>
-                     </div>
-                     <div
-                        class="attendance-day bg-yellow-100 border border-yellow-300 rounded p-2 cursor-pointer hover:bg-yellow-200"
-                        data-date="2024-01-09"
-                     >
-                        <div class="text-center font-semibold">9</div>
-                        <div class="text-xs text-yellow-700">Terlambat</div>
-                     </div>
-                     <div
-                        class="attendance-day bg-green-100 border border-green-300 rounded p-2 cursor-pointer hover:bg-green-200"
-                        data-date="2024-01-10"
-                     >
-                        <div class="text-center font-semibold">10</div>
-                        <div class="text-xs text-green-700">08:00-17:00</div>
-                     </div>
-                     <div
-                        class="attendance-day bg-green-100 border border-green-300 rounded p-2 cursor-pointer hover:bg-green-200"
-                        data-date="2024-01-11"
-                     >
-                        <div class="text-center font-semibold">11</div>
-                        <div class="text-xs text-green-700">08:00-17:00</div>
-                     </div>
-                     <div
-                        class="attendance-day bg-blue-100 border border-blue-300 rounded p-2 cursor-pointer hover:bg-blue-200"
-                        data-date="2024-01-12"
-                     >
-                        <div class="text-center font-semibold">12</div>
-                        <div class="text-xs text-blue-700">Cuti</div>
-                     </div>
-                     <div
-                        class="bg-gray-100 border border-gray-300 rounded p-2"
-                     >
-                        <div class="text-center font-semibold text-gray-500">
-                           13
-                        </div>
-                        <div class="text-xs text-gray-500">Weekend</div>
-                     </div>
-
-                     <!-- Continue with more weeks... -->
-                     <div
-                        class="bg-gray-100 border border-gray-300 rounded p-2"
-                     >
-                        <div class="text-center font-semibold text-gray-500">
-                           14
-                        </div>
-                        <div class="text-xs text-gray-500">Weekend</div>
-                     </div>
-                     <div
-                        class="attendance-day bg-green-100 border border-green-300 rounded p-2 cursor-pointer hover:bg-green-200"
-                        data-date="2024-01-15"
-                     >
-                        <div class="text-center font-semibold">15</div>
-                        <div class="text-xs text-green-700">08:00-17:00</div>
-                     </div>
-                     <div
-                        class="attendance-day bg-red-100 border border-red-300 rounded p-2 cursor-pointer hover:bg-red-200"
-                        data-date="2024-01-16"
-                     >
-                        <div class="text-center font-semibold">16</div>
-                        <div class="text-xs text-red-700">Tidak Hadir</div>
-                     </div>
-                     <div
-                        class="attendance-day bg-green-100 border border-green-300 rounded p-2 cursor-pointer hover:bg-green-200"
-                        data-date="2024-01-17"
-                     >
-                        <div class="text-center font-semibold">17</div>
-                        <div class="text-xs text-green-700">08:00-17:00</div>
-                     </div>
-                     <div
-                        class="attendance-day bg-green-100 border border-green-300 rounded p-2 cursor-pointer hover:bg-green-200"
-                        data-date="2024-01-18"
-                     >
-                        <div class="text-center font-semibold">18</div>
-                        <div class="text-xs text-green-700">08:00-17:00</div>
-                     </div>
-                     <div
-                        class="attendance-day bg-green-100 border border-green-300 rounded p-2 cursor-pointer hover:bg-green-200"
-                        data-date="2024-01-19"
-                     >
-                        <div class="text-center font-semibold">19</div>
-                        <div class="text-xs text-green-700">08:00-17:00</div>
-                     </div>
-                     <div
-                        class="bg-gray-100 border border-gray-300 rounded p-2"
-                     >
-                        <div class="text-center font-semibold text-gray-500">
-                           20
-                        </div>
-                        <div class="text-xs text-gray-500">Weekend</div>
-                     </div>
-                  </div>
-
-                  <!-- Legend -->
-                  <div class="mt-6 flex flex-wrap gap-4 text-sm">
-                     <div class="flex items-center">
-                        <div
-                           class="w-4 h-4 bg-green-100 border border-green-300 rounded mr-2"
-                        ></div>
-                        <span>Hadir</span>
-                     </div>
-                     <div class="flex items-center">
-                        <div
-                           class="w-4 h-4 bg-yellow-100 border border-yellow-300 rounded mr-2"
-                        ></div>
-                        <span>Terlambat</span>
-                     </div>
-                     <div class="flex items-center">
-                        <div
-                           class="w-4 h-4 bg-blue-100 border border-blue-300 rounded mr-2"
-                        ></div>
-                        <span>Cuti</span>
-                     </div>
-                     <div class="flex items-center">
-                        <div
-                           class="w-4 h-4 bg-red-100 border border-red-300 rounded mr-2"
-                        ></div>
-                        <span>Tidak Hadir</span>
-                     </div>
-                     <div class="flex items-center">
-                        <div
-                           class="w-4 h-4 bg-gray-100 border border-gray-300 rounded mr-2"
-                        ></div>
-                        <span>Weekend/Libur</span>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-            <!-- Attendance Details Form -->
-            <div
-               class="bg-white rounded-lg border border-gray-200 overflow-hidden mb-6"
-               id="attendance-form"
-               style="display: none"
-            >
-               <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
-                  <h3 class="text-lg font-semibold flex items-center">
-                     <i class="fas fa-clock text-gray-400 mr-3"></i>
-                     Edit Kehadiran - <span id="selected-date"></span>
+                     <i class="fas fa-cloud-upload-alt text-gray-400 mr-3"></i>
+                     Upload Dokumen Baru
                   </h3>
                </div>
                <div class="p-6">
@@ -510,78 +245,59 @@
                         <div>
                            <label
                               class="block text-sm font-medium text-gray-700 mb-2"
-                              >Status Kehadiran *</label
+                              >Kategori Dokumen *</label
                            >
                            <select
-                              id="attendance-status"
                               class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
                            >
-                              <option value="hadir">Hadir</option>
-                              <option value="terlambat">Terlambat</option>
-                              <option value="cuti">Cuti</option>
-                              <option value="izin">Izin</option>
-                              <option value="sakit">Sakit</option>
-                              <option value="tidak_hadir">Tidak Hadir</option>
+                              <option value="">Pilih Kategori</option>
+                              <option value="identitas">
+                                 Dokumen Identitas
+                              </option>
+                              <option value="pendidikan">
+                                 Dokumen Pendidikan
+                              </option>
+                              <option value="kontrak">
+                                 Kontrak & Perjanjian
+                              </option>
+                              <option value="sertifikat">
+                                 Sertifikat & Lisensi
+                              </option>
+                              <option value="kesehatan">
+                                 Dokumen Kesehatan
+                              </option>
+                              <option value="keuangan">Dokumen Keuangan</option>
+                              <option value="lainnya">Lainnya</option>
                            </select>
                         </div>
                         <div>
                            <label
                               class="block text-sm font-medium text-gray-700 mb-2"
-                              >Jam Masuk</label
-                           >
-                           <input
-                              type="time"
-                              id="check-in"
-                              value="08:00"
-                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
-                           />
-                        </div>
-                        <div>
-                           <label
-                              class="block text-sm font-medium text-gray-700 mb-2"
-                              >Jam Keluar</label
-                           >
-                           <input
-                              type="time"
-                              id="check-out"
-                              value="17:00"
-                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
-                           />
-                        </div>
-                        <div>
-                           <label
-                              class="block text-sm font-medium text-gray-700 mb-2"
-                              >Total Jam Kerja</label
+                              >Nama Dokumen *</label
                            >
                            <input
                               type="text"
-                              id="total-hours"
-                              value="8 jam"
-                              class="w-full border border-gray-300 rounded-lg px-3 py-2 bg-gray-100"
-                              readonly
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                              placeholder="Masukkan nama dokumen"
                            />
                         </div>
                         <div>
                            <label
                               class="block text-sm font-medium text-gray-700 mb-2"
-                              >Jam Istirahat</label
+                              >Tanggal Dokumen</label
                            >
                            <input
-                              type="number"
-                              step="0.5"
-                              value="1"
+                              type="date"
                               class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
                            />
                         </div>
                         <div>
                            <label
                               class="block text-sm font-medium text-gray-700 mb-2"
-                              >Jam Lembur</label
+                              >Tanggal Kadaluarsa</label
                            >
                            <input
-                              type="number"
-                              step="0.5"
-                              value="0"
+                              type="date"
                               class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
                            />
                         </div>
@@ -590,18 +306,585 @@
                      <div>
                         <label
                            class="block text-sm font-medium text-gray-700 mb-2"
-                           >Keterangan</label
+                           >Deskripsi</label
                         >
                         <textarea
                            rows="3"
                            class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
-                           placeholder="Tambahkan keterangan jika diperlukan..."
+                           placeholder="Tambahkan deskripsi dokumen..."
                         ></textarea>
                      </div>
 
+                     <!-- File Upload Area -->
                      <div
-                        class="flex items-center justify-between pt-4 border-t border-gray-200"
+                        class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-primary-green transition-colors"
                      >
+                        <i
+                           class="fas fa-cloud-upload-alt text-4xl text-gray-400 mb-4"
+                        ></i>
+                        <h4 class="text-lg font-medium text-gray-700 mb-2">
+                           Upload File Dokumen
+                        </h4>
+                        <p class="text-sm text-gray-600 mb-4">
+                           Drag & drop file atau klik untuk browse
+                        </p>
+                        <p class="text-xs text-gray-500 mb-4">
+                           Format yang didukung: PDF, DOC, DOCX, JPG, PNG (Max:
+                           10MB)
+                        </p>
+                        <input
+                           type="file"
+                           class="hidden"
+                           accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+                           multiple
+                        />
+                        <button
+                           type="button"
+                           class="bg-primary-green hover:bg-light-green text-white px-4 py-2 rounded text-sm font-medium"
+                        >
+                           <i class="fas fa-folder-open mr-2"></i>
+                           Pilih File
+                        </button>
+                     </div>
+
+                     <!-- File Preview Area -->
+                     <div id="file-preview" class="hidden">
+                        <h4 class="font-medium text-gray-700 mb-3">
+                           File yang akan diupload:
+                        </h4>
+                        <div id="file-list" class="space-y-2"></div>
+                     </div>
+
+                     <div class="flex justify-end">
+                        <button
+                           type="submit"
+                           class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded text-sm font-medium flex items-center"
+                        >
+                           <i class="fas fa-upload mr-2"></i>
+                           Upload Dokumen
+                        </button>
+                     </div>
+                  </form>
+               </div>
+            </div>
+
+            <!-- Existing Documents -->
+            <div
+               class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+            >
+               <div
+                  class="bg-gray-50 px-6 py-4 border-b border-gray-200 flex items-center justify-between"
+               >
+                  <h3 class="text-lg font-semibold flex items-center">
+                     <i class="fas fa-folder-open text-gray-400 mr-3"></i>
+                     Dokumen Tersimpan
+                  </h3>
+                  <div class="flex items-center space-x-2">
+                     <select
+                        class="border border-gray-300 rounded px-3 py-1 text-sm"
+                     >
+                        <option>Semua Kategori</option>
+                        <option>Dokumen Identitas</option>
+                        <option>Dokumen Pendidikan</option>
+                        <option>Kontrak & Perjanjian</option>
+                        <option>Sertifikat & Lisensi</option>
+                     </select>
+                     <input
+                        type="text"
+                        placeholder="Cari dokumen..."
+                        class="border border-gray-300 rounded px-3 py-1 text-sm"
+                     />
+                  </div>
+               </div>
+               <div class="p-6">
+                  <div class="space-y-4">
+                     <!-- Document Item 1 -->
+                     <div
+                        class="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 transition-colors"
+                     >
+                        <div class="flex items-center justify-between">
+                           <div class="flex items-center space-x-4">
+                              <div
+                                 class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center"
+                              >
+                                 <i
+                                    class="fas fa-file-pdf text-red-600 text-xl"
+                                 ></i>
+                              </div>
+                              <div>
+                                 <h4 class="font-semibold text-gray-800">
+                                    KTP Arif Wibisono
+                                 </h4>
+                                 <p class="text-sm text-gray-600">
+                                    Dokumen Identitas • PDF • 2.3 MB
+                                 </p>
+                                 <p class="text-xs text-gray-500">
+                                    Diupload: 15 Jan 2024 • Berlaku hingga: 15
+                                    Mar 2030
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="flex items-center space-x-2">
+                              <span
+                                 class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full"
+                                 >Aktif</span
+                              >
+                              <button
+                                 class="text-blue-600 hover:text-blue-800 p-2"
+                                 title="Lihat"
+                              >
+                                 <i class="fas fa-eye"></i>
+                              </button>
+                              <button
+                                 class="text-green-600 hover:text-green-800 p-2"
+                                 title="Download"
+                              >
+                                 <i class="fas fa-download"></i>
+                              </button>
+                              <button
+                                 class="text-yellow-600 hover:text-yellow-800 p-2"
+                                 title="Edit"
+                              >
+                                 <i class="fas fa-edit"></i>
+                              </button>
+                              <button
+                                 class="text-red-600 hover:text-red-800 p-2"
+                                 title="Hapus"
+                              >
+                                 <i class="fas fa-trash"></i>
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+
+                     <!-- Document Item 2 -->
+                     <div
+                        class="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 transition-colors"
+                     >
+                        <div class="flex items-center justify-between">
+                           <div class="flex items-center space-x-4">
+                              <div
+                                 class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center"
+                              >
+                                 <i
+                                    class="fas fa-file-word text-blue-600 text-xl"
+                                 ></i>
+                              </div>
+                              <div>
+                                 <h4 class="font-semibold text-gray-800">
+                                    Kontrak Kerja 2020
+                                 </h4>
+                                 <p class="text-sm text-gray-600">
+                                    Kontrak & Perjanjian • DOCX • 1.8 MB
+                                 </p>
+                                 <p class="text-xs text-gray-500">
+                                    Diupload: 01 Jul 2020 • Berlaku hingga: 01
+                                    Jul 2025
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="flex items-center space-x-2">
+                              <span
+                                 class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full"
+                                 >Aktif</span
+                              >
+                              <button
+                                 class="text-blue-600 hover:text-blue-800 p-2"
+                                 title="Lihat"
+                              >
+                                 <i class="fas fa-eye"></i>
+                              </button>
+                              <button
+                                 class="text-green-600 hover:text-green-800 p-2"
+                                 title="Download"
+                              >
+                                 <i class="fas fa-download"></i>
+                              </button>
+                              <button
+                                 class="text-yellow-600 hover:text-yellow-800 p-2"
+                                 title="Edit"
+                              >
+                                 <i class="fas fa-edit"></i>
+                              </button>
+                              <button
+                                 class="text-red-600 hover:text-red-800 p-2"
+                                 title="Hapus"
+                              >
+                                 <i class="fas fa-trash"></i>
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+
+                     <!-- Document Item 3 -->
+                     <div
+                        class="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 transition-colors"
+                     >
+                        <div class="flex items-center justify-between">
+                           <div class="flex items-center space-x-4">
+                              <div
+                                 class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center"
+                              >
+                                 <i
+                                    class="fas fa-file-image text-green-600 text-xl"
+                                 ></i>
+                              </div>
+                              <div>
+                                 <h4 class="font-semibold text-gray-800">
+                                    Ijazah S2 Manajemen Bisnis
+                                 </h4>
+                                 <p class="text-sm text-gray-600">
+                                    Dokumen Pendidikan • JPG • 3.1 MB
+                                 </p>
+                                 <p class="text-xs text-gray-500">
+                                    Diupload: 10 Aug 2017 • Tanggal Ijazah: 15
+                                    Jun 2010
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="flex items-center space-x-2">
+                              <span
+                                 class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full"
+                                 >Aktif</span
+                              >
+                              <button
+                                 class="text-blue-600 hover:text-blue-800 p-2"
+                                 title="Lihat"
+                              >
+                                 <i class="fas fa-eye"></i>
+                              </button>
+                              <button
+                                 class="text-green-600 hover:text-green-800 p-2"
+                                 title="Download"
+                              >
+                                 <i class="fas fa-download"></i>
+                              </button>
+                              <button
+                                 class="text-yellow-600 hover:text-yellow-800 p-2"
+                                 title="Edit"
+                              >
+                                 <i class="fas fa-edit"></i>
+                              </button>
+                              <button
+                                 class="text-red-600 hover:text-red-800 p-2"
+                                 title="Hapus"
+                              >
+                                 <i class="fas fa-trash"></i>
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+
+                     <!-- Document Item 4 -->
+                     <div
+                        class="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 transition-colors"
+                     >
+                        <div class="flex items-center justify-between">
+                           <div class="flex items-center space-x-4">
+                              <div
+                                 class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center"
+                              >
+                                 <i
+                                    class="fas fa-certificate text-purple-600 text-xl"
+                                 ></i>
+                              </div>
+                              <div>
+                                 <h4 class="font-semibold text-gray-800">
+                                    Sertifikat PMP
+                                 </h4>
+                                 <p class="text-sm text-gray-600">
+                                    Sertifikat & Lisensi • PDF • 1.5 MB
+                                 </p>
+                                 <p class="text-xs text-gray-500">
+                                    Diupload: 20 Mar 2023 • Berlaku hingga: 20
+                                    Mar 2026
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="flex items-center space-x-2">
+                              <span
+                                 class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full"
+                                 >Aktif</span
+                              >
+                              <button
+                                 class="text-blue-600 hover:text-blue-800 p-2"
+                                 title="Lihat"
+                              >
+                                 <i class="fas fa-eye"></i>
+                              </button>
+                              <button
+                                 class="text-green-600 hover:text-green-800 p-2"
+                                 title="Download"
+                              >
+                                 <i class="fas fa-download"></i>
+                              </button>
+                              <button
+                                 class="text-yellow-600 hover:text-yellow-800 p-2"
+                                 title="Edit"
+                              >
+                                 <i class="fas fa-edit"></i>
+                              </button>
+                              <button
+                                 class="text-red-600 hover:text-red-800 p-2"
+                                 title="Hapus"
+                              >
+                                 <i class="fas fa-trash"></i>
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+
+                     <!-- Document Item 5 -->
+                     <div
+                        class="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 transition-colors"
+                     >
+                        <div class="flex items-center justify-between">
+                           <div class="flex items-center space-x-4">
+                              <div
+                                 class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center"
+                              >
+                                 <i
+                                    class="fas fa-file-medical text-yellow-600 text-xl"
+                                 ></i>
+                              </div>
+                              <div>
+                                 <h4 class="font-semibold text-gray-800">
+                                    Medical Check Up 2024
+                                 </h4>
+                                 <p class="text-sm text-gray-600">
+                                    Dokumen Kesehatan • PDF • 4.2 MB
+                                 </p>
+                                 <p class="text-xs text-gray-500">
+                                    Diupload: 05 Jan 2024 • Tanggal Pemeriksaan:
+                                    03 Jan 2024
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="flex items-center space-x-2">
+                              <span
+                                 class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full"
+                                 >Aktif</span
+                              >
+                              <button
+                                 class="text-blue-600 hover:text-blue-800 p-2"
+                                 title="Lihat"
+                              >
+                                 <i class="fas fa-eye"></i>
+                              </button>
+                              <button
+                                 class="text-green-600 hover:text-green-800 p-2"
+                                 title="Download"
+                              >
+                                 <i class="fas fa-download"></i>
+                              </button>
+                              <button
+                                 class="text-yellow-600 hover:text-yellow-800 p-2"
+                                 title="Edit"
+                              >
+                                 <i class="fas fa-edit"></i>
+                              </button>
+                              <button
+                                 class="text-red-600 hover:text-red-800 p-2"
+                                 title="Hapus"
+                              >
+                                 <i class="fas fa-trash"></i>
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+
+                     <!-- Document Item 6 - Expired -->
+                     <div
+                        class="border border-red-200 rounded-lg p-4 hover:bg-red-50 transition-colors bg-red-25"
+                     >
+                        <div class="flex items-center justify-between">
+                           <div class="flex items-center space-x-4">
+                              <div
+                                 class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center"
+                              >
+                                 <i
+                                    class="fas fa-id-card text-red-600 text-xl"
+                                 ></i>
+                              </div>
+                              <div>
+                                 <h4 class="font-semibold text-gray-800">
+                                    NPWP Lama
+                                 </h4>
+                                 <p class="text-sm text-gray-600">
+                                    Dokumen Keuangan • PDF • 1.1 MB
+                                 </p>
+                                 <p class="text-xs text-red-500">
+                                    Diupload: 15 Jul 2017 • Kadaluarsa: 31 Dec
+                                    2023
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="flex items-center space-x-2">
+                              <span
+                                 class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full"
+                                 >Kadaluarsa</span
+                              >
+                              <button
+                                 class="text-blue-600 hover:text-blue-800 p-2"
+                                 title="Lihat"
+                              >
+                                 <i class="fas fa-eye"></i>
+                              </button>
+                              <button
+                                 class="text-green-600 hover:text-green-800 p-2"
+                                 title="Download"
+                              >
+                                 <i class="fas fa-download"></i>
+                              </button>
+                              <button
+                                 class="text-orange-600 hover:text-orange-800 p-2"
+                                 title="Perbarui"
+                              >
+                                 <i class="fas fa-sync-alt"></i>
+                              </button>
+                              <button
+                                 class="text-red-600 hover:text-red-800 p-2"
+                                 title="Hapus"
+                              >
+                                 <i class="fas fa-trash"></i>
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Pagination -->
+                  <div class="mt-6 flex items-center justify-between">
+                     <div class="text-sm text-gray-600">
+                        Menampilkan 1-6 dari 12 dokumen
+                     </div>
+                     <div class="flex space-x-2">
+                        <button
+                           class="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50"
+                        >
+                           <i class="fas fa-chevron-left mr-1"></i>
+                           Sebelumnya
+                        </button>
+                        <button
+                           class="px-3 py-1 bg-primary-green text-white rounded text-sm"
+                        >
+                           1
+                        </button>
+                        <button
+                           class="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50"
+                        >
+                           2
+                        </button>
+                        <button
+                           class="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50"
+                        >
+                           Selanjutnya
+                           <i class="fas fa-chevron-right ml-1"></i>
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Document Edit Modal -->
+      <div
+         id="edit-modal"
+         class="fixed inset-0 bg-black bg-opacity-50 hidden z-50"
+      >
+         <div class="flex items-center justify-center min-h-screen p-4">
+            <div
+               class="bg-white rounded-lg max-w-2xl w-full max-h-screen overflow-y-auto"
+            >
+               <div
+                  class="bg-gray-50 px-6 py-4 border-b border-gray-200 flex items-center justify-between"
+               >
+                  <h3 class="text-lg font-semibold">Edit Dokumen</h3>
+                  <button
+                     id="close-modal"
+                     class="text-gray-400 hover:text-gray-600"
+                  >
+                     <i class="fas fa-times text-xl"></i>
+                  </button>
+               </div>
+               <div class="p-6">
+                  <form class="space-y-4">
+                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Nama Dokumen</label
+                           >
+                           <input
+                              type="text"
+                              id="edit-doc-name"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           />
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Kategori</label
+                           >
+                           <select
+                              id="edit-doc-category"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           >
+                              <option value="identitas">
+                                 Dokumen Identitas
+                              </option>
+                              <option value="pendidikan">
+                                 Dokumen Pendidikan
+                              </option>
+                              <option value="kontrak">
+                                 Kontrak & Perjanjian
+                              </option>
+                              <option value="sertifikat">
+                                 Sertifikat & Lisensi
+                              </option>
+                              <option value="kesehatan">
+                                 Dokumen Kesehatan
+                              </option>
+                              <option value="keuangan">Dokumen Keuangan</option>
+                              <option value="lainnya">Lainnya</option>
+                           </select>
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Tanggal Dokumen</label
+                           >
+                           <input
+                              type="date"
+                              id="edit-doc-date"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           />
+                        </div>
+                        <div>
+                           <label
+                              class="block text-sm font-medium text-gray-700 mb-2"
+                              >Tanggal Kadaluarsa</label
+                           >
+                           <input
+                              type="date"
+                              id="edit-doc-expiry"
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                           />
+                        </div>
+                     </div>
+                     <div>
+                        <label
+                           class="block text-sm font-medium text-gray-700 mb-2"
+                           >Deskripsi</label
+                        >
+                        <textarea
+                           rows="3"
+                           id="edit-doc-description"
+                           class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-green focus:border-transparent"
+                        ></textarea>
+                     </div>
+                     <div class="flex justify-end space-x-3 pt-4">
                         <button
                            type="button"
                            id="cancel-edit"
@@ -609,109 +892,53 @@
                         >
                            Batal
                         </button>
-                        <div class="flex space-x-2">
-                           <button
-                              type="button"
-                              class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded text-sm font-medium"
-                           >
-                              Hapus
-                           </button>
-                           <button
-                              type="submit"
-                              class="bg-primary-green hover:bg-light-green text-white px-4 py-2 rounded text-sm font-medium"
-                           >
-                              Simpan
-                           </button>
-                        </div>
+                        <button
+                           type="submit"
+                           class="bg-primary-green hover:bg-light-green text-white px-4 py-2 rounded text-sm font-medium"
+                        >
+                           Simpan Perubahan
+                        </button>
                      </div>
                   </form>
                </div>
             </div>
+         </div>
+      </div>
 
-            <!-- Bulk Actions -->
+      <!-- Document Viewer Modal -->
+      <div
+         id="viewer-modal"
+         class="fixed inset-0 bg-black bg-opacity-75 hidden z-50"
+      >
+         <div class="flex items-center justify-center min-h-screen p-4">
             <div
-               class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+               class="bg-white rounded-lg max-w-4xl w-full max-h-screen overflow-hidden"
             >
-               <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
-                  <h3 class="text-lg font-semibold flex items-center">
-                     <i class="fas fa-tasks text-gray-400 mr-3"></i>
-                     Aksi Massal
+               <div
+                  class="bg-gray-50 px-6 py-4 border-b border-gray-200 flex items-center justify-between"
+               >
+                  <h3 class="text-lg font-semibold" id="viewer-title">
+                     Preview Dokumen
                   </h3>
+                  <button
+                     id="close-viewer"
+                     class="text-gray-400 hover:text-gray-600"
+                  >
+                     <i class="fas fa-times text-xl"></i>
+                  </button>
                </div>
-               <div class="p-6">
-                  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                     <div class="border border-gray-200 rounded-lg p-4">
-                        <h4 class="font-semibold mb-3">Import Kehadiran</h4>
-                        <p class="text-sm text-gray-600 mb-4">
-                           Upload file Excel untuk import data kehadiran massal
+               <div class="p-6 h-96 overflow-auto">
+                  <div
+                     id="document-preview"
+                     class="flex items-center justify-center h-full bg-gray-100 rounded"
+                  >
+                     <div class="text-center">
+                        <i
+                           class="fas fa-file-alt text-4xl text-gray-400 mb-4"
+                        ></i>
+                        <p class="text-gray-600">
+                           Preview dokumen akan ditampilkan di sini
                         </p>
-                        <div
-                           class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center"
-                        >
-                           <i
-                              class="fas fa-file-excel text-2xl text-gray-400 mb-2"
-                           ></i>
-                           <p class="text-sm text-gray-600">
-                              Drag & drop file Excel atau klik untuk browse
-                           </p>
-                           <input
-                              type="file"
-                              class="hidden"
-                              accept=".xlsx,.xls"
-                           />
-                        </div>
-                     </div>
-
-                     <div class="border border-gray-200 rounded-lg p-4">
-                        <h4 class="font-semibold mb-3">Generate Laporan</h4>
-                        <p class="text-sm text-gray-600 mb-4">
-                           Buat laporan kehadiran untuk periode tertentu
-                        </p>
-                        <div class="space-y-3">
-                           <select
-                              class="w-full border border-gray-300 rounded px-3 py-2 text-sm"
-                           >
-                              <option>Januari 2024</option>
-                              <option>Februari 2024</option>
-                              <option>Maret 2024</option>
-                           </select>
-                           <button
-                              class="w-full bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded text-sm"
-                           >
-                              <i class="fas fa-download mr-2"></i>
-                              Download Laporan
-                           </button>
-                        </div>
-                     </div>
-
-                     <div class="border border-gray-200 rounded-lg p-4">
-                        <h4 class="font-semibold mb-3">Pengaturan Cepat</h4>
-                        <p class="text-sm text-gray-600 mb-4">
-                           Atur kehadiran untuk beberapa hari sekaligus
-                        </p>
-                        <div class="space-y-3">
-                           <input
-                              type="date"
-                              class="w-full border border-gray-300 rounded px-3 py-2 text-sm"
-                           />
-                           <input
-                              type="date"
-                              class="w-full border border-gray-300 rounded px-3 py-2 text-sm"
-                           />
-                           <select
-                              class="w-full border border-gray-300 rounded px-3 py-2 text-sm"
-                           >
-                              <option>Hadir Normal</option>
-                              <option>Cuti</option>
-                              <option>Izin</option>
-                           </select>
-                           <button
-                              class="w-full bg-green-500 hover:bg-green-600 text-white px-3 py-2 rounded text-sm"
-                           >
-                              <i class="fas fa-magic mr-2"></i>
-                              Terapkan
-                           </button>
-                        </div>
                      </div>
                   </div>
                </div>
@@ -728,299 +955,295 @@
             background-color: rgba(255, 255, 255, 0.05);
          }
 
-         .attendance-day {
+         .file-item {
             transition: all 0.2s ease;
-            min-height: 60px;
          }
 
-         .attendance-day:hover {
+         .file-item:hover {
             transform: translateY(-1px);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
          }
 
-         .attendance-day.selected {
-            ring: 2px;
-            ring-color: #2d5a3d;
+         .drag-over {
+            border-color: #2d5a3d !important;
+            background-color: #f0f9f0 !important;
          }
       </style>
 
       <script>
          document.addEventListener("DOMContentLoaded", function () {
-            // Calendar day click handler
-            const attendanceDays = document.querySelectorAll(".attendance-day");
-            const attendanceForm = document.getElementById("attendance-form");
-            const selectedDateSpan = document.getElementById("selected-date");
+            // File upload handling
+            const fileUploadArea = document.querySelector(".border-dashed");
+            const fileInput =
+               fileUploadArea.querySelector('input[type="file"]');
+            const filePreview = document.getElementById("file-preview");
+            const fileList = document.getElementById("file-list");
+            const selectFileBtn = fileUploadArea.querySelector("button");
+
+            selectFileBtn.addEventListener("click", (e) => {
+               e.preventDefault();
+               fileInput.click();
+            });
+
+            fileUploadArea.addEventListener("click", (e) => {
+               if (e.target === fileUploadArea || e.target.closest(".fas")) {
+                  fileInput.click();
+               }
+            });
+
+            fileUploadArea.addEventListener("dragover", (e) => {
+               e.preventDefault();
+               fileUploadArea.classList.add("drag-over");
+            });
+
+            fileUploadArea.addEventListener("dragleave", (e) => {
+               e.preventDefault();
+               fileUploadArea.classList.remove("drag-over");
+            });
+
+            fileUploadArea.addEventListener("drop", (e) => {
+               e.preventDefault();
+               fileUploadArea.classList.remove("drag-over");
+               const files = e.dataTransfer.files;
+               handleFiles(files);
+            });
+
+            fileInput.addEventListener("change", (e) => {
+               handleFiles(e.target.files);
+            });
+
+            function handleFiles(files) {
+               fileList.innerHTML = "";
+               filePreview.classList.remove("hidden");
+
+               Array.from(files).forEach((file, index) => {
+                  const fileItem = document.createElement("div");
+                  fileItem.className =
+                     "flex items-center justify-between p-3 bg-gray-50 rounded border";
+
+                  const fileIcon = getFileIcon(file.type);
+                  const fileSize = (file.size / 1024 / 1024).toFixed(2);
+
+                  fileItem.innerHTML = `
+                        <div class="flex items-center space-x-3">
+                            <i class="${fileIcon} text-xl"></i>
+                            <div>
+                                <p class="font-medium text-sm">${file.name}</p>
+                                <p class="text-xs text-gray-500">${fileSize} MB</p>
+                            </div>
+                        </div>
+                        <button type="button" class="text-red-600 hover:text-red-800" onclick="removeFile(${index})">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    `;
+
+                  fileList.appendChild(fileItem);
+               });
+            }
+
+            function getFileIcon(fileType) {
+               if (fileType.includes("pdf"))
+                  return "fas fa-file-pdf text-red-600";
+               if (fileType.includes("word"))
+                  return "fas fa-file-word text-blue-600";
+               if (fileType.includes("image"))
+                  return "fas fa-file-image text-green-600";
+               return "fas fa-file text-gray-600";
+            }
+
+            window.removeFile = function (index) {
+               const dt = new DataTransfer();
+               const files = Array.from(fileInput.files);
+               files.splice(index, 1);
+
+               files.forEach((file) => dt.items.add(file));
+               fileInput.files = dt.files;
+
+               if (files.length === 0) {
+                  filePreview.classList.add("hidden");
+               } else {
+                  handleFiles(dt.files);
+               }
+            };
+
+            // Document actions
+            const editModal = document.getElementById("edit-modal");
+            const viewerModal = document.getElementById("viewer-modal");
+            const closeModalBtn = document.getElementById("close-modal");
+            const closeViewerBtn = document.getElementById("close-viewer");
             const cancelEditBtn = document.getElementById("cancel-edit");
 
-            attendanceDays.forEach((day) => {
-               day.addEventListener("click", function () {
-                  // Remove previous selection
-                  attendanceDays.forEach((d) => d.classList.remove("selected"));
+            // Edit document
+            document.querySelectorAll(".fa-edit").forEach((btn) => {
+               btn.closest("button").addEventListener("click", function () {
+                  const docItem = this.closest(".border");
+                  const docName = docItem.querySelector("h4").textContent;
 
-                  // Add selection to clicked day
-                  this.classList.add("selected");
-
-                  // Show form
-                  attendanceForm.style.display = "block";
-
-                  // Set date
-                  const date = this.dataset.date;
-                  selectedDateSpan.textContent = new Date(
-                     date
-                  ).toLocaleDateString("id-ID", {
-                     weekday: "long",
-                     year: "numeric",
-                     month: "long",
-                     day: "numeric",
-                  });
-
-                  // Populate form with existing data
-                  populateForm(this);
-
-                  // Scroll to form
-                  attendanceForm.scrollIntoView({ behavior: "smooth" });
+                  document.getElementById("edit-doc-name").value = docName;
+                  editModal.classList.remove("hidden");
                });
             });
 
-            // Cancel edit
-            cancelEditBtn.addEventListener("click", function () {
-               attendanceForm.style.display = "none";
-               attendanceDays.forEach((d) => d.classList.remove("selected"));
+            // View document
+            document.querySelectorAll(".fa-eye").forEach((btn) => {
+               btn.closest("button").addEventListener("click", function () {
+                  const docItem = this.closest(".border");
+                  const docName = docItem.querySelector("h4").textContent;
+
+                  document.getElementById(
+                     "viewer-title"
+                  ).textContent = `Preview: ${docName}`;
+                  viewerModal.classList.remove("hidden");
+               });
             });
 
-            // Status change handler
-            const statusSelect = document.getElementById("attendance-status");
-            const checkInInput = document.getElementById("check-in");
-            const checkOutInput = document.getElementById("check-out");
+            // Download document
+            document.querySelectorAll(".fa-download").forEach((btn) => {
+               btn.closest("button").addEventListener("click", function () {
+                  const docItem = this.closest(".border");
+                  const docName = docItem.querySelector("h4").textContent;
 
-            statusSelect.addEventListener("change", function () {
-               const status = this.value;
-
-               if (
-                  status === "cuti" ||
-                  status === "izin" ||
-                  status === "sakit" ||
-                  status === "tidak_hadir"
-               ) {
-                  checkInInput.disabled = true;
-                  checkOutInput.disabled = true;
-                  checkInInput.value = "";
-                  checkOutInput.value = "";
-               } else {
-                  checkInInput.disabled = false;
-                  checkOutInput.disabled = false;
-                  if (status === "hadir") {
-                     checkInInput.value = "08:00";
-                     checkOutInput.value = "17:00";
-                  } else if (status === "terlambat") {
-                     checkInInput.value = "08:30";
-                     checkOutInput.value = "17:00";
-                  }
-               }
-
-               calculateTotalHours();
+                  // Simulate download
+                  alert(`Mengunduh dokumen: ${docName}`);
+               });
             });
 
-            // Time input change handlers
-            checkInInput.addEventListener("change", calculateTotalHours);
-            checkOutInput.addEventListener("change", calculateTotalHours);
+            // Delete document
+            document.querySelectorAll(".fa-trash").forEach((btn) => {
+               btn.closest("button").addEventListener("click", function () {
+                  const docItem = this.closest(".border");
+                  const docName = docItem.querySelector("h4").textContent;
 
-            function calculateTotalHours() {
-               const checkIn = checkInInput.value;
-               const checkOut = checkOutInput.value;
-               const totalHoursInput = document.getElementById("total-hours");
-
-               if (checkIn && checkOut) {
-                  const start = new Date(`2024-01-01 ${checkIn}`);
-                  const end = new Date(`2024-01-01 ${checkOut}`);
-                  const diff = (end - start) / (1000 * 60 * 60); // Convert to hours
-
-                  if (diff > 0) {
-                     totalHoursInput.value = `${diff} jam`;
-                  } else {
-                     totalHoursInput.value = "0 jam";
+                  if (
+                     confirm(
+                        `Apakah Anda yakin ingin menghapus dokumen "${docName}"?`
+                     )
+                  ) {
+                     docItem.remove();
+                     alert("Dokumen berhasil dihapus");
                   }
-               } else {
-                  totalHoursInput.value = "0 jam";
+               });
+            });
+
+            // Close modals
+            closeModalBtn.addEventListener("click", () => {
+               editModal.classList.add("hidden");
+            });
+
+            closeViewerBtn.addEventListener("click", () => {
+               viewerModal.classList.add("hidden");
+            });
+
+            cancelEditBtn.addEventListener("click", () => {
+               editModal.classList.add("hidden");
+            });
+
+            // Close modal when clicking outside
+            editModal.addEventListener("click", (e) => {
+               if (e.target === editModal) {
+                  editModal.classList.add("hidden");
                }
-            }
+            });
 
-            function populateForm(dayElement) {
-               const timeText =
-                  dayElement.querySelector(".text-xs").textContent;
-
-               if (timeText.includes("-")) {
-                  const times = timeText.split("-");
-                  checkInInput.value = times[0];
-                  checkOutInput.value = times[1];
-                  statusSelect.value = "hadir";
-               } else if (timeText === "Terlambat") {
-                  statusSelect.value = "terlambat";
-                  checkInInput.value = "08:30";
-                  checkOutInput.value = "17:00";
-               } else if (timeText === "Cuti") {
-                  statusSelect.value = "cuti";
-                  checkInInput.value = "";
-                  checkOutInput.value = "";
-                  checkInInput.disabled = true;
-                  checkOutInput.disabled = true;
-               } else if (timeText === "Tidak Hadir") {
-                  statusSelect.value = "tidak_hadir";
-                  checkInInput.value = "";
-                  checkOutInput.value = "";
-                  checkInInput.disabled = true;
-                  checkOutInput.disabled = true;
+            viewerModal.addEventListener("click", (e) => {
+               if (e.target === viewerModal) {
+                  viewerModal.classList.add("hidden");
                }
+            });
 
-               calculateTotalHours();
-            }
-
-            // Form submission
+            // Form submissions
             document
-               .querySelector("#attendance-form form")
+               .querySelector("form")
                .addEventListener("submit", function (e) {
                   e.preventDefault();
 
-                  // Show loading state
+                  const submitBtn = this.querySelector('button[type="submit"]');
+                  const originalText = submitBtn.innerHTML;
+                  submitBtn.innerHTML =
+                     '<i class="fas fa-spinner fa-spin mr-2"></i>Mengupload...';
+                  submitBtn.disabled = true;
+
+                  setTimeout(() => {
+                     alert("Dokumen berhasil diupload!");
+                     submitBtn.innerHTML = originalText;
+                     submitBtn.disabled = false;
+
+                     // Reset form
+                     this.reset();
+                     filePreview.classList.add("hidden");
+                  }, 2000);
+               });
+
+            // Edit form submission
+            document
+               .querySelector("#edit-modal form")
+               .addEventListener("submit", function (e) {
+                  e.preventDefault();
+
                   const submitBtn = this.querySelector('button[type="submit"]');
                   const originalText = submitBtn.textContent;
                   submitBtn.innerHTML =
                      '<i class="fas fa-spinner fa-spin mr-2"></i>Menyimpan...';
                   submitBtn.disabled = true;
 
-                  // Simulate API call
                   setTimeout(() => {
-                     alert("Data kehadiran berhasil diperbarui!");
+                     alert("Dokumen berhasil diperbarui!");
                      submitBtn.textContent = originalText;
                      submitBtn.disabled = false;
-
-                     // Update calendar display
-                     updateCalendarDisplay();
-
-                     // Hide form
-                     attendanceForm.style.display = "none";
-                     attendanceDays.forEach((d) =>
-                        d.classList.remove("selected")
-                     );
+                     editModal.classList.add("hidden");
                   }, 1500);
                });
 
-            function updateCalendarDisplay() {
-               // Update the selected day's display based on form data
-               const selectedDay = document.querySelector(
-                  ".attendance-day.selected"
+            // Search functionality
+            const searchInput = document.querySelector(
+               'input[placeholder="Cari dokumen..."]'
+            );
+            searchInput.addEventListener("input", function () {
+               const searchTerm = this.value.toLowerCase();
+               const docItems = document.querySelectorAll(
+                  ".border.border-gray-200, .border.border-red-200"
                );
-               if (selectedDay) {
-                  const status = statusSelect.value;
-                  const checkIn = checkInInput.value;
-                  const checkOut = checkOutInput.value;
-                  const timeDisplay = selectedDay.querySelector(".text-xs");
 
-                  // Update classes and content based on status
-                  selectedDay.className =
-                     "attendance-day rounded p-2 cursor-pointer";
+               docItems.forEach((item) => {
+                  const docName = item
+                     .querySelector("h4")
+                     .textContent.toLowerCase();
+                  const docType = item
+                     .querySelector("p")
+                     .textContent.toLowerCase();
 
-                  switch (status) {
-                     case "hadir":
-                        selectedDay.classList.add(
-                           "bg-green-100",
-                           "border",
-                           "border-green-300",
-                           "hover:bg-green-200"
-                        );
-                        timeDisplay.textContent = `${checkIn}-${checkOut}`;
-                        timeDisplay.className = "text-xs text-green-700";
-                        break;
-                     case "terlambat":
-                        selectedDay.classList.add(
-                           "bg-yellow-100",
-                           "border",
-                           "border-yellow-300",
-                           "hover:bg-yellow-200"
-                        );
-                        timeDisplay.textContent = "Terlambat";
-                        timeDisplay.className = "text-xs text-yellow-700";
-                        break;
-                     case "cuti":
-                        selectedDay.classList.add(
-                           "bg-blue-100",
-                           "border",
-                           "border-blue-300",
-                           "hover:bg-blue-200"
-                        );
-                        timeDisplay.textContent = "Cuti";
-                        timeDisplay.className = "text-xs text-blue-700";
-                        break;
-                     case "tidak_hadir":
-                        selectedDay.classList.add(
-                           "bg-red-100",
-                           "border",
-                           "border-red-300",
-                           "hover:bg-red-200"
-                        );
-                        timeDisplay.textContent = "Tidak Hadir";
-                        timeDisplay.className = "text-xs text-red-700";
-                        break;
+                  if (
+                     docName.includes(searchTerm) ||
+                     docType.includes(searchTerm)
+                  ) {
+                     item.style.display = "block";
+                  } else {
+                     item.style.display = "none";
                   }
-               }
-            }
-
-            // File upload handling
-            const fileUploadArea = document.querySelector(".border-dashed");
-            const fileInput =
-               fileUploadArea.querySelector('input[type="file"]');
-
-            fileUploadArea.addEventListener("click", () => {
-               fileInput.click();
+               });
             });
 
-            fileUploadArea.addEventListener("dragover", (e) => {
-               e.preventDefault();
-               fileUploadArea.classList.add(
-                  "border-primary-green",
-                  "bg-green-50"
+            // Category filter
+            const categoryFilter = document.querySelector("select");
+            categoryFilter.addEventListener("change", function () {
+               const selectedCategory = this.value;
+               const docItems = document.querySelectorAll(
+                  ".border.border-gray-200, .border.border-red-200"
                );
-            });
 
-            fileUploadArea.addEventListener("dragleave", (e) => {
-               e.preventDefault();
-               fileUploadArea.classList.remove(
-                  "border-primary-green",
-                  "bg-green-50"
-               );
-            });
+               docItems.forEach((item) => {
+                  const docCategory = item.querySelector("p").textContent;
 
-            fileUploadArea.addEventListener("drop", (e) => {
-               e.preventDefault();
-               fileUploadArea.classList.remove(
-                  "border-primary-green",
-                  "bg-green-50"
-               );
-               const files = e.dataTransfer.files;
-               if (files.length > 0) {
-                  handleFileUpload(files[0]);
-               }
+                  if (
+                     selectedCategory === "Semua Kategori" ||
+                     docCategory.includes(selectedCategory)
+                  ) {
+                     item.style.display = "block";
+                  } else {
+                     item.style.display = "none";
+                  }
+               });
             });
-
-            fileInput.addEventListener("change", (e) => {
-               if (e.target.files.length > 0) {
-                  handleFileUpload(e.target.files[0]);
-               }
-            });
-
-            function handleFileUpload(file) {
-               if (
-                  file.type.includes("sheet") ||
-                  file.name.endsWith(".xlsx") ||
-                  file.name.endsWith(".xls")
-               ) {
-                  alert(
-                     `File ${file.name} berhasil diupload dan sedang diproses...`
-                  );
-               } else {
-                  alert("Mohon upload file Excel (.xlsx atau .xls)");
-               }
-            }
          });
       </script>
    </body>
